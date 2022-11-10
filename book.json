@@ -1,0 +1,7 @@
+{
+  "structure": {
+    "readme": "StudentDesc.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": ["toggle-chapters"]
+}
