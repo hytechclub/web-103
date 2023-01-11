@@ -1,1 +1,1 @@
-- [Follow-Along Activity](FollowAlong.md)
+- [Web 103 | Hy-Tech Club](StudentDesc.md)

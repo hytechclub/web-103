@@ -1,4 +1,31 @@
-# Behind-the-Scenes Readme
-This file will be the landing page for the GitHub repository, but will not be surfaced in the GitBook. Use it to outline the lesson plan and provide any other instructor-facing information. Note that this page will not actually be private or secure; it is simply separated from the GitBook.
+# Web 103: Advanced JavaScript
+This course dives a deeper into some of the more advanced features of JavaScript.
 
-[Click here for information about this template repository.](BOOKTEMPLATEREADME.md)
+## Outline
+Here is an outline.
+
+- Week 1: JavaScript Review
+- Week 2: Arrays (pulled from Web 102)
+- Week 3: Objects / JSON (adapted from Web 201)
+- Week 4: Callbacks (adapted from Web 201)
+- Week 5: Arrow Functions (could maybe be combined with above)
+- Week 6: Review/Check-Ins
+- Week 7: Promises (conceptually) + `async`/`await`
+- Week 8: `try`/`catch` (could maybe be combined with above, or swapped)
+- Week 9: Consuming an API (ultimate goal)
+- Week 10: Review & Final Project Introduction
+- Week 11: Final Project Work
+- Week 12: Final Project Presentations
+
+## Resources & Ideas
+Here are some thoughts and things.
+
+- [Vanilla Log-in](https://github.com/developer-job-simulation/vanilla-login-form)
+  - Help students find/fix bugs
+  - Expose students to GitHub/version control/open source
+  - May fit better in a future course
+- Additional Topics: modules, spread operator, ternary operator, destructuring
+  - These may come in handy in the future, especially when working with React and any existing code written by someone else
+
+## Learning Objectives
+The goal of this course is _not_ to teach programming concepts; it is to show students how they can build more advanced front-end web applications using vanilla JavaScript. Each concept learned should have a direct application and purpose. The ultimate aim is for students to build a website that connects to an external API.
