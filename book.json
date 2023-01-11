@@ -3,5 +3,6 @@
     "readme": "StudentDesc.md",
     "summary": "SUMMARY.md"
   },
+  "title": "Web 103",
   "plugins": ["toggle-chapters"]
 }
