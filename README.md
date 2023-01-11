@@ -29,3 +29,8 @@ Here are some thoughts and things.
 
 ## Learning Objectives
 The goal of this course is _not_ to teach programming concepts; it is to show students how they can build more advanced front-end web applications using vanilla JavaScript. Each concept learned should have a direct application and purpose. The ultimate aim is for students to build a website that connects to an external API.
+
+## Final Project Possibilities
+A student might attempt to build a cat quote generator like this: [https://getcat.josephmaxwell.repl.co/](https://getcat.josephmaxwell.repl.co/).
+
+There are a ton of public APIs available, and a bunch of them are listed here: [https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis). It would be beneficial to search through the APIs, find a few simple ones, and make small demonstration websites for them.
