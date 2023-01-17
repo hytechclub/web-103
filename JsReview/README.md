@@ -36,7 +36,7 @@ Follow these instructions to spin up a game:
 1. When all rounds are complete, present the sentences and drawings everyone did!
 
 ## Lecture: JavaScript Crash Course
-Present the [JavaScript Crash Course PowerPoint](JsCrashCourse.pptx). This is meant to be a very quick re-hash of everything covered in Web 102. Students may not fully remember everything during the lecture, but they will have a chance to apply the concepts during the code-along.
+Present the [JavaScript Crash Course PowerPoint](JsCrashCourse.pptx). This is meant to be a very quick re-hash of everything covered in Web 102. Students may not fully remember everything during the lecture, but they will have a chance to apply the concepts during the [code-along](QuizCodeAlong.md). There is also a [cheat sheet](Web102CheatSheet.md) for them to reference. _Try not to spend too long on this part; it should mainly be used to jog their memory._
 
 ## Code-Along: Personal Quiz
 Walk through [the instructions](QuizCodeAlong.md) with the students to have them build a short quiz about themselves.
