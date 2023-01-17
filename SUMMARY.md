@@ -1,4 +1,4 @@
-- [Web 103 | Hy-Tech Club](StudentDesc.md)
+- [Home](StudentDesc.md)
 - [Week 1 - JavaScript Review](JsReview/StudentDesc.md)
   - [Cheat Sheet](JsReview/Web102CheatSheet.md)
   - [Code-Along](JsReview/QuizCodeAlong.md)
