@@ -28,9 +28,9 @@ Follow these instructions to spin up a game:
 1. Click on "CUSTOM SETTINGS" and make sure the "ESTIMATED DURATION" is about 10 minutes
 1. Click on "INVITE" to get the URL
 1. Share the URL with the students
-  - Through Zoom
-  - Through the projector (typing manually)
-  - Through an ad-hoc [tinyurl](https://tinyurl.com/) link
+    - Through Zoom
+    - Through the projector (typing manually)
+    - Through an ad-hoc [tinyurl](https://tinyurl.com/) link
 1. Click on "START"
 1. Stop sharing screen, and go through the game
 1. When all rounds are complete, present the sentences and drawings everyone did!
