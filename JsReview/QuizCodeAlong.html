@@ -213,7 +213,107 @@
                                 
                                 <h1 id="code-along-personal-quiz">Code-Along: Personal Quiz</h1>
 <p>Follow these instructions to customize an interactive quiz about yourself!</p>
-<h2 id="setup">Setup</h2>
+<h2 id="1-setup">1. Setup</h2>
+<p><a href="https://replit.com/@HylandOutreach/PersonalQuizStarter" target="_blank">https://replit.com/@HylandOutreach/PersonalQuizStarter</a></p>
+<h2 id="2-hooking-up-the-button">2. Hooking Up the Button</h2>
+<p>Define the function and make it alert</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startQuiz</span>(<span class="hljs-params"></span>) </span>{
+  alert(<span class="hljs-string">&quot;Loading...&quot;</span>);
+}
+</code></pre>
+<h2 id="3-adding-a-personal-greeting">3. Adding a Personal Greeting</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> nameInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#name&quot;</span>);
+<span class="hljs-keyword">let</span> name = nameInput.value;
+
+alert(<span class="hljs-string">`Hello, <span class="hljs-subst">${name}</span>! Get ready for some questions...`</span>);
+</code></pre>
+<h2 id="4-asking-one-question">4. Asking One Question</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> score = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">let</span> numQuestions = <span class="hljs-number">3.0</span>;
+
+<span class="hljs-keyword">let</span> answer1 = prompt(<span class="hljs-string">&quot;What is my name?&quot;</span>);
+<span class="hljs-keyword">if</span> (answer1 === <span class="hljs-string">&quot;Ash Ketchum&quot;</span>) {
+  score = score + <span class="hljs-number">1</span>;
+}
+</code></pre>
+<h2 id="5-asking-two-more-questions">5. Asking Two More Questions</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> answer2 = prompt(<span class="hljs-string">&quot;Where do I live?&quot;</span>);
+<span class="hljs-keyword">if</span> (answer2 === <span class="hljs-string">&quot;Kanto&quot;</span>) {
+  score = score + <span class="hljs-number">1</span>;
+}
+
+<span class="hljs-keyword">let</span> answer3 = prompt(<span class="hljs-string">&quot;What is my cat&apos;s name?&quot;</span>);
+<span class="hljs-keyword">if</span> (answer3 === <span class="hljs-string">&quot;Pikachu&quot;</span>) {
+  score = score + <span class="hljs-number">1</span>;
+}
+</code></pre>
+<h2 id="6-calculating-and-displaying-the-result">6. Calculating and Displaying the Result</h2>
+<pre><code class="lang-js">alert(<span class="hljs-string">&quot;Calculating...&quot;</span>);
+<span class="hljs-keyword">let</span> scorePercent = <span class="hljs-number">100</span> * (score / numQuestions);
+
+<span class="hljs-keyword">if</span> (scorePercent &gt; <span class="hljs-number">60</span>) {
+  alert(<span class="hljs-string">&quot;You passed &#x1F60E;&quot;</span>);
+} <span class="hljs-keyword">else</span> {
+  alert(<span class="hljs-string">&quot;You failed &#x1F62D;&quot;</span>);
+}
+</code></pre>
+<h2 id="7-revealing-the-final-score">7. Revealing the Final Score</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> scoreElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#score&quot;</span>);
+scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-subst">${score}</span> correct (<span class="hljs-subst">${scorePercent}</span>%)`</span>;
+</code></pre>
+<h2 id="8-presenting-the-stars">8. Presenting the Stars</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score; i++) {
+  <span class="hljs-keyword">let</span> starImg = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
+  starImg.src = <span class="hljs-string">&quot;star.png&quot;</span>;
+  <span class="hljs-built_in">document</span>.body.appendChild(starImg);
+}
+</code></pre>
+<h2 id="final-code">Final Code</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startQuiz</span>(<span class="hljs-params"></span>) </span>{
+  alert(<span class="hljs-string">&quot;Loading...&quot;</span>);
+
+  <span class="hljs-keyword">let</span> nameInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#name&quot;</span>);
+  <span class="hljs-keyword">let</span> name = nameInput.value;
+
+  alert(<span class="hljs-string">`Hello, <span class="hljs-subst">${name}</span>! Get ready for some questions...`</span>);
+
+  <span class="hljs-keyword">let</span> score = <span class="hljs-number">0</span>;
+  <span class="hljs-keyword">let</span> numQuestions = <span class="hljs-number">3.0</span>;
+
+  <span class="hljs-keyword">let</span> answer1 = prompt(<span class="hljs-string">&quot;What is my name?&quot;</span>);
+  <span class="hljs-keyword">if</span> (answer1 === <span class="hljs-string">&quot;Ash Ketchum&quot;</span>) {
+    score = score + <span class="hljs-number">1</span>;
+  }
+
+  <span class="hljs-keyword">let</span> answer2 = prompt(<span class="hljs-string">&quot;Where do I live?&quot;</span>);
+  <span class="hljs-keyword">if</span> (answer2 === <span class="hljs-string">&quot;Kanto&quot;</span>) {
+    score = score + <span class="hljs-number">1</span>;
+  }
+
+  <span class="hljs-keyword">let</span> answer3 = prompt(<span class="hljs-string">&quot;What is my cat&apos;s name?&quot;</span>);
+  <span class="hljs-keyword">if</span> (answer3 === <span class="hljs-string">&quot;Pikachu&quot;</span>) {
+    score = score + <span class="hljs-number">1</span>;
+  }
+
+  alert(<span class="hljs-string">&quot;Calculating...&quot;</span>);
+  <span class="hljs-keyword">let</span> scorePercent = <span class="hljs-number">100</span> * (score / numQuestions);
+
+  <span class="hljs-keyword">if</span> (scorePercent &gt; <span class="hljs-number">60</span>) {
+    alert(<span class="hljs-string">&quot;You passed &#x1F60E;&quot;</span>);
+  } <span class="hljs-keyword">else</span> {
+    alert(<span class="hljs-string">&quot;You failed &#x1F62D;&quot;</span>);
+  }
+
+  <span class="hljs-keyword">let</span> scoreElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#score&quot;</span>);
+  scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-subst">${score}</span> correct (<span class="hljs-subst">${scorePercent}</span>%)`</span>;
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score; i++) {
+    <span class="hljs-keyword">let</span> starImg = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
+    starImg.src = <span class="hljs-string">&quot;star.png&quot;</span>;
+    <span class="hljs-built_in">document</span>.body.appendChild(starImg);
+  }
+}
+</code></pre>
 
                                 
                                 </section>
@@ -257,7 +357,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.2.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"path":"JsReview/SelfPacedWork.md","ref":"JsReview/SelfPacedWork.md","articles":[]},"previous":{"title":"Cheat Sheet","level":"1.2.1","depth":2,"path":"JsReview/Web102CheatSheet.md","ref":"JsReview/Web102CheatSheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/QuizCodeAlong.md","mtime":"2023-01-17T18:42:20.642Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-17T18:43:02.958Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.2.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"path":"JsReview/SelfPacedWork.md","ref":"JsReview/SelfPacedWork.md","articles":[]},"previous":{"title":"Cheat Sheet","level":"1.2.1","depth":2,"path":"JsReview/Web102CheatSheet.md","ref":"JsReview/Web102CheatSheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/QuizCodeAlong.md","mtime":"2023-01-17T20:29:47.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-17T20:30:30.567Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
