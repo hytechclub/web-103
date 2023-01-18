@@ -210,7 +210,42 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="self-paced-work-quiz-updates">Self-Paced Work: Quiz Updates</h1>
-<p>Make some updates to your personal quiz website.</p>
+<p>Make some updates to your personal quiz website!</p>
+<h2 id="1-more-custom-questions">1. More Custom Questions</h2>
+<p>Fill out your quiz with more questions about yourself! Add as many as you can, and make sure to update the <code>numQuestions</code> variable so the final score calculation is accurate.</p>
+<h2 id="2-html--css-updates">2. HTML &amp; CSS Updates</h2>
+<p>Currently, the webpage really only serves as a way to start the quiz. Make it your own by adding information, updating the color scheme, and anything else you&apos;d like to do!</p>
+<h2 id="3-multiple-choice-questions">3. Multiple Choice Questions</h2>
+<p>The fill-in-the-blank style of the questions is a little easier to program, but it makes the questions much harder. Update the questions so that they show a list of possible answers! A question could look something like this:</p>
+<pre><code>Where do I live?
+
+A) Kanto
+B) Banto
+C) Ranto
+D) Flanto
+</code></pre><p>The user could then enter <code>A</code> or <code>a</code>, so the answer variable could be checked against that.</p>
+<h2 id="4-different-images">4. Different Images</h2>
+<p>Stars are cool, but you might be able to find something better. Search the internet for an appropriate victory icon, and replace the <code>star.png</code> url in the JavaScript with the new URL!</p>
+<h2 id="5-bug-extra-stars">5. (BUG) Extra Stars</h2>
+<p>Currently, if a player completes the quiz more than once, all the additional stars are appended to the page - they are never removed! Figure out how to remove the star <code>&lt;img&gt;</code> elements whenever the quiz starts, so that the number of stars will always match the number of correct answers.</p>
+<h2 id="6-challenge-fully-dom-quiz">6. (CHALLENGE) Fully DOM Quiz</h2>
+<p>The <code>alert</code> and <code>prompt</code> statements are functional, but they might not be the optimal user experience. Get rid of <em>all</em> <code>alert</code> and <code>prompt</code> statements in the <code>startQuiz</code> function, and replace them with HTML elements!</p>
+<p>For example, for the first question, you could add HTML like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>What is my name?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;answer1&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>Then, instead of setting the <code>answer1</code> variable based on a <code>prompt</code>, you could grab the value from the <code>&lt;input id=&quot;answer1&quot;&gt;</code> like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> answer1Input = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#answer1&quot;</span>);
+<span class="hljs-keyword">let</span> answer1 = answer1Input.value;
+</code></pre>
+<p>From there, the <code>answer1</code> variable could be used in the same way.</p>
+<h3 id="dom-dropdowns-or-radio-buttons">DOM Dropdowns or Radio Buttons</h3>
+<p>Another option would be to use <code>&lt;select&gt;</code> dropdowns or <code>&lt;input type=&quot;radio&quot;&gt;</code> buttons for a multiple choice quiz.</p>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank">Dropdowns</a></li>
+<li><a href="https://www.geeksforgeeks.org/how-to-get-value-of-selected-radio-button-using-javascript/" target="_blank">Radio Buttons</a></li>
+</ul>
+<p>The code may need a little more updating, but the user experience will be excellent!</p>
 
                                 
                                 </section>
@@ -250,7 +285,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"previous":{"title":"Code-Along","level":"1.2.2","depth":2,"path":"JsReview/QuizCodeAlong.md","ref":"JsReview/QuizCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/SelfPacedWork.md","mtime":"2023-01-18T17:17:04.523Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-18T17:17:51.611Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"previous":{"title":"Code-Along","level":"1.2.2","depth":2,"path":"JsReview/QuizCodeAlong.md","ref":"JsReview/QuizCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/SelfPacedWork.md","mtime":"2023-01-18T17:32:21.945Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-18T17:32:52.694Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
