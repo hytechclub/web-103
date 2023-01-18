@@ -1,5 +1,5 @@
 # JavaScript Review
-Review the concepts covered by the [Web 102](https://github.com/hytechclub/web-102/) course, and practice using JavaScript again!
+Review the concepts covered by the [Web 102](https://hylandtechclub.com/web-102/) course, and practice using JavaScript again!
 
 ## JS Crash Course
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://github.com/hytechclub/web-103/raw/main/JsReview/JsCrashCourse.pptx' width='100%' height='450px' frameborder='0'></iframe>
