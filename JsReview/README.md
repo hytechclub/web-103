@@ -47,7 +47,7 @@ By the end of the activity, the projects should look something like [this](https
 Have the students follow [the instructions](SelfPacedWork.md) to continue working on their Personal Quiz from the code-along.
 
 ## Formative Assessment: Blooket Quiz Game
-Close the session by facilitating the [Blooket]() to give students a chance to review the concepts from the lecture. Note that a Blooket account is required to host the game.
+Close the session by facilitating the [Blooket](https://dashboard.blooket.com/set/63c82eb286d8642832db5730) to give students a chance to review the concepts from the lecture. Note that a Blooket account is required to host the game.
  
 ## Agenda
 
