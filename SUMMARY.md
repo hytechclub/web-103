@@ -3,4 +3,9 @@
   - [Cheat Sheet](JsReview/Web102CheatSheet.md)
   - [Code-Along](JsReview/QuizCodeAlong.md)
   - [Self-Paced Work](JsReview/SelfPacedWork.md)
+- [Week 2 - Arrays](Arrays/StudentDesc.md)
+  - [Warm Up](Arrays/WarmUp.md)
+  - [Code-Along](Arrays/WatchlistCodeAlong.md)
+  - [Self-Paced Work](Arrays/SelfPacedWork.md)
+  - [Challenges](Arrays/Challenges.md)
   
