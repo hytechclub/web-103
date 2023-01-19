@@ -1,8 +1,7 @@
 # Web 103: Advanced JavaScript
-This course dives a deeper into some of the more advanced features of JavaScript.
+This course expands upon the material from Web 102, and dives deeper into more JavaScript concepts. Students will learn about objects, data, functional programming, asynchronous execution, and more! By the end of the semester, students should be able to create an advanced website that connects to an external API and dynamically updates based on real live information.
 
 ## Outline
-Here is an outline.
 
 - Week 1: JavaScript Review
 - Week 2: Arrays (pulled from Web 102)
