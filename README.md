@@ -3,8 +3,8 @@ This course expands upon the material from Web 102, and dives deeper into more J
 
 ## Outline
 
-- Week 1: JavaScript Review
-- Week 2: Arrays (pulled from Web 102)
+- [Week 1: JavaScript Review](JsReview/)
+- [Week 2: Arrays](Arrays/)
 - Week 3: Objects / JSON (adapted from Web 201)
 - Week 4: Callbacks (adapted from Web 201)
 - Week 5: Arrow Functions (could maybe be combined with above)
