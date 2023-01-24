@@ -3,8 +3,8 @@ Introduce [objects](https://www.w3schools.com/js/js_objects.asp) as a way to sto
 
 Note that it is more important for students to be able to _use_ objects than fully understand them at this point. If they can memorize the basic structure and syntax, that should be sufficient.
 
-## Warm-Up: TODO
-Have the students complete the warm-up activity by following [the instructions](WarmUp.md).
+## Warm-Up: Character Builder
+Have the students complete the warm-up activity by following [the instructions](WarmUp.md). They will be able to build a character by assigning some basic traits. This leads into the lecture by showing students how traits of a character are like properties of an object. After all students have added characters, they can go around the room and introduce them if there is time.
 
 ## Lecture: Objects
 The [presentation](Objects.pptx) introduces the concept of objects, explains their importance, and shows the JavaScript syntax. It also touches on JSON data.
@@ -14,11 +14,11 @@ There is a mini-quiz at the end of the lecture.
 ## Review: Object Activity
 Facilitate the [Object Activity](ObjectActivity.md). Every student should have a chance to answer at least one of the questions.
 
-## Code-Along:  TODO
-Follow the [instructions](TODO.md) to build up a website meant to TODO.
+## Code-Along: Food Picker
+Follow the [instructions](FoodPickerCodeAlong.md) to build up a website meant to help hungry visitors decide which food to eat. By the end of the activity, the project should be something like [this](https://replit.com/@HylandOutreach/FoodPickerComplete#script.js).
 
-## Self-Paced Work: TODO Updates
-Have the students follow [the instructions](SelfPacedWork.md) to continue working on the TODO website.
+## Self-Paced Work: Food Picker Updates
+Have the students follow [the instructions](SelfPacedWork.md) to continue working on the Food Picker website.
  
 ## Agenda
 
@@ -28,5 +28,5 @@ Have the students follow [the instructions](SelfPacedWork.md) to continue workin
 | Lecture | 30m |
 | Review | 15m |
 | Break | 10m |
-| Code-Along | 25m |
-| Self-Paced Work/Challenges | 30m |
+| Code-Along | 40m |
+| Self-Paced Work/Challenges | 15m |
