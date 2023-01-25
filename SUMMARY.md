@@ -4,8 +4,11 @@
   - [Code-Along](JsReview/QuizCodeAlong.md)
   - [Self-Paced Work](JsReview/SelfPacedWork.md)
 - [Week 2 - Arrays](Arrays/StudentDesc.md)
-  - [Warm Up](Arrays/WarmUp.md)
+  - [Warm-Up](Arrays/WarmUp.md)
   - [Code-Along](Arrays/WatchlistCodeAlong.md)
   - [Self-Paced Work](Arrays/SelfPacedWork.md)
   - [Challenges](Arrays/Challenges.md)
-  
+- [Week 3 - Objects & JSON](Objects/StudentDesc.md)
+  - [Warm-Up](Objects/WarmUp.md)
+  - [Code-Along](Objects/FoodPickerCodeAlong.md)
+  - [Self-Paced Work](Objects/SelfPacedWork.md)
