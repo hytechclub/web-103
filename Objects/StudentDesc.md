@@ -16,4 +16,5 @@ Learn how to use objects to store related pieces of data within one variable.
 ## Resources
 - [W3Schools Introduction to Objects](https://www.w3schools.com/js/js_objects.asp)
 - [W3Schools Introduction to JSON](https://www.w3schools.com/js/js_json_intro.asp)
+- [JAVASCRIPT.INFO Object Basics](https://javascript.info/object)
 - [MDN Guide to Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)

@@ -29,4 +29,4 @@ Have the students follow [the instructions](SelfPacedWork.md) to continue workin
 | Review | 15m |
 | Break | 10m |
 | Code-Along | 40m |
-| Self-Paced Work/Challenges | 15m |
+| Self-Paced Work | 15m |
