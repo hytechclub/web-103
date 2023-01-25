@@ -3,8 +3,12 @@ Introduce [callbacks](https://www.w3schools.com/js/js_callback.asp) as a way to 
 
 This lesson is fairly conceptual, and it may be difficult for students to grasp - however, using callbacks will become quite important when working with APIs.
 
-## Warm-Up: TODO
-Have the students complete the warm-up activity by following [the instructions](WarmUp.md).
+## Warm-Up: Function Machine
+Introduce the warm-up game by following the [instructions](WarmUp.md). Students will visit the [Function Machine](https://www.mathplayground.com/functionmachine.html) site, read through the instructions, and play the game. The first student to correctly figure out the answer for an Advanced Game, Activity Level 3, can win something. It should look something like this:
+
+![](Assets/FunctionMachineWin.png)
+
+It may be worth walking through an example with the group just to show everyone how it works. There are also some additional games linked from the instructions - students are welcome to play those as well.
 
 ## Lecture: Functions & Callbacks
 The [presentation](FunctionsAndCallbacks.pptx) reviews functions, and shows how they can be used for callbacks. There are a few code examples.
