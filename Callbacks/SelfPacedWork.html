@@ -411,7 +411,97 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="self-paced-work-todo">Self-Paced Work: TODO</h1>
+                                <h1 id="self-paced-work-funktional-functions-updates">Self-Paced Work: Funktional Functions Updates</h1>
+<p>Follow these instructions to update the Funktional Functions website.</p>
+<h2 id="new-cycle-speed">New Cycle Speed</h2>
+<p>Currently, when the color cycle is running, it changes colors once every <strong>250</strong> milliseconds. Update this to make it a little less hectic - try 500 milliseconds instead.</p>
+<h2 id="new-colors">New Colors</h2>
+<p>Currently, there are only six colors for the filter. Add a few more colors to randomly cycle.</p>
+<blockquote>
+<p>Note: to make the filter stronger or weaker, check the <code>.filter</code> ruleset in the <strong>style.css</strong> file, and update the <code>opacity</code> value.</p>
+</blockquote>
+<h2 id="playpause-button">Play/Pause Button</h2>
+<p>Currently, the button text for the &quot;&#x1F3B8; &#x23EF;&quot; button is always the same. However, to make it more dynamic, update the code so that it changes the button text based on whether or not the music is playing. If the music is playing, it should display &#x23F8;. If the music is not playing, it should display &#x25B6;.</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Find the <code>playBass</code> function</li>
+<li>In the body of the <code>if</code>, under <code>bassAudio.play()</code>, make a new line</li>
+<li>There, set <code>playPauseBassButton.textContent</code> to <code>&quot;&#x1F3B8; &#x23F8;&quot;</code></li>
+<li>In the body of the <code>else</code>, under <code>bassAudio.pause()</code>, make a new line</li>
+<li>There, set <code>playPauseBassButton.textContent</code> to <code>&quot;&#x1F3B8; &#x25B6;&quot;</code></li>
+</ol>
+<p>Run the program, click the button, and make sure the play and pause symbols show up appropriately!</p>
+<h2 id="display-current-filter-color">Display Current Filter Color</h2>
+<p>As of now, the filter color changes, but a visitor to the site might not know what the current color actually is. Add a piece of code to display the current color of the background filter.</p>
+<h3 id="html-a-new-paragraph">HTML: A New Paragraph</h3>
+<p>Start by adding a new <code>&lt;p&gt;</code> element in the HTML.</p>
+<ol>
+<li>Open the <strong>index.html</strong> file for editing</li>
+<li>Make a new line under the <code>&lt;h1&gt;&lt;/h1&gt;</code></li>
+<li>There, add a new <code>&lt;p&gt;&lt;/p&gt;</code> element</li>
+<li>Set the <code>id</code> of the <code>&lt;p&gt;</code> to be <code>&quot;filter-color&quot;</code></li>
+</ol>
+<h3 id="js-setting-the-paragraph-text">JS: Setting the Paragraph Text</h3>
+<p>Next, update the <code>&lt;p&gt;</code> element text every time the filter color changes.</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Make a new line under the <code>backgroundFilterDiv</code> variable initialization</li>
+<li>There, create a new variable named <code>filterColorParagraph</code></li>
+<li>Set <code>filterColorParagraph</code> to a call to <code>document.querySelector</code></li>
+<li>Pass in <code>&quot;#filter-color&quot;</code> to store the proper <code>&lt;p&gt;</code> element in the variable</li>
+<li>Make a new line at the bottom of the <code>randomBgFilter</code> function</li>
+<li>There, set <code>filterColorParagraph.textContent</code> to be <code>randomColor</code></li>
+</ol>
+<p>Run the program, start the cycle, and verify that the current filter color appears on the page!</p>
+<h2 id="easter-egg-header-click">Easter Egg: Header Click</h2>
+<p>Add a secret way to change the background image - when a site visitor clicks the &quot;FUNKTIONAL FUNCTIONS&quot; header, a new picture should appear!</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Make a new line at the bottom of the file</li>
+<li>There, Define a new function named <code>slyBackground</code><ul>
+<li><code>function</code> keyword</li>
+<li>Function name (<code>slyBackground</code>)</li>
+<li>Parentheses (<code>()</code>)</li>
+<li>Curly brackets (<code>{}</code>)</li>
+</ul>
+</li>
+<li>Make a new line in the body of the function (between <code>{</code> and <code>}</code>)</li>
+<li>There, set <code>document.body.style.backgroundImage</code> to <code>&quot;url(&apos;assets/sly.jpg&apos;)&quot;</code><ul>
+<li>This will change the background image of the page</li>
+</ul>
+</li>
+<li>Make a new line <em>under</em> the function definition (after <code>}</code>)</li>
+<li>There, create a new variable named <code>header</code></li>
+<li>Set <code>header</code> to select the <code>&quot;h1&quot;</code> using <code>document.querySelector</code></li>
+<li>Under that, call <code>header.addEventListener</code></li>
+<li>Pass in <code>&quot;click&quot;</code> and <code>slyBackground</code> to the <code>addEventListener</code> call</li>
+</ol>
+<p>Run the program, click the header, and verify that the background changes!</p>
+<h3 id="header-click-music">Header Click Music</h3>
+<p>In addition to changing the background image, start playing a different piece of music when the header is clicked.</p>
+<ol>
+<li>Make a new line above the <code>slyBackground</code> function definition</li>
+<li>There, create a new variable named <code>danceToTheMusic</code><ul>
+<li>Set <code>danceToTheMusic</code> to be a <code>new Audio</code> object</li>
+<li>Set the audio file to be <code>&quot;assets/dancetothemusic.mp3&quot;</code></li>
+</ul>
+</li>
+<li>Make a new line in the <em>body</em> of the <code>slyBackground</code> function</li>
+<li>There, reate an <code>if</code>/<code>else</code> structure<ul>
+<li><code>if</code> keyword</li>
+<li>Parentheses (<code>()</code>)</li>
+<li>Curly brackets (<code>{}</code>)</li>
+<li><code>else</code> keyword</li>
+<li>Curly brackets (<code>{}</code>)</li>
+</ul>
+</li>
+<li>For the <code>if</code> condition, check if <code>danceToTheMusic.paused</code></li>
+<li>In the body of the <code>if</code>, call the <code>danceToTheMusic.play</code> function</li>
+<li>In the body of the <code>else</code>, call the <code>danceToTheMusic.pause</code> function</li>
+</ol>
+<p>Run the program, click the header again, and verify that the new music can start and stop playing!</p>
+<h2 id="next-steps">Next Steps</h2>
+<p><a href="Challenges.html">Click here for some additional challenges.</a></p>
 
                                 
                                 </section>
@@ -455,7 +545,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.5.3","depth":2,"next":{"title":"Challenges","level":"1.5.4","depth":2,"path":"Callbacks/Challenges.md","ref":"Callbacks/Challenges.md","articles":[]},"previous":{"title":"Code-Along","level":"1.5.2","depth":2,"path":"Callbacks/FunktionalCodeAlong.md","ref":"Callbacks/FunktionalCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Callbacks/SelfPacedWork.md","mtime":"2023-01-30T12:43:30.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-30T12:44:02.265Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.5.3","depth":2,"next":{"title":"Challenges","level":"1.5.4","depth":2,"path":"Callbacks/Challenges.md","ref":"Callbacks/Challenges.md","articles":[]},"previous":{"title":"Code-Along","level":"1.5.2","depth":2,"path":"Callbacks/FunktionalCodeAlong.md","ref":"Callbacks/FunktionalCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Callbacks/SelfPacedWork.md","mtime":"2023-01-30T19:41:50.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-30T19:42:21.508Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
