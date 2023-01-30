@@ -14,13 +14,13 @@ It may be worth walking through an example with the group just to show everyone 
 The [presentation](FunctionsAndCallbacks.pptx) reviews functions, and shows how they can be used for callbacks. There are a few code examples.
 
 ## Formative Assessment: Blooket
-TODO
+Facilitate the [Blooket quiz game](https://dashboard.blooket.com/set/63d16a6402b104792091fdf5). Note than an account is required to host the game.
 
-## Code-Along: TODO
-Follow the [instructions](CodeAlong.md) to build up a website.
+## Code-Along: Funktional Functions
+Follow the [instructions](FunktionalCodeAlong.md) to build up a funky website. By the end of the activity, the project should look something like [this](https://replit.com/@HylandOutreach/FunktionalFunctions#script.js).
 
-## Self-Paced Work: TODO
-Have the students follow [the instructions](SelfPacedWork.md) to continue working on the website.
+## Self-Paced Work: Funktional Functions Updates
+Have the students follow [the instructions](SelfPacedWork.md) to continue working on the funky website.
 
 ## Challenges
 There are some additional [challenges](Challenges.md).
