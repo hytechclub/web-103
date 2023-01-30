@@ -33,4 +33,4 @@ Currently, the songs should play in sequential order. Add an option that will pl
 Currently, it is only possible to stop a track completely. If a song is stopped, it will start over when it is played again (instead of picking up where it left off). Add the ability to _pause_ a track instead of stopping it completely.
 
 ## SUPER CHALLENGE: Reordering
-Add the ability for a visitor to the site to reorder the playlist to their liking.
+Add the ability for a visitor to the site to reorder the playlist to their liking. This challenge will be quite difficult.
