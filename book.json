@@ -4,5 +4,12 @@
     "summary": "SUMMARY.md"
   },
   "title": "Web 103 | Hy-Tech Club",
-  "plugins": ["toggle-chapters"]
+  "plugins": ["toggle-chapters", "scripts"],
+  "pluginsConfig": {
+      "scripts": {
+          "files": [
+              "./passwordProtectedPages.js"
+          ]
+      }
+  }
 }
