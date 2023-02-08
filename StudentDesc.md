@@ -7,7 +7,7 @@ Follow the links below to view each week of material.
 - [Week 1 (2/28): JavaScript Review](JsReview/StudentDesc.md)
 - [Week 2 (3/7): Arrays](Arrays/StudentDesc.md)
 - [Week 3 (3/14): Objects / JSON](Objects/StudentDesc.md)
-- Week 4 (3/21): Callbacks
+- [Week 4 (3/21): Callbacks](Callbacks/StudentDesc.md)
 - Week 5 (3/28): Arrow Functions
 - Week 6 (4/4): Review/Check-Ins
 - Week 7 (4/11): Promises + `async`/`await`
