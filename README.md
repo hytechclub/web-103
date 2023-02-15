@@ -7,7 +7,7 @@ This course expands upon the material from Web 102, and dives deeper into more J
 - [Week 2: Arrays](Arrays/)
 - [Week 3: Objects / JSON](Objects/)
 - [Week 4: Callbacks](Callbacks/)
-- Week 5: Arrow Functions (could maybe be combined with above)
+- [Week 5: Arrow Functions](ArrowFunctions/)
 - Week 6: Review/Check-Ins
 - Week 7: Promises (conceptually) + `async`/`await`
 - Week 8: `try`/`catch` (could maybe be combined with above, or swapped)

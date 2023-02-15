@@ -3,6 +3,13 @@ Introduce [arrays](https://www.w3schools.com/js/js_arrays.asp) as a way to store
 
 Note that it is more important for students to be able to _use_ arrays than fully understand them. If they can memorize the basic structure and syntax, that should be sufficient.
 
+## Learning Objectives
+Students will be able to...
+
+- Create arrays
+- Access array elements by index
+- Loop through arrays
+
 ## Warm-Up: Top Ten Restaurants
 Have the students complete the warm-up activity by following [the instructions](WarmUp.md). The idea is to show them an example of collections in action. Give them a few minutes to re-order their lists, and then maybe a few minutes for some students to shout out their top restaurants.
 

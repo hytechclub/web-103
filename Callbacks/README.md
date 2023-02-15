@@ -3,6 +3,14 @@ Introduce [callbacks](https://www.w3schools.com/js/js_callback.asp) as a way to 
 
 This lesson is fairly conceptual, and it may be difficult for students to grasp - however, using callbacks will become quite important when working with APIs.
 
+## Learning Objectives
+Students will be able to...
+
+- Define functions as variables
+- Pass functions into other functions as arguments
+- Understand that functions are objects in JavaScript
+- Use `setInterval` and `addEventListener`
+
 ## Warm-Up: Function Machine
 Introduce the warm-up game by following the [instructions](WarmUp.md). Students will visit the [Function Machine](https://www.mathplayground.com/functionmachine.html) site, read through the instructions, and play the game. The first student to correctly figure out the answer for an Advanced Game, Activity Level 3, can win something. It should look something like this:
 

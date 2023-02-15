@@ -3,6 +3,13 @@ Introduce [objects](https://www.w3schools.com/js/js_objects.asp) as a way to sto
 
 Note that it is more important for students to be able to _use_ objects than fully understand them at this point. If they can memorize the basic structure and syntax, that should be sufficient.
 
+## Learning Objectives
+Students will be able to...
+
+- Create new JavaScript objects
+- Access object properties
+- Understand how data is stored as JSON
+
 ## Warm-Up: Character Builder
 Have the students complete the warm-up activity by following [the instructions](WarmUp.md). They will be able to build a character by assigning some basic traits. This leads into the lecture by showing students how traits of a character are like properties of an object. After all students have added characters, they can go around the room and introduce them if there is time.
 
