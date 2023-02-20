@@ -17,4 +17,7 @@
   - [Code-Along](Callbacks/FunktionalCodeAlong.md)
   - [Self-Paced Work](Callbacks/SelfPacedWork.md)
   - [Challenges](Callbacks/Challenges.md)
-  
+- [Week 5 - Arrow Functions](ArrowFunctions/StudentDesc.md)
+  - [Worksheet](ArrowFunctions/Worksheet.md)
+  - [Code-Along](ArrowFunctions/MascotsCodeAlong.md)
+  - [Self-Paced Work](ArrowFunctions/SelfPacedWork.md)

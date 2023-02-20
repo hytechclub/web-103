@@ -10,23 +10,20 @@ Students will be able to...
 - Practice using functions like `map` and `filter` on arrays
 
 ## Warm-Up: Blooket
-
+Facilitate the [Blooket](https://dashboard.blooket.com/set/63d16a6402b104792091fdf5) from the [Callbacks](../Callbacks/README.md) lesson. This will hopefully refresh the students' memory about functions in preparation for the lesson.
 
 ## Lecture: Arrow Functions
-
+The [presentation](ArrowFunctions.pptx) reviews anonymous functions, introduces arrow functions as syntactic sugar, and covers a couple array methods where arrow functions are particularly helpful.
 
 ## Review: Worksheet
-
+Print out copies of the [worksheet](ArrowFunctionsWorksheet.docx), or direct students to the [online version](Worksheet.md) if they are virtual. Give them time to try to complete the worksheet without assistance. When they turn in their worksheets, check them for correctness against the [answer key](WorksheetAnswers.md), and give them back if there is anything they need to fix.
 
 ## Code-Along: Cereal Mascots for Some Reason
+Follow the [instructions](MascotsCodeAlong.md) to build up a sweet website. By the end of the activity, the project should look something like [this](https://cerealend.hylandoutreach.repl.co/).
 
+## Self-Paced Work: Trading Card Updates
+Students should follow the [self-paced work instructions](SelfPacedWork.md) to update their websites. They should be encouraged to change the subjects of the trading cards, and do whatever they would like with the styles.
 
-## Self-Paced Work: Cereal Mascots Updates
-
-
-## Challenges
-
- 
 ## Agenda
 
 | Activity | Time |
@@ -35,5 +32,5 @@ Students will be able to...
 | Lecture | 20m |
 | Review | 15m |
 | Break | 10m |
-| Code-Along | 30m |
-| Self-Paced Work/Challenges | 30m |
+| Code-Along | 40m |
+| Self-Paced Work | 20m |
