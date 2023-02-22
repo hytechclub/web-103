@@ -4,7 +4,8 @@ let passwordProtectedPages = {
     "Arrays/WatchlistCodeAlong.md": "awesome",
     "Callbacks/FunktionalCodeAlong.md": "teartheroofoff",
     "JsReview/QuizCodeAlong.md": "whoami",
-    "Objects/FoodPickerCodeAlong.md": "imhungry"
+    "Objects/FoodPickerCodeAlong.md": "imhungry",
+    "ArrowFunctions/MascotsCodeAlong.md": "horatio"
 }
 
 document.addEventListener('DOMContentLoaded', function() {
