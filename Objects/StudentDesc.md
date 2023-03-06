@@ -8,6 +8,8 @@ Learn how to use objects to store related pieces of data within one variable.
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-103/Objects/Objects.pptx' width='100%' height='450px' frameborder='0'></iframe>
 
 ## Code-Along: Food Picker
+[Click here for the code-along **starter code**.](https://replit.com/@HylandOutreach/FoodPickerStart#script.js)
+
 [Click here for the code-along instructions.](FoodPickerCodeAlong.md)
 
 ## Self-Paced Work: Food Picker Updates

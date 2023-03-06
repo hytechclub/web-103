@@ -8,6 +8,8 @@ Learn a new, shorter way to define functions!
 [Click here to view the worksheet.](Worksheet.md)
 
 ## Code-Along: Cereal Mascots For Some Reason
+[Click here for the code-along **starter code**.](https://replit.com/@HylandOutreach/CerealStart)
+
 [Click here for the code-along instructions.](MascotsCodeAlong.md)
 
 ## Self-Paced Work: Trading Card Updates
