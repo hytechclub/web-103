@@ -1,7 +1,7 @@
 # Challenges: Menu Application
 Complete these challenges based on an online menu.
 
-[Click here to view the Menu Application Repl project.](https://replit.com/@JosephMaxwell/MenuApplication) Fork the project to begin the challenges.
+[Click here to view the Menu Application Repl project.](https://replit.com/@HylandOutreach/MenuApplication) Fork the project to begin the challenges.
 
 ## Background: Application Testing
 Run the project, and see how the application works:
