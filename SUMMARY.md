@@ -21,3 +21,8 @@
   - [Worksheet](ArrowFunctions/Worksheet.md)
   - [Code-Along](ArrowFunctions/MascotsCodeAlong.md)
   - [Self-Paced Work](ArrowFunctions/SelfPacedWork.md)
+- [Week 6 - Mid-Semester Review](MidSemesterReview/StudentDesc.md)
+  - [Bug Fixing](MidSemesterReview/BugFixing.md)
+  - [Challenges](MidSemesterReview/Challenges.md)
+  - [Library](MidSemesterReview/Library.md)
+- [Final Project](FinalProject/StudentDesc.md)
