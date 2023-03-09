@@ -8,7 +8,7 @@ This course expands upon the material from Web 102, and dives deeper into more J
 - [Week 3: Objects / JSON](Objects/)
 - [Week 4: Callbacks](Callbacks/)
 - [Week 5: Arrow Functions](ArrowFunctions/)
-- Week 6: Review/Check-Ins
+- [Week 6: Mid-Semester Review](MidSemesterReview/)
 - Week 7: Promises (conceptually) + `async`/`await`
 - Week 8: `try`/`catch` (could maybe be combined with above, or swapped)
 - Week 9: Consuming an API (ultimate goal)

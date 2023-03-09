@@ -17,6 +17,16 @@ Present each of these options to the students, and then let them decide what the
 ### Bug Fixing Challenges
 Students can follow [these instructions](BugFixing.md) to fix some bugs in existing projects.
 
+Here are the solutions, each fixable in the **script.js** file for each project:
+
+- **Bug 1**: Line 1 - function name `runMe` does not match `onclick` attribute of `<button>` in **index.html**
+- **Bug 2**: Line 2 - `#age-level` does not select the proper `<input id="age">` from **index.html**
+- **Bug 3**: Line 5 - initialization sets `i` to `1` so the loop only executes `numCats-1` times
+- **Bug 4**: Line 19 - `rankIndex` is set to `rank+1` when it should be `rank-1` (off by two error)
+- **Bug 5**: Line 17 - `movieObject.pic` fails because the property is named `image`, not `pic`
+- **Bug 6**: Line 14 - the `displayByIndex` function is _called_ instead of properly _set_ as the `onclick`
+- **Bug 7**: Line 3 - function has no parentheses before the arrow, should be `() => {}`
+
 ### Other Challenges
 Students can follow [these instructions](Challenges.md) to work on some additional challenges.
 
@@ -32,7 +42,7 @@ If the students complete enough of the review activities satisfactorily, there s
 These games can take place while check-ins continue.
 
 ## Baamboozle Team Quiz
-Hopefully, all check-ins will be completed with some time to spare at the end. At that point, bring everybody together and facilitate the [Baamboozle Team Quiz](TODO). The students should split into two teams, and the instructor should click through questions. Note that Baamboozle is _very_ unfair, and the best team may not win - but that's okay!
+Hopefully, all check-ins will be completed with some time to spare at the end. At that point, bring everybody together and facilitate the [Baamboozle Team Quiz](https://www.baamboozle.com/game/1471097). The students should split into two teams, and the instructor should click through questions. Note that Baamboozle is _very_ unfair when using power-ups, and the best team may not win - but that's okay!
 
 ## Agenda
 
