@@ -9,10 +9,10 @@ This course expands upon the material from Web 102, and dives deeper into more J
 - [Week 4: Callbacks](Callbacks/)
 - [Week 5: Arrow Functions](ArrowFunctions/)
 - [Week 6: Mid-Semester Review](MidSemesterReview/)
-- Week 7: Promises (conceptually) + `async`/`await`
-- Week 8: `try`/`catch` (could maybe be combined with above, or swapped)
-- Week 9: Consuming an API (ultimate goal)
-- Week 10: Review & Final Project Introduction
+- [Week 7: Consuming an API](ApiConsumption/)
+- [Week 8: API Review & Examples](ApiReviewExamples/)
+- [Week 9: API Practice](ApiPractice/)
+- [Week 10: Final Project Introduction](FinalProject/)
 - Week 11: Final Project Work
 - Week 12: Final Project Presentations
 
