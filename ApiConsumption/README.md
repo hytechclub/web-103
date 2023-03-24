@@ -29,8 +29,8 @@ The first [presentation](ApiConcepts.pptx) should familiarize the students with 
 - Query parameters
 - JavaScript promises
 
-## Formative Assessment: Questions Slides
-Present the [Questions slides](ApiQuestions.pptx) to review the concepts covered in the first lecture. Call on a random student for each question, and ensure that every student answers at least once.
+## Formative Assessment: API Questions
+Present the [API Questions slides](ApiQuestions.pptx) to review the concepts covered in the first lecture. Call on a random student for each question, and ensure that every student answers at least once.
 
 ## Lecture 2: Using APIs
 The second [presentation](UsingApis.pptx) dives into the specific code used to work with APIs. This is focused on HTTP APIs called with `fetch`, wrapped in `try`/`catch`, and handled with `await`.
