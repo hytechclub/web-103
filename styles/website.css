@@ -1,3 +1,24 @@
 h2 {
   border-bottom: 1px solid #ddd;
 }
+
+div.inline-img {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+div.inline-img img {
+  border: 1px solid black;
+}
+
+div.inline-img div.img-container {
+  width: 165px;
+  margin: 0 auto;
+}
+
+div.inline-img div.instruction-container {
+  width: 415px;
+  font-size: 1.1em;
+}
