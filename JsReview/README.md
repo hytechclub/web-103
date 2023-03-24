@@ -1,4 +1,4 @@
-# Week 1: JavaScript Review
+# JavaScript Review
 Review the concepts covered by the [Web 102](https://github.com/hytechclub/web-102/) course, and give the students a chance to practice and re-learn their skills.
 
 ## Learning Objectives
