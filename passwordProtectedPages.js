@@ -5,8 +5,9 @@ let passwordProtectedPages = {
     "Callbacks/FunktionalCodeAlong.md": "teartheroofoff",
     "JsReview/QuizCodeAlong.md": "whoami",
     "Objects/FoodPickerCodeAlong.md": "imhungry",
-    "ArrowFunctions/MascotsCodeAlong.md": "horatio"
-}
+    "ArrowFunctions/MascotsCodeAlong.md": "horatio",
+    "ApiConsumption/DogFetcherCodeAlong.md": "wow"
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     function addPassword(pw) {

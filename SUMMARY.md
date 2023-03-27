@@ -25,4 +25,8 @@
   - [Bug Fixing](MidSemesterReview/BugFixing.md)
   - [Challenges](MidSemesterReview/Challenges.md)
   - [Library](MidSemesterReview/Library.md)
+- [Week 7 - Consuming an API](ApiConsumption/StudentDesc.md)
+  - [Warm-Up](ApiConsumption/QueryStylesWarmUp.md)
+  - [Code-Along](ApiConsumption/DogFetcherCodeAlong.md)
+  - [Self-Paced Work](ApiConsumption/DogFetcherSelfPacedWork.md)
 - [Final Project](FinalProject/StudentDesc.md)

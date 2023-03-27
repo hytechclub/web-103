@@ -10,10 +10,10 @@ Follow the links below to view each week of material.
 - [Week 4 (3/21): Callbacks](Callbacks/StudentDesc.md)
 - [Week 5 (3/28): Arrow Functions](ArrowFunctions/StudentDesc.md)
 - [Week 6 (4/4): Mid-Semester Review](MidSemesterReview/StudentDesc.md)
-- Week 7 (4/11): Promises + `async`/`await`
-- Week 8 (4/18): `try`/`catch`
-- Week 9 (4/25): Consuming an API
-- Week 10 (5/2): Review & Final Project Introduction
+- [Week 7 (4/11): Consuming an API](ApiConsumption/StudentDesc.md)
+- [Week 8 (4/18): API Review & Examples](ApiReviewExamples/StudentDesc.md)
+- [Week 9 (4/25): API Practice](ApiPractice/StudentDesc.md)
+- [Week 10 (5/2): Final Project Introduction](FinalProject/StudentDesc.md)
 - Week 11 (5/9): Final Project Work
 - Week 12 (5/16): Final Project Presentations
 
