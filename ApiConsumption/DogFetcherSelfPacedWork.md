@@ -37,6 +37,27 @@ Make these updates in the **script.js** file:
 1. [Get the selected animal option](https://www.w3schools.com/jsref/prop_select_value.asp) in the body of the function
 1. In the `fetch` call URL, replace the `shibes` with the interpolated value from the selected option value
 
+## New Dog Breeds
+Currently, the website only shows shiba inu dogs. This is a good thing, but some people might want other types of dogs as well. Luckily, this is possible... but it required the use of a _different_ API.
+
+### The [Dog CEO Dog API](https://dog.ceo/dog-api/)
+Head over to the **[Dog API](https://dog.ceo/dog-api/)** page to see how to get random dogs of a variety of breeds! This is very similar to the **shibe.online** API, but it is a little different:
+
+- The base URL is `https://dog.ceo/api/breeds/image/random`
+- There is no `count` query parameter
+- Instead of an array, The response is a JSON object with a `"message"` property
+- Only _one_ dog image is returned
+
+Update the code to use this new API instead of the **shibe.online** API!
+
+### More Customization
+Another benefit of the Dog API is that it is actually possible to specify a breed in the request. There are a number of ways to work with this data.
+
+- [Check out the Documentation for the API](https://dog.ceo/dog-api/documentation/)
+- [Check out the BREEDS LIST page to see how these requests can be used](https://dog.ceo/dog-api/breeds-list)
+
+Choose a few different breeds, and allow the _user_ to select which dog breed they would like to see.
+
 ## EXTRA CHALLENGE: Locking Pictures
 This is fun, but removing all the pictures every time new ones are retrieved is kind of sad. Figure out a way to keep around some of the `<img>` elements every time new images are grabbed! It should be possible for the user to select which pictures they would like to keep; all other pictures should be removed.
 
