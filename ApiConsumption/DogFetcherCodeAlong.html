@@ -607,13 +607,13 @@
 <h3 id="the-starter-code">The Starter Code</h3>
 <p>The starter project has quite a bit of code, but it&apos;s all HTML and CSS! In the <strong>index.html</strong> file, there are a few elements of note:</p>
 <ul>
-<li>An <code>&lt;input&gt;</code> with an <code>id</code> of <code>num-dogs</code></li>
-<li>A <code>&lt;button&gt;</code> with an <code>onclick</code> of <code>getDogs()</code></li>
-<li>An <code>&lt;img&gt;</code> with an <code>id</code> of <code>loading</code><ul>
-<li>This is currently hidden</li>
+<li>An <code>&lt;input&gt;</code> with an <code>id</code> of <code>&quot;num-dogs&quot;</code></li>
+<li>A <code>&lt;button&gt;</code> with an <code>onclick</code> of <code>&quot;getDogs()&quot;</code></li>
+<li>An <code>&lt;img&gt;</code> with an <code>id</code> of <code>&quot;loading&quot;</code><ul>
+<li>This is currently hidden using CSS</li>
 </ul>
 </li>
-<li>A <code>&lt;div&gt;</code> with an <code>id</code> of <code>dog-imgs</code></li>
+<li>A <code>&lt;div&gt;</code> with an <code>id</code> of <code>&quot;dog-imgs&quot;</code></li>
 </ul>
 <p>All of these elements will be necessary to make the website functional.</p>
 <h3 id="the-shibeonline-api">The <a href="https://shibe.online/" target="_blank">shibe.online</a> API</h3>
@@ -716,7 +716,7 @@ alert(responseJson);
 </code></pre>
 <p>Now, try running the project and clicking the button. It still will not work, but at least the error should appear in a pop-up! It should say the following:</p>
 <pre><code>TypeError: response.json is not a function
-</code></pre><h3 id="fixing-the-error-with-asyncronicity">Fixing the Error with Asyncronicity</h3>
+</code></pre><h3 id="fixing-the-error-with-asynchronicity">Fixing the Error with Asynchronicity</h3>
 <p>Hmm... why would <code>response.json</code> not be a function? The <code>fetch</code> call <em>should</em> return a <code>Response</code> object... or should it? What does the <code>fetch</code> function return again?</p>
 <p><strong>The <code>fetch</code> function returns a Promise object - so it must be <code>await</code>ed to yield the actual result!</strong></p>
 <ol>
@@ -894,7 +894,7 @@ dogImgsDiv.appendChild(newDogImg);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.8.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.8.3","depth":2,"path":"ApiConsumption/DogFetcherSelfPacedWork.md","ref":"ApiConsumption/DogFetcherSelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.8.1","depth":2,"path":"ApiConsumption/QueryStylesWarmUp.md","ref":"ApiConsumption/QueryStylesWarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiConsumption/DogFetcherCodeAlong.md","mtime":"2023-03-29T12:26:29.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-29T12:27:04.185Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.8.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.8.3","depth":2,"path":"ApiConsumption/DogFetcherSelfPacedWork.md","ref":"ApiConsumption/DogFetcherSelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.8.1","depth":2,"path":"ApiConsumption/QueryStylesWarmUp.md","ref":"ApiConsumption/QueryStylesWarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiConsumption/DogFetcherCodeAlong.md","mtime":"2023-03-29T17:22:02.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-29T17:22:36.185Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
