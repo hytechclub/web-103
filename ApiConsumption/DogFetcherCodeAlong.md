@@ -11,11 +11,11 @@ Typically, dogs play fetch. In this activity, _your code_ is going to be playing
 ### The Starter Code
 The starter project has quite a bit of code, but it's all HTML and CSS! In the **index.html** file, there are a few elements of note:
 
-- An `<input>` with an `id` of `num-dogs`
-- A `<button>` with an `onclick` of `getDogs()`
-- An `<img>` with an `id` of `loading`
-    - This is currently hidden
-- A `<div>` with an `id` of `dog-imgs`
+- An `<input>` with an `id` of `"num-dogs"`
+- A `<button>` with an `onclick` of `"getDogs()"`
+- An `<img>` with an `id` of `"loading"`
+    - This is currently hidden using CSS
+- A `<div>` with an `id` of `"dog-imgs"`
 
 All of these elements will be necessary to make the website functional.
 
@@ -127,7 +127,7 @@ Now, try running the project and clicking the button. It still will not work, bu
 TypeError: response.json is not a function
 ```
 
-### Fixing the Error with Asyncronicity
+### Fixing the Error with Asynchronicity
 Hmm... why would `response.json` not be a function? The `fetch` call _should_ return a `Response` object... or should it? What does the `fetch` function return again?
 
 **The `fetch` function returns a Promise object - so it must be `await`ed to yield the actual result!**
