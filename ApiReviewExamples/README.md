@@ -13,10 +13,10 @@ Students will be able to...
 Students can start by working on the [self-paced work from the previous lesson](../ApiConsumption/DogFetcherSelfPacedWork.md). This should help them review the material in a comfortable environment.
 
 ## Review: Blooket
-Facilitate the [Blooket quiz game](TODO). Note than an account is required to host the game.
+Facilitate the [Blooket quiz game](https://dashboard.blooket.com/set/6422fe57d17b5fa22d5eb76d). Note than an account is required to host the game.
 
 ## Code-Along: What Does the Cat Say?
-Follow [the instructions](CatSayCodeAlong.md) to build a website that displays pictures of cats with messages.
+Follow [the instructions](CatSayCodeAlong.md) to build a website that displays pictures of cats with messages. If students are interested, there is also some optional [self-paced work](CatSaySelfPacedWork.md) that explores more of the [cataas API](https://cataas.com/#/).
 
 ## Examples
 Introduce [the examples](Examples.md) to show students more of what is possible with APIs. Students should have an opportunity to explore and modify a variety of API-driven front-end web applications.
