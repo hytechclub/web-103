@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Worksheet · Web 103 | Hy-Tech Club</title>
+        <title>Color Schemer · Web 103 | Hy-Tech Club</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,7 +63,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MascotsCodeAlong.html" />
+    <link rel="next" href="TvCharacters.html" />
     
     
     <link rel="prev" href="StudentDesc.html" />
@@ -366,9 +366,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.6" data-path="../ArrowFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../ArrowFunctions/StudentDesc.html">
             
                     
                     Week 5 - Arrow Functions
@@ -380,9 +380,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="Worksheet.html">
+        <li class="chapter " data-level="1.6.1" data-path="../ArrowFunctions/Worksheet.html">
             
-                <a href="Worksheet.html">
+                <a href="../ArrowFunctions/Worksheet.html">
             
                     
                     Worksheet
@@ -393,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="MascotsCodeAlong.html">
+        <li class="chapter " data-level="1.6.2" data-path="../ArrowFunctions/MascotsCodeAlong.html">
             
-                <a href="MascotsCodeAlong.html">
+                <a href="../ArrowFunctions/MascotsCodeAlong.html">
             
                     
                     Code-Along
@@ -406,9 +406,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="SelfPacedWork.html">
+        <li class="chapter " data-level="1.6.3" data-path="../ArrowFunctions/SelfPacedWork.html">
             
-                <a href="SelfPacedWork.html">
+                <a href="../ArrowFunctions/SelfPacedWork.html">
             
                     
                     Self-Paced Work
@@ -643,9 +643,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../ApiPractice/StudentDesc.html">
+        <li class="chapter " data-level="1.10" data-path="StudentDesc.html">
             
-                <a href="../ApiPractice/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Week 9 - API Practice
@@ -657,9 +657,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../ApiPractice/ColorSchemer.html">
+        <li class="chapter active" data-level="1.10.1" data-path="ColorSchemer.html">
             
-                <a href="../ApiPractice/ColorSchemer.html">
+                <a href="ColorSchemer.html">
             
                     
                     Color Schemer
@@ -670,9 +670,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../ApiPractice/TvCharacters.html">
+        <li class="chapter " data-level="1.10.2" data-path="TvCharacters.html">
             
-                <a href="../ApiPractice/TvCharacters.html">
+                <a href="TvCharacters.html">
             
                     
                     TV Characters
@@ -683,9 +683,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../ApiPractice/EmojiCrush.html">
+        <li class="chapter " data-level="1.10.3" data-path="EmojiCrush.html">
             
-                <a href="../ApiPractice/EmojiCrush.html">
+                <a href="EmojiCrush.html">
             
                     
                     Emoji Crush
@@ -744,7 +744,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Worksheet</a>
+        <a href=".." >Color Schemer</a>
     </h1>
 </div>
 
@@ -759,7 +759,147 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-103/ArrowFunctions/ArrowFunctionsWorksheet.docx" width="100%" height="2000px" frameborder="0"></iframe>
+                                <h1 id="color-schemer">Color Schemer</h1>
+<p>Follow these instructions to update a website that generates aesthetically pleasing color schemes.</p>
+<p><a href="https://replit.com/@HylandOutreach/ColorSchemer" target="_blank">Click here to view the Color Schemer Starter Repl project.</a> Fork the project to begin the activity.</p>
+<h2 id="part-zero-background">Part Zero: Background</h2>
+<p>This project is already fairly substantial in terms of the code and the functionality.</p>
+<h3 id="the-user-experience">The User Experience</h3>
+<p>Currently, the user is able to select a color, click the &quot;Generate a New Scheme&quot; button, and see the colors change. There is also a &quot;Randomize&quot; button that will choose a random seed color, and then get the scheme.</p>
+<p>This is functional, but it would be cool to be able to see some different types of color schemes... right now, it always uses &quot;quad&quot; mode.</p>
+<h3 id="the-api">The API</h3>
+<p>The code uses <a href="https://www.thecolorapi.com/" target="_blank">T H E <span style="color: darkred">C O L O R</span> A P I</a> to pull matching colors for a given seed. A ton of data is returned from each request, but only some parts of it will be relevant.</p>
+<p>For example, a <code>scheme</code> with the color red (<code>FF0000</code>), in <code>quad</code> mode, with <code>4</code> colors, could look like this:</p>
+<h4 id="url">URL</h4>
+<p><a href="https://www.thecolorapi.com/scheme?hex=FF0000&amp;mode=quad&amp;count=4" target="_blank">https://www.thecolorapi.com/scheme?hex=FF0000&amp;mode=quad&amp;count=4</a></p>
+<h4 id="response-abbreviated">Response (Abbreviated)</h4>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;mode&quot;</span>: <span class="hljs-string">&quot;quad&quot;</span>,
+  <span class="hljs-string">&quot;count&quot;</span>: <span class="hljs-string">&quot;4&quot;</span>,
+  <span class="hljs-string">&quot;colors&quot;</span>: [{
+    <span class="hljs-string">&quot;hex&quot;</span>: {
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;#70D10E&quot;</span>,
+    },
+    <span class="hljs-string">&quot;image&quot;</span>: {
+      <span class="hljs-string">&quot;named&quot;</span>: <span class="hljs-string">&quot;https://www.thecolorapi.com/id?format=svg&amp;hex=70D10E&quot;</span>
+    },
+    <span class="hljs-string">&quot;contrast&quot;</span>: {
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;#000000&quot;</span>
+    }
+  },
+  {
+    <span class="hljs-string">&quot;hex&quot;</span>: {
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;#0BE4E4&quot;</span>,
+    },
+    <span class="hljs-string">&quot;image&quot;</span>: {
+      <span class="hljs-string">&quot;named&quot;</span>: <span class="hljs-string">&quot;https://www.thecolorapi.com/id?format=svg&amp;hex=0BE4E4&quot;</span>
+    },
+    <span class="hljs-string">&quot;contrast&quot;</span>: {
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;#000000&quot;</span>
+    }
+  }]
+}
+</code></pre>
+<p>All of the color objects within the <code>colors</code> property array contain the hex values used to update the website styles.</p>
+<h3 id="the-code">The Code</h3>
+<p>There are several functions in the <strong>script.js</strong> file that make the current site work how it does, as well as some set variables.</p>
+<ul>
+<li><code>colorCustomProps</code>: this is the ordered array of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS custom properties</a> that determine the colors for the page</li>
+<li><code>chooseRandomFromList</code>: this chooses a random item from an array, and returns it</li>
+<li><code>randomizeSeedColor</code>: this chooses a random hex value, and updates the HTML color input</li>
+<li><code>randomizeSchemeType</code>: this function is not called yet - but it randomizes the value of the currently-non-existent scheme type dropdown</li>
+<li><code>setNewScheme</code>: this takes some color objects and updates the custom properties to reflect their hex values</li>
+<li><code>newScheme</code>: this makes the request to the API, and updates the scheme with the new colors</li>
+<li><code>randomize</code>: this randomizes the seed color, and then sets the new scheme</li>
+</ul>
+<p><em>Note: You don&apos;t really need to understand all the code - you can still work with it!</em></p>
+<h3 id="the-goal">The Goal</h3>
+<p>These instructions show how to add a new dropdown where the user can decide which type of color scheme they would like!</p>
+<h2 id="part-one-html">Part One: HTML</h2>
+<p>The first step is to add the dropdown in the HTML. This will be possible using a <code>&lt;select&gt;&lt;/select&gt;</code> element that contains <code>&lt;option&gt;&lt;/option&gt;</code> child elements. Each <code>&lt;option&gt;</code> should have a <code>value</code> attribute representing the scheme type, and the <code>&lt;select&gt;</code> should have an <code>id</code> attribute so it is identifiable in the JavaScript. All of this should be wrapped in a <code>&lt;p&gt;&lt;/p&gt;</code> element, with a <code>&lt;span&gt;&lt;/span&gt;</code> that introduces the input.</p>
+<h3 id="creating-the-dropdown">Creating the Dropdown</h3>
+<ol>
+<li>Open the <strong>index.html</strong> file for editing</li>
+<li>Make a new line under the <code>&lt;p&gt;First, pick...&lt;/p&gt;</code> element</li>
+<li>There, create a new <code>&lt;p&gt;&lt;/p&gt;</code> element</li>
+<li>Within the <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code>, make a new line</li>
+<li>There, create a <code>&lt;span&gt;</code> element that says &quot;Next, pick a scheme type:&quot;</li>
+<li>Under that, create a <code>&lt;select&gt;&lt;/select&gt;</code> element</li>
+<li>Give the <code>&lt;select&gt;</code> element an <code>id</code> of <code>&quot;scheme-type&quot;</code></li>
+</ol>
+<p>Run the project, and verify that a new input appears! So far, the added HTML should look something like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Next, pick a scheme type:<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;scheme-type&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<h3 id="adding-the-options">Adding the Options</h3>
+<p>The input is useless without any options, so add some options. There should be four options total, for these types:</p>
+<ul>
+<li><code>quad</code></li>
+<li><code>analogic</code></li>
+<li><code>complement</code></li>
+<li><code>monochrome</code></li>
+</ul>
+<p>First, make a new line within the <code>&lt;select&gt;</code> and <code>&lt;/select&gt;</code> tags. Then, for each of the four types:</p>
+<ol>
+<li>Create a new <code>&lt;option&gt;&lt;/option&gt;</code> element</li>
+<li>Add a <code>value</code> attribute with the given type</li>
+<li>Add a capitalized name within the <code>&lt;option&gt;</code> and <code>&lt;/option&gt;</code> tags</li>
+</ol>
+<p>Run the project, and verify that all the options appear! The added options should look something like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;quad&quot;</span>&gt;</span>Quad<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;analogic&quot;</span>&gt;</span>Analogic<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;complement&quot;</span>&gt;</span>Complement<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;monochrome&quot;</span>&gt;</span>Monochrome<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+</code></pre>
+<h2 id="part-two-javascript">Part Two: JavaScript</h2>
+<p>Now the HTML should all be good to go, but it&apos;s not actually doing anything yet! The next step is to include the scheme type from the dropdown as a query parameter in the API request.</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Find the <code>newScheme</code> function definition</li>
+<li>Under the <code>hex</code> variable creation, make a new line</li>
+<li>There, create a new variable named <code>schemeTypeInput</code></li>
+<li>Use <code>document.querySelector</code> to grab the <code>&lt;select id=&quot;scheme-type&quot;&gt;</code> from the HTML, and store it in the <code>schemeTypeInput</code> variable</li>
+<li>Under that, create a new variable named <code>schemeType</code></li>
+<li>Set <code>schemeType</code> to be the <code>value</code> of <code>schemeTypeInput</code></li>
+<li>In the <code>url</code> template literal below, remove the <code>quad</code> after <code>mode=</code></li>
+<li>Replace <code>quad</code> with the interpolated <code>schemeType</code> value</li>
+</ol>
+<p>Run the project, select a new scheme type (like monochrome), click the &quot;Generate a New Scheme&quot; button, and see a scheme of the new type! The updated code in the <code>newScheme</code> function should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">newScheme</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// ...</span>
+  <span class="hljs-keyword">let</span> schemeTypeInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#scheme-type&quot;</span>);
+  <span class="hljs-keyword">let</span> schemeType = schemeTypeInput.value;
+
+  <span class="hljs-keyword">let</span> url = <span class="hljs-string">`https://www.thecolorapi.com/scheme?hex=<span class="hljs-subst">${hex}</span>&amp;mode=<span class="hljs-subst">${schemeType}</span>&amp;count=4`</span>;
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<h2 id="part-three-randomization">Part Three: Randomization</h2>
+<p>The final step is to include the scheme type in the randomization that happens when the &quot;Randomize&quot; button is clicked. Luckily, there is already a function that does this!</p>
+<ol>
+<li>Open the <strong>script.js</strong> file</li>
+<li>Find the <code>randomize</code> function definition</li>
+<li>Make a new line above the call to the <code>newScheme</code> function</li>
+<li>There, call the <code>randomizeSchemeType</code> function</li>
+</ol>
+<p>Run the project, click the &quot;Randomize&quot; button, and verify that a random scheme type is selected! The updated code in the <code>randomize</code> function should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">randomize</span>(<span class="hljs-params"></span>) </span>{
+  randomizeSeedColor();
+  randomizeSchemeType();
+  <span class="hljs-keyword">await</span> newScheme();
+}
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>The update may have been a small part of the overall functionality of the site, but being able to work with existing code and make it better is a huge part of software development. There are quite a few additional updates you could try to make - if you have any interest, try to make it whatever you&apos;d like! Here are some ideas:</p>
+<ul>
+<li>Update the sample text and content so that it is more reflective of a real website</li>
+<li>Add additional colors through CSS custom properties, and grab more colors from the API call</li>
+<li>Display the colors (and even their names) every time a new color scheme is set</li>
+<li>Add more scheme types based on the scheme modes: <code>monochrome-dark</code>, <code>monochrome-light</code>, <code>analogic-complement</code>, and <code>triad</code></li>
+</ul>
+<p>Feel free to use the API for any desired purpose.</p>
 
                                 
                                 </section>
@@ -787,12 +927,12 @@
 
             
                 
-                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Week 5 - Arrow Functions">
+                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Week 9 - API Practice">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MascotsCodeAlong.html" class="navigation navigation-next " aria-label="Next page: Code-Along">
+                <a href="TvCharacters.html" class="navigation navigation-next " aria-label="Next page: TV Characters">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -803,7 +943,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Worksheet","level":"1.6.1","depth":2,"next":{"title":"Code-Along","level":"1.6.2","depth":2,"path":"ArrowFunctions/MascotsCodeAlong.md","ref":"ArrowFunctions/MascotsCodeAlong.md","articles":[]},"previous":{"title":"Week 5 - Arrow Functions","level":"1.6","depth":1,"path":"ArrowFunctions/StudentDesc.md","ref":"ArrowFunctions/StudentDesc.md","articles":[{"title":"Worksheet","level":"1.6.1","depth":2,"path":"ArrowFunctions/Worksheet.md","ref":"ArrowFunctions/Worksheet.md","articles":[]},{"title":"Code-Along","level":"1.6.2","depth":2,"path":"ArrowFunctions/MascotsCodeAlong.md","ref":"ArrowFunctions/MascotsCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.6.3","depth":2,"path":"ArrowFunctions/SelfPacedWork.md","ref":"ArrowFunctions/SelfPacedWork.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ArrowFunctions/Worksheet.md","mtime":"2023-04-13T17:20:14.578Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T17:20:58.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Color Schemer","level":"1.10.1","depth":2,"next":{"title":"TV Characters","level":"1.10.2","depth":2,"path":"ApiPractice/TvCharacters.md","ref":"ApiPractice/TvCharacters.md","articles":[]},"previous":{"title":"Week 9 - API Practice","level":"1.10","depth":1,"path":"ApiPractice/StudentDesc.md","ref":"ApiPractice/StudentDesc.md","articles":[{"title":"Color Schemer","level":"1.10.1","depth":2,"path":"ApiPractice/ColorSchemer.md","ref":"ApiPractice/ColorSchemer.md","articles":[]},{"title":"TV Characters","level":"1.10.2","depth":2,"path":"ApiPractice/TvCharacters.md","ref":"ApiPractice/TvCharacters.md","articles":[]},{"title":"Emoji Crush","level":"1.10.3","depth":2,"path":"ApiPractice/EmojiCrush.md","ref":"ApiPractice/EmojiCrush.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiPractice/ColorSchemer.md","mtime":"2023-04-13T17:20:14.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T17:20:58.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

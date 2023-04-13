@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Worksheet · Web 103 | Hy-Tech Club</title>
+        <title>TV Characters · Web 103 | Hy-Tech Club</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -63,10 +63,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="MascotsCodeAlong.html" />
+    <link rel="next" href="EmojiCrush.html" />
     
     
-    <link rel="prev" href="StudentDesc.html" />
+    <link rel="prev" href="ColorSchemer.html" />
     
 
     </head>
@@ -366,9 +366,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="StudentDesc.html">
+        <li class="chapter " data-level="1.6" data-path="../ArrowFunctions/StudentDesc.html">
             
-                <a href="StudentDesc.html">
+                <a href="../ArrowFunctions/StudentDesc.html">
             
                     
                     Week 5 - Arrow Functions
@@ -380,9 +380,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="Worksheet.html">
+        <li class="chapter " data-level="1.6.1" data-path="../ArrowFunctions/Worksheet.html">
             
-                <a href="Worksheet.html">
+                <a href="../ArrowFunctions/Worksheet.html">
             
                     
                     Worksheet
@@ -393,9 +393,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="MascotsCodeAlong.html">
+        <li class="chapter " data-level="1.6.2" data-path="../ArrowFunctions/MascotsCodeAlong.html">
             
-                <a href="MascotsCodeAlong.html">
+                <a href="../ArrowFunctions/MascotsCodeAlong.html">
             
                     
                     Code-Along
@@ -406,9 +406,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="SelfPacedWork.html">
+        <li class="chapter " data-level="1.6.3" data-path="../ArrowFunctions/SelfPacedWork.html">
             
-                <a href="SelfPacedWork.html">
+                <a href="../ArrowFunctions/SelfPacedWork.html">
             
                     
                     Self-Paced Work
@@ -643,9 +643,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../ApiPractice/StudentDesc.html">
+        <li class="chapter " data-level="1.10" data-path="StudentDesc.html">
             
-                <a href="../ApiPractice/StudentDesc.html">
+                <a href="StudentDesc.html">
             
                     
                     Week 9 - API Practice
@@ -657,9 +657,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1" data-path="../ApiPractice/ColorSchemer.html">
+        <li class="chapter " data-level="1.10.1" data-path="ColorSchemer.html">
             
-                <a href="../ApiPractice/ColorSchemer.html">
+                <a href="ColorSchemer.html">
             
                     
                     Color Schemer
@@ -670,9 +670,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../ApiPractice/TvCharacters.html">
+        <li class="chapter active" data-level="1.10.2" data-path="TvCharacters.html">
             
-                <a href="../ApiPractice/TvCharacters.html">
+                <a href="TvCharacters.html">
             
                     
                     TV Characters
@@ -683,9 +683,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../ApiPractice/EmojiCrush.html">
+        <li class="chapter " data-level="1.10.3" data-path="EmojiCrush.html">
             
-                <a href="../ApiPractice/EmojiCrush.html">
+                <a href="EmojiCrush.html">
             
                     
                     Emoji Crush
@@ -744,7 +744,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Worksheet</a>
+        <a href=".." >TV Characters</a>
     </h1>
 </div>
 
@@ -759,7 +759,149 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-103/ArrowFunctions/ArrowFunctionsWorksheet.docx" width="100%" height="2000px" frameborder="0"></iframe>
+                                <h1 id="tv-characters">TV Characters</h1>
+<p>Follow these instructions to update a website that displays characters from TV shows.</p>
+<p><a href="https://replit.com/@HylandOutreach/TvCharacters" target="_blank">Click here to view the TV Characters Starter Repl project.</a> Fork the project to begin the activity.</p>
+<h2 id="part-zero-background">Part Zero: Background</h2>
+<p>There is significant code and functionality already built into this project.</p>
+<h3 id="the-user-experience">The User Experience</h3>
+<p>When someone goes to the page, they are able to click the &quot;Load Characters&quot; button to see characters from Stranger Things appear.</p>
+<h3 id="the-api">The API</h3>
+<p>The API that makes this possible is named <a href="https://www.tvmaze.com/api" target="_blank">TVMAZE</a>. There are a variety of endpoints that return data about TV shows. The TV Characters site uses the <code>/singlesearch/</code> endpoint to get data about <code>Stranger Things</code>, and the <code>cast</code> data is embedded. The URL is static, so it currently returns the same data each time. It looks something like this:</p>
+<h4 id="url">URL</h4>
+<p><a href="https://api.tvmaze.com/singlesearch/shows?q=Stranger%20Things&amp;embed=cast" target="_blank">https://api.tvmaze.com/singlesearch/shows?q=Stranger Things&amp;embed=cast</a></p>
+<h4 id="response-abbreviated">Response (Abbreviated)</h4>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2993</span>,
+  <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;https://www.tvmaze.com/shows/2993/stranger-things&quot;</span>,
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Stranger Things&quot;</span>,
+  <span class="hljs-string">&quot;summary&quot;</span>: <span class="hljs-string">&quot;&lt;p&gt;A love letter to the &apos;80s classics that captivated a generation, &lt;b&gt;Stranger Things&lt;/b&gt; is set in 1983 Indiana, where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.&lt;/p&gt;&quot;</span>,
+  <span class="hljs-string">&quot;_embedded&quot;</span>: {
+    <span class="hljs-string">&quot;cast&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;person&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Winona Ryder&quot;</span>,
+          <span class="hljs-string">&quot;image&quot;</span>: {
+            <span class="hljs-string">&quot;medium&quot;</span>: <span class="hljs-string">&quot;https://static.tvmaze.com/uploads/images/medium_portrait/204/511427.jpg&quot;</span>,
+          }
+        },
+        <span class="hljs-string">&quot;character&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Joyce Byers&quot;</span>,
+          <span class="hljs-string">&quot;image&quot;</span>: {
+            <span class="hljs-string">&quot;medium&quot;</span>: <span class="hljs-string">&quot;https://static.tvmaze.com/uploads/images/medium_portrait/406/1015330.jpg&quot;</span>,
+          }
+      },
+      {
+        <span class="hljs-string">&quot;person&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Caleb McLaughlin&quot;</span>,
+          <span class="hljs-string">&quot;image&quot;</span>: {
+            <span class="hljs-string">&quot;medium&quot;</span>: <span class="hljs-string">&quot;https://static.tvmaze.com/uploads/images/medium_portrait/16/40907.jpg&quot;</span>,
+          }
+        },
+        <span class="hljs-string">&quot;character&quot;</span>: {
+          <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lucas Sinclair&quot;</span>,
+          <span class="hljs-string">&quot;image&quot;</span>: {
+            <span class="hljs-string">&quot;medium&quot;</span>: <span class="hljs-string">&quot;https://static.tvmaze.com/uploads/images/medium_portrait/410/1027426.jpg&quot;</span>,
+          },
+        },
+      }
+    ]
+  }
+}
+</code></pre>
+<p>All the data that renders is in the <code>_embedded.cast</code> array property.</p>
+<h3 id="the-code">The Code</h3>
+<p>There are several functions in the <strong>script.js</strong> file that make the current site work how it does.</p>
+<ul>
+<li><code>objectToHtml</code>: takes a JSON data object and returns an HTML element with a nice image/name</li>
+<li><code>getCharactersForShow</code>: makes the request to the API - currently returns information about Stranger Things</li>
+<li><code>loadCharacters</code>: makes the call to get the data, and then puts it on the page</li>
+</ul>
+<h3 id="the-goal">The Goal</h3>
+<p>Right now, the site is exclusively about Stranger Things. Update it so that it can display characters from any TV show!</p>
+<h2 id="part-one-the-html">Part One: The HTML</h2>
+<p>First, there needs to be a way for the user to say which TV show they would like.</p>
+<ol>
+<li>Open the <strong>index.html</strong> file for editing</li>
+<li>Make a new line under the <code>&lt;h1&gt;Characters&lt;/h1&gt;</code> element</li>
+<li>There, create a new <code>&lt;input&gt;</code> element</li>
+<li>Set the <code>type</code> attribute to be <code>&quot;text&quot;</code></li>
+<li>Set the <code>id</code> attribute to be <code>&quot;tv-show&quot;</code></li>
+<li>Set the <code>placeholder</code> attribute to be <code>&quot;Enter a TV Show&quot;</code></li>
+</ol>
+<p>Run the project and verify that the new text box appears! The added HTML should look like this:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;tv-show&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Enter a TV Show&quot;</span> /&gt;</span>
+</code></pre>
+<h2 id="part-two-function-parameterization">Part Two: Function Parameterization</h2>
+<p>Next, the JavaScript code needs to take what the user enters, and pass it along to get the data.</p>
+<h3 id="updating-the-definition">Updating the Definition</h3>
+<p>Currently, the <code>getCharactersForShow</code> function does <em>not</em> take any arguments. Add a parameter so that it will be possible to pass a show search query into the API.</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Find the <code>getCharactersForShow</code> function definition</li>
+<li>Add a parameter named <code>show</code> between the parentheses</li>
+</ol>
+<p>The updated code should look like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCharactersForShow</span>(<span class="hljs-params">show</span>) </span>{ <span class="hljs-comment">/* ... */</span> }
+</code></pre>
+<h3 id="updating-the-call">Updating the Call</h3>
+<p>Now, it will be possible to pass the value to the function call.</p>
+<ol>
+<li>Find the <code>loadCharacters</code> function definition</li>
+<li>Make a new line above the <code>characters</code> variable creation</li>
+<li>There, create a new variable named <code>tvShowInput</code></li>
+<li>Use <code>document.querySelector</code> to grab the <code>&lt;input id=&quot;tv-show&quot;&gt;</code> from the HTML, and store it in the <code>tvShowInput</code> variable</li>
+<li>Under that, create a new variable named <code>tvShow</code></li>
+<li>Set <code>tvShow</code> to be the <code>value</code> of <code>tvShowInput</code></li>
+<li>Under that, update the call to <code>getCharactersForShow</code> by passing <code>tvShow</code> as an argument</li>
+</ol>
+<p>Nothing will actually change yet, but now the <code>getCharactersForShow</code> function has a show to use! The updated code should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> tvShowInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#tv-show&quot;</span>);
+<span class="hljs-keyword">let</span> tvShow = tvShowInput.value;
+<span class="hljs-keyword">let</span> characters = <span class="hljs-keyword">await</span> getCharactersForShow(tvShow);
+</code></pre>
+<h2 id="part-three-query-parameterization">Part Three: Query Parameterization</h2>
+<p>Here&apos;s where the magic happens. The API call can be updated to search for whatever show the user entered in the text box!</p>
+<ol>
+<li>Find the <code>getCharactersForShow</code> function</li>
+<li>Find the <code>url</code> variable creation</li>
+<li>In the template literal for it, remove <code>Stranger Things</code></li>
+<li>Replace it with the interpolated value of the <code>show</code> parameter</li>
+</ol>
+<p>Run the project, enter a real TV show, click the button, and verify that characters from that TV show appear! The updated URL code should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> url = <span class="hljs-string">`https://api.tvmaze.com/singlesearch/shows?q=<span class="hljs-subst">${show}</span>&amp;embed=cast`</span>;
+</code></pre>
+<h2 id="part-four-handling-an-error">Part Four: Handling an Error</h2>
+<p>Now this is all well and good, but what happens when a fake show title is entered? Luckily, there is a <code>try</code>/<code>catch</code> in place, so a message like <code>TypeError: Cannot read properties of null (reading &apos;_embedded&apos;)</code> may be <code>alert</code>ed. That message is not very clear, though... the site can do better.</p>
+<h3 id="background">Background</h3>
+<p>HTTP responses have <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">status codes</a> that indicate the success of the request. For example, a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404" target="_blank">404</a> error indicates that a resource has not been found. In the case of the TVMAZE API, it will return a <code>404</code> response if a TV search does not return any results.</p>
+<p>The status code is returned with the response object from a <code>fetch</code> call, so it is possible to check it. It is also possible to use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw" target="_blank"><code>throw</code></a> to display a new message to bubble up in the <code>try</code>/<code>catch</code>.</p>
+<p>The goal will be to display a new message if the search fails, and the entered show is not found!</p>
+<h3 id="the-code">The Code</h3>
+<p>After the response is returned, it will be possible to handle any errors gracefully.</p>
+<ol>
+<li>Open the <strong>script.js</strong> file for editing</li>
+<li>Find the <code>getCharactersForShow</code> function definition</li>
+<li>Find the <code>fetch</code> call in the <code>try</code> block</li>
+<li>Make a new line under that</li>
+<li>There, create an <code>if</code> structure</li>
+<li>In the <code>if</code> condition, check if <code>response.status</code> is equal to <code>404</code></li>
+<li>In the body block of the <code>if</code> statement, use <code>throw</code> to send an error message of &quot;Show not found &#x2639;&quot;</li>
+</ol>
+<p>Now, run the project, enter a fake show, and verify that a nicer error message is <code>alert</code>ed! The added code should look something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">if</span> (response.status === <span class="hljs-number">404</span>) {
+  <span class="hljs-keyword">throw</span> <span class="hljs-string">`Show not found &#x2639;`</span>;
+}
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>This activity showed another example of an API with a lot of possibility. The code only used a small part of the data returned, but so much more of it could be useful! Here are some ideas for this API:</p>
+<ul>
+<li>Display both the character <em>and</em> the actor for each entry</li>
+<li>Display more information about each new show, such as the description or the image</li>
+<li>Update the CSS colors/fonts so that they are not specific to Stranger Things</li>
+<li>Make each character &quot;card&quot; a link that can go to the character page (like <a href="https://www.tvmaze.com/characters/165115/stranger-things-mike-wheeler" target="_blank">this</a>)</li>
+</ul>
+<p>Feel free to use the API for any desired purpose.</p>
 
                                 
                                 </section>
@@ -787,12 +929,12 @@
 
             
                 
-                <a href="StudentDesc.html" class="navigation navigation-prev " aria-label="Previous page: Week 5 - Arrow Functions">
+                <a href="ColorSchemer.html" class="navigation navigation-prev " aria-label="Previous page: Color Schemer">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="MascotsCodeAlong.html" class="navigation navigation-next " aria-label="Next page: Code-Along">
+                <a href="EmojiCrush.html" class="navigation navigation-next " aria-label="Next page: Emoji Crush">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -803,7 +945,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Worksheet","level":"1.6.1","depth":2,"next":{"title":"Code-Along","level":"1.6.2","depth":2,"path":"ArrowFunctions/MascotsCodeAlong.md","ref":"ArrowFunctions/MascotsCodeAlong.md","articles":[]},"previous":{"title":"Week 5 - Arrow Functions","level":"1.6","depth":1,"path":"ArrowFunctions/StudentDesc.md","ref":"ArrowFunctions/StudentDesc.md","articles":[{"title":"Worksheet","level":"1.6.1","depth":2,"path":"ArrowFunctions/Worksheet.md","ref":"ArrowFunctions/Worksheet.md","articles":[]},{"title":"Code-Along","level":"1.6.2","depth":2,"path":"ArrowFunctions/MascotsCodeAlong.md","ref":"ArrowFunctions/MascotsCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.6.3","depth":2,"path":"ArrowFunctions/SelfPacedWork.md","ref":"ArrowFunctions/SelfPacedWork.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ArrowFunctions/Worksheet.md","mtime":"2023-04-13T17:20:14.578Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T17:20:58.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TV Characters","level":"1.10.2","depth":2,"next":{"title":"Emoji Crush","level":"1.10.3","depth":2,"path":"ApiPractice/EmojiCrush.md","ref":"ApiPractice/EmojiCrush.md","articles":[]},"previous":{"title":"Color Schemer","level":"1.10.1","depth":2,"path":"ApiPractice/ColorSchemer.md","ref":"ApiPractice/ColorSchemer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiPractice/TvCharacters.md","mtime":"2023-04-13T17:20:14.546Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-13T17:20:58.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
