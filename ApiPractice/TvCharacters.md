@@ -18,41 +18,42 @@ The API that makes this possible is named [TVMAZE](https://www.tvmaze.com/api). 
 #### Response (Abbreviated)
 ```json
 {
-  "id": 2993,
-  "url": "https://www.tvmaze.com/shows/2993/stranger-things",
-  "name": "Stranger Things",
-  "summary": "<p>A love letter to the '80s classics that captivated a generation, <b>Stranger Things</b> is set in 1983 Indiana, where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.</p>",
-  "_embedded": {
-    "cast": [
+	"id": 2993,
+	"url": "https://www.tvmaze.com/shows/2993/stranger-things",
+	"name": "Stranger Things",
+	"summary": "<p>A love letter to the '80s classics that captivated a generation, <b>Stranger Things</b> is set in 1983 Indiana, where a young boy vanishes into thin air. As friends, family and local police search for answers, they are drawn into an extraordinary mystery involving top-secret government experiments, terrifying supernatural forces and one very strange little girl.</p>",
+	"_embedded": {
+		"cast": [
       {
-        "person": {
-          "name": "Winona Ryder",
-          "image": {
-            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/204/511427.jpg",
-          }
-        },
-        "character": {
-          "name": "Joyce Byers",
-          "image": {
-            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/406/1015330.jpg",
-          }
-      },
-      {
-        "person": {
-          "name": "Caleb McLaughlin",
-          "image": {
-            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/16/40907.jpg",
-          }
-        },
-        "character": {
-          "name": "Lucas Sinclair",
-          "image": {
-            "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/410/1027426.jpg",
-          },
-        },
-      }
-    ]
-  }
+				"person": {
+					"name": "Winona Ryder",
+					"image": {
+						"medium": "https://static.tvmaze.com/uploads/images/medium_portrait/204/511427.jpg"
+					}
+				},
+				"character": {
+					"name": "Joyce Byers",
+					"image": {
+						"medium": "https://static.tvmaze.com/uploads/images/medium_portrait/406/1015330.jpg"
+					}
+				}
+			},
+			{
+				"person": {
+					"name": "Caleb McLaughlin",
+					"image": {
+						"medium": "https://static.tvmaze.com/uploads/images/medium_portrait/16/40907.jpg"
+					}
+				},
+				"character": {
+					"name": "Lucas Sinclair",
+					"image": {
+						"medium": "https://static.tvmaze.com/uploads/images/medium_portrait/410/1027426.jpg"
+					}
+				}
+			}
+		]
+	}
 }
 ```
 
