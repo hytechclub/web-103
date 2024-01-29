@@ -158,7 +158,7 @@ From there, the actual image is retrieved through the `obj.primaryImageSmall` pr
 #### shibe.online
 The [shibe.online API](https://shibe.online/) is thankfully much simpler. This is the same API used in the [Dog Fetcher](../../ApiConsumption/DogFetcherCodeAlong.md) activity.
 
-The URL looks like this: [https://shibe.online/api/shibes?count=1](`https://shibe.online/api/shibes?count=1)
+The URL looks like this: [https://shibe.online/api/shibes?count=1](https://shibe.online/api/shibes?count=1)
 
 The JSON response looks like this:
 
