@@ -16,7 +16,7 @@ Follow the links below to view each week of material.
 - [Week 9 (4/23) - API Practice](ApiPractice/StudentDesc.md)
 - [Week 10 (4/30) - Final Project Work](FinalProject/StudentDesc.md)
 - Week 11 (5/7) - Final Project Work Continued
-- Week 12 (5/14): Final Project Presentations
+- Week 12 (5/14) - Final Project Presentations
 
 ## Multiplayer Repl Submissions
 [Click here to submit your Multiplayer Repl links!](https://forms.office.com/r/1StfpmNY2h)
