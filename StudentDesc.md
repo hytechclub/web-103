@@ -16,5 +16,7 @@ Follow the links below to view each week of material.
 - [Week 10 (5/9): Final Project Work](FinalProject/StudentDesc.md)
 - Week 11 (5/16): Final Project Presentations
 
-## Multiplayer Repl Shares
-[Click here to submit your Multiplayer Repl Link.](https://forms.gle/kw8KoyCRXzFC2dZt8)
+## Multiplayer Repl Submissions
+[Click here to submit your Multiplayer Repl links!](https://forms.office.com/r/1StfpmNY2h)
+
+> _Note: [click here for help generating a Multiplayer Repl link](https://hylandtechclub.com/MultiplayerLink)_
