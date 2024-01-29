@@ -31,7 +31,7 @@ let results = [
             emailAddress: 'Pat@hotmail.com',
         }
     }
-]
+];
 ```
 
 ## Questions
