@@ -17,7 +17,7 @@ Students will be able to...
 ## Warm-Up: Query Styles
 This warm-up asks students to experiment with query parameters, even if they don't know what they are yet! There are some different things they can do, but at minimum, they should change the background color and text color for the page. Minimal instruction should be given; the students should be able to figure it out on their own.
 
-Make sure to wake up the [page](https://QueryStyles.hylandoutreach.repl.co) before club - it is [hosted](https://replit.com/@HylandOutreach/QueryStyles) on Replit, and sometimes has some issues.
+Make sure to wake up the [page](https://querystyles.onrender.com/) before club - it is hosted on [Render](https://render.com/), and sometimes has some issues.
 
 ## Lecture 1: API Concepts
 The first [presentation](ApiConcepts.pptx) should familiarize the students with several topics that make API connections possible in JavaScript. This is a high-level overview of these concepts, and should not be too technical.
