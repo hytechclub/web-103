@@ -11,12 +11,12 @@ Feel free to add any new items desired! At minimum, add one new item for each ex
 | Taco Bell | Cheesy Roll Up | 1.00 | cheesyroll.jpg |
 | Panera | Bagel | 4.50 | bagel.jpg |
 
-Feel free to add these items directly when the `restaurants` object is created, or add them in the way the `panera` items were added. Whatever works!
+Feel free to add these items directly when the `items` array is created, or add them in the way the Panera items were added. Whatever works!
 
 Make sure it is possible to click the button and see all items appear.
 
 ## New Restaurant: Arby's
-Next, add an entirely new restaurant. This can be done in the same way that Panera was added, or added wholesale to the `restaurants` array.
+Next, add an entirely new restaurant. This can be done in the same way that Panera was added, or added wholesale to the `items` array.
 
 #### Name
 Arby's
@@ -100,30 +100,27 @@ Next, select the new `<input id="restaurant">` element, and get its value.
 
 Now the name is ready to go.
 
-### JavaScript: Finding the Restaurant Object
+### JavaScript: Finding the Items for the Restaurant
 Once the name has been retrieved, it will be possible to use it to find the proper object for the restaurant.
 
 1. Under the `restaurantName` variable, make a couple new lines in the `getFood` function
-1. There, create a new variable named `restaurant` (not set to anything)
-1. Under that, create a new variable named `found`, set to `false`
-1. Next, create a `for` loop to loop through each element in the `restaurants` array
+1. There, create a new variable named `restaurantItems` set to an empty array `[]`
+1. Next, create a `for` loop to loop through each element in the `items` array
     - `for`
     - Parentheses
     - Curly Brackets
     - Initialization (`let i = 0`)
-    - Condition (`i < restaurants.length`)
+    - Condition (`i < items.length`)
     - Increment (`i++`)
 1. In the body of the `for` loop, create an `if` statement
     - `if`
     - Parentheses
     - Curly Brackets
-1. For the condition, check if `restaurants[i].name` is equal to `restaurantName`
-    - This means the current index contains the restaurant the user entered
-1. In the body of the `if`, set the `restaurant` variable to `restaurants[i]
-1. Under that, set the `found` variable to `true`
-1. Under that, use a `break` statement to exit the loop
+1. For the condition, check if `items[i].store` is equal to `restaurantName`
+    - This means the current index has an item from the given restaurant
+1. In the body of the `if`, `push` the `items[i]` object to the `restaurantItems` array
     
-Now the `restaurant` variable should be ready to go! Make sure to comment out the two lines that randomly choose the `restaurant` variable.
+Now the `restaurantItems` variable should be ready to go! Replace the `items` references in the code below with `restaurantItems` to ensure that only items from the given restaurant are available.
 
 Run the project, enter a restaurant name, and click the button. It should only choose food items from that restaurant! It's not perfect, though...
 
@@ -134,9 +131,8 @@ Currently, when entering a restaurant name that is not found, the page should fa
     - `if`
     - Parentheses
     - Curly Brackets
-1. Set the condition to check if `found` is `false` using `!found`
+1. Set the condition to check if `restaurantItems.length` is `0`
 1. In the body of the `if`, copy the old code that found a random restaurant
-    - Remove the `let` from the `restaurant` variable because it has already been declared
 
 Run the project, enter a name that does not exist, and verify that it chooses randomly from all restaurant items!
 
