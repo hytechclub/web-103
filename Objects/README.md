@@ -24,7 +24,7 @@ There is a mini-quiz at the end of the lecture.
 Facilitate the [Object Activity](ObjectActivity.md). Every student should have a chance to answer at least one of the questions.
 
 ## Code-Along: Food Picker
-Follow the [instructions](FoodPickerCodeAlong.md) to build up a website meant to help hungry visitors decide which food to eat. By the end of the activity, the project should be something like [this](https://replit.com/@HylandOutreach/FoodPickerComplete#script.js).
+Follow the [instructions](FoodPickerCodeAlong.md) to build up a website meant to help hungry visitors decide which food to eat. By the end of the activity, the project should be something like [this](https://replit.com/@HylandOutreach/FoodPickerStarterComplete).
 
 ## Self-Paced Work: Food Picker Updates
 Have the students follow [the instructions](SelfPacedWork.md) to continue working on the Food Picker website.
