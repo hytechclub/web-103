@@ -13,6 +13,8 @@ Students will be able to...
 ## Warm-Up: Character Builder
 Have the students complete the warm-up activity by following [the instructions](WarmUp.md). They will be able to build a character by assigning some basic traits. This leads into the lecture by showing students how traits of a character are like properties of an object. After all students have added characters, they can go around the room and introduce them if there is time.
 
+[View form responses here.](https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&FormId=iNuljKul90il4EzlCTX4B33juYEmlJlJpIkctSGCv9RUM1JPWk8wUzhMTEJYNTIyMFU1QlRMWVBERC4u&Token=d4e6ad5040cd498da5c54fbad9c236fd)
+
 ## Lecture: Objects
 The [presentation](Objects.pptx) introduces the concept of objects, explains their importance, and shows the JavaScript syntax. It also touches on JSON data.
 
