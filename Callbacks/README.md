@@ -11,12 +11,10 @@ Students will be able to...
 - Understand that functions are objects in JavaScript
 - Use `setInterval` and `addEventListener`
 
-## Warm-Up: Function Machine
-Introduce the warm-up game by following the [instructions](WarmUp.md). Students will visit the [Function Machine](https://www.mathplayground.com/functionmachine.html) site, read through the instructions, and play the game. The first student to correctly figure out the answer for an Advanced Game, Activity Level 3, can win something. It should look something like this:
+## Warm-Up: Function Game
+Introduce the warm-up game by following the [instructions](WarmUp.md). Students will visit the [Function Game](https://embed.mangahigh.com/bubblefunction?locale=en-us&guestMode=false) site, read through the instructions, and play the game. The student who succeeds the most can win something.
 
-![](Assets/FunctionMachineWin.png)
-
-It may be worth walking through an example with the group just to show everyone how it works. There are also some additional games linked from the instructions - students are welcome to play those as well.
+It may be worth walking through an example with the group just to show everyone how it works.
 
 ## Lecture: Functions & Callbacks
 The [presentation](FunctionsAndCallbacks.pptx) reviews functions, and shows how they can be used for callbacks. There are a few code examples.
