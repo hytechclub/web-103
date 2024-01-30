@@ -1,7 +1,7 @@
 # Functions & Callbacks
 Learn how to use functions as objects and pass them into other functions!
 
-## Warm-Up: Function Machine Game
+## Warm-Up: Function Game
 [Click here for the warm-up activity instructions.](WarmUp.md)
 
 ## PowerPoint Presentation
