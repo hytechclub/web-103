@@ -18,7 +18,7 @@ Make sure it is possible to click the button and see all items appear.
 ## New Restaurant: Arby's
 Next, add an entirely new restaurant. This can be done in the same way that Panera was added, or added wholesale to the `items` array.
 
-#### Name
+#### Store
 Arby's
 
 #### Items
