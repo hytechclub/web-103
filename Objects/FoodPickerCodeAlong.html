@@ -762,7 +762,7 @@
                                 <h1 id="code-along-food-picker">Code-Along: Food Picker</h1>
 <p>In this code-along, create a website to help visitors decide which food they should eat!</p>
 <h2 id="setting-up">Setting Up</h2>
-<p><a href="https://replit.com/@HylandOutreach/FoodPickerStart#script.js" target="_blank">Click here to go to the Food Picker Start project.</a></p>
+<p><a href="https://replit.com/@HylandOutreach/FoodPickerStarter" target="_blank">Click here to go to the Food Picker Start project.</a></p>
 <ol>
 <li>Fork the Repl</li>
 <li>Run the project</li>
@@ -791,45 +791,26 @@
   alert(<span class="hljs-string">&quot;Calculating...&quot;</span>);
 }
 </code></pre>
-<h2 id="getting-a-random-restaurant">Getting a Random Restaurant</h2>
-<p>Next, find a random restaurant. There are a few things to notice in the existing code:</p>
+<h2 id="getting-a-random-item">Getting a Random Item</h2>
+<p>Next, find a random item. There are a few things to notice in the existing code:</p>
 <ul>
-<li>The <code>restaurants</code> array contains various restaurant objects, that all contain items</li>
+<li>The <code>items</code> array contains various food objects, that all contain some properties</li>
 <li>The <code>getRandomInt</code> function will return a random integer between <code>0</code> and the <code>max</code></li>
 </ul>
-<p>The code will have to find a random restaurant using the existing code.</p>
+<p>The code will have to find a random item using the existing code.</p>
 <ol>
 <li>Make a new line in the body of the <code>getFood</code> function</li>
-<li>Create a new variable named <code>randomRestaurantIndex</code></li>
-<li>Set <code>randomRestaurantIndex</code> to be a call to <code>getRandomInt</code></li>
-<li>Pass in <code>restaurants.length</code> to the <code>getRandomInt</code> call</li>
-<li>Under that, create a new variable named <code>restaurant</code></li>
-<li>Set <code>restaurant</code> to be the value from the <code>restaurants</code> array at the <code>randomRestaurantIndex</code> index</li>
-</ol>
-<p>The code should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> randomRestaurantIndex = getRandomInt(restaurants.length);
-<span class="hljs-keyword">let</span> restaurant = restaurants[randomRestaurantIndex];
-</code></pre>
-<p>This will not change the functionality of the button yet, but it will now be possible to get a random item!</p>
-<h2 id="getting-a-random-item">Getting a Random Item</h2>
-<p>A random restaurant has been chosen, and now a random item must be chosen from that restaurant.</p>
-<ol>
-<li>Make a new line in the body of the <code>getFood</code> function</li>
-<li>Create a new variable named <code>restaurantItems</code></li>
-<li>Set <code>restaurantItems</code> to the <code>items</code> property of the <code>restaurant</code> object</li>
-<li>Make another new line</li>
-<li>There, create a new variable named <code>randomItemIndex</code></li>
+<li>Create a new variable named <code>randomItemIndex</code></li>
 <li>Set <code>randomItemIndex</code> to be a call to <code>getRandomInt</code></li>
-<li>Pass in <code>restaurantItems.length</code> to the <code>getRandomInt</code> call</li>
+<li>Pass in <code>items.length</code> to the <code>getRandomInt</code> call</li>
 <li>Under that, create a new variable named <code>item</code></li>
-<li>Set <code>item</code> to be the value from the <code>restaurantItems</code> array at the <code>randomItemIndex</code> index</li>
+<li>Set <code>item</code> to be the value from the <code>items</code> array at the <code>randomItemIndex</code> index</li>
 </ol>
 <p>The code should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> restaurantItems = restaurant.items;
-<span class="hljs-keyword">let</span> randomItemIndex = getRandomInt(restaurantItems.length);
-<span class="hljs-keyword">let</span> item = restaurantItems[randomItemIndex];
+<pre><code class="lang-js">  <span class="hljs-keyword">let</span> randomItemIndex = getRandomInt(items.length);
+  <span class="hljs-keyword">let</span> item = items[randomItemIndex];
 </code></pre>
-<p>Again, the button will not do anything yet... but now the function has all the necessary information about the item!</p>
+<p>This will not change the functionality of the button yet, but now we have a random item!</p>
 <h2 id="displaying-the-random-item-name">Displaying the Random Item Name</h2>
 <p>Now it is time to display the item information.</p>
 <ol>
@@ -846,14 +827,14 @@
 </ul>
 </li>
 <li>Under that, create a new variable named <code>foodNameText</code></li>
-<li>Set <code>foodNameText</code> to be <code>ITEM (RESTAURANT)</code></li>
+<li>Set <code>foodNameText</code> to be <code>ITEM (STORE)</code></li>
 <li>Make the string into a template literal</li>
 <li>In the literal, replace <code>ITEM</code> with <code>${item.name}</code><ul>
 <li>This gets the <code>name</code> property of the <code>item</code> object</li>
 </ul>
 </li>
-<li>In the literal, replace <code>RESTAURANT</code> with <code>{$restaurant.name}</code><ul>
-<li>This gets the <code>name</code> property of the <code>restaurant</code> object</li>
+<li>In the literal, replace <code>STORE</code> with <code>{$item.store}</code><ul>
+<li>This gets the <code>store</code> property of the <code>item</code> object</li>
 </ul>
 </li>
 <li>Set the <code>textContent</code> property of <code>foodNameElement</code> to <code>foodNameText</code><ul>
@@ -863,7 +844,7 @@
 </ol>
 <p>Run the project, click the button, and verify that a random food item name is properly displayed! The additional code should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> foodNameElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#food-name&quot;</span>);
-<span class="hljs-keyword">let</span> foodNameText = <span class="hljs-string">`<span class="hljs-subst">${item.name}</span> (<span class="hljs-subst">${restaurant.name}</span>)`</span>;
+<span class="hljs-keyword">let</span> foodNameText = <span class="hljs-string">`<span class="hljs-subst">${item.name}</span> (<span class="hljs-subst">${item.store}</span>)`</span>;
 foodNameElement.textContent = foodNameText;
 </code></pre>
 <h2 id="displaying-the-random-item-picture">Displaying the Random Item Picture</h2>
@@ -898,56 +879,36 @@ foodNameElement.textContent = foodNameText;
 <span class="hljs-keyword">let</span> foodPictureUrl = <span class="hljs-string">`pictures/<span class="hljs-subst">${item.picture}</span>`</span>;
 foodPictureElement.src = foodPictureUrl;
 </code></pre>
-<h2 id="creating-a-panera-object">Creating a Panera Object</h2>
-<p>The page should now be fully functional! All that&apos;s left is adding some additional food items. Start by creating a new object for Panera.</p>
+<h2 id="creating-a-greek-salad-object">Creating a Greek Salad Object</h2>
+<p>The page should now be fully functional! All that&apos;s left is adding some additional food items. Start by creating a new object for a greek salad from Panera.</p>
 <ol>
 <li>Make a new line at the bottom of the <strong>script.js</strong> file<ul>
 <li>Make sure it&apos;s outside of the <code>getFood</code> function (after the <code>}</code>)</li>
 </ul>
 </li>
-<li>There, create a new variable named <code>panera</code></li>
-<li>Set <code>panera</code> to be a new empty object with <code>{</code> and <code>}</code><ul>
-<li>Press <strong>Enter</strong> to automatically add space between</li>
-</ul>
-</li>
-<li>In the object, create a <code>name</code> property set to <code>&quot;Panera&quot;</code><ul>
-<li>Property name, colon, property value, comma</li>
-</ul>
-</li>
-<li>Under that in the object, create an <code>items</code> property set to <code>[]</code></li>
-</ol>
-<p>The new code should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> panera = {
-  name: <span class="hljs-string">&quot;Panera&quot;</span>,
-  items: []
-};
-</code></pre>
-<p>It will not change the functionality of the site yet - it needs at least one item!</p>
-<h2 id="creating-a-greek-salad-object">Creating a Greek Salad Object</h2>
-<p>Start by adding a Greek Salad to the Panera items.</p>
-<ol>
-<li>Make a new line at the bottom of the <strong>script.js</strong> file</li>
 <li>There, create a new variable named <code>greekSalad</code></li>
 <li>Set <code>greekSalad</code> to be a new empty object with <code>{</code> and <code>}</code><ul>
 <li>Press <strong>Enter</strong> to automatically add space between</li>
 </ul>
 </li>
-<li>In the object, create a <code>price</code> property set to <code>10</code><ul>
+<li>In the object, create a <code>store</code> property set to <code>&quot;Panera&quot;</code><ul>
 <li>Property name, colon, property value, comma</li>
 </ul>
 </li>
-<li>Under that in the object, create a <code>picture</code> property set to <code>&quot;greeksalad.jpg&quot;</code><ul>
-<li>Note that there is a file in the <strong>pictures</strong> folder named <strong>greeksalad.jpg</strong></li>
+<li>Under that in the object, create two more properties:  <ul>
+<li><code>price</code> set to <code>10</code></li>
+<li><code>picture</code> set to <code>greeksalad.jpg</code></li>
 </ul>
 </li>
 </ol>
 <p>The new code should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> greekSalad = {
+  store: <span class="hljs-string">&quot;Panera&quot;</span>,
   price: <span class="hljs-number">10</span>,
   picture: <span class="hljs-string">&quot;greeksalad.jpg&quot;</span>
 };
 </code></pre>
-<p>It still will not do anything yet... it needs to be added!</p>
+<p>It will not change the functionality of the site yet - the item must be added to the <code>items</code> array!</p>
 <h2 id="adding-the-greek-salad-object">Adding the Greek Salad Object</h2>
 <p>Now the <code>greekSalad</code> is almost ready, but there are a couple things still needed before it will show up as a food item.</p>
 <ol>
@@ -956,26 +917,20 @@ foodPictureElement.src = foodPictureUrl;
 <li>This ensures that it has a name for the display!</li>
 </ul>
 </li>
-<li>Under that, push the <code>greekSalad</code> object to the <code>panera.items</code> array</li>
-<li>Under that, push the <code>panera</code> object to the <code>restaurants</code> array</li>
+<li>Under that, push the <code>greekSalad</code> object to the <code>items</code> array</li>
 </ol>
 <p>At this point:</p>
 <ul>
 <li>The <code>name</code> property has been added to the <code>greekSalad</code> object</li>
-<li>The <code>greekSalad</code> object has been added to the <code>panera</code> object <code>items</code> array</li>
-<li>The <code>panera</code> object has been added to the <code>restaurants</code> array</li>
+<li>The <code>greekSalad</code> object has been added to the <code>items</code> array</li>
 </ul>
 <p>Run the project, click the button a few times, and verify that the Greek Salad eventually appears! Note that it may be helpful to remove the <code>alert</code> statement from the top of the <code>getFood</code> function for usability purposes. Replit also runs slowly sometimes, so if the image is not changing, it may be necessary to wait several seconds.</p>
 <p>The additional code should look something like this:</p>
 <pre><code class="lang-js">greekSalad.name = <span class="hljs-string">&quot;Greek Salad&quot;</span>;
-panera.items.push(greekSalad);
-restaurants.push(panera);
+items.push(greekSalad);
 </code></pre>
 <h2 id="creating-and-adding-a-mac-n-cheese-object">Creating and Adding a Mac n Cheese Object</h2>
-<p>Now it will be possible to add new items in a few different ways! Add a Mac n Cheese item to the Panera menu.</p>
-<blockquote>
-<p>Note: Even though the <code>panera</code> object has already been pushed, updating its properties will still update the object - that&apos;s because JavaScript recognizes objects <em>by reference</em></p>
-</blockquote>
+<p>Now it will be possible to add new items in a few different ways! Add a Mac n Cheese item to the menu.</p>
 <ol>
 <li>Make a new line at the bottom of the <strong>script.js</strong> file</li>
 <li>There, create a new variable named <code>mac</code></li>
@@ -983,38 +938,41 @@ restaurants.push(panera);
 <li>Press <strong>Enter</strong> to automatically add space between</li>
 </ul>
 </li>
-<li>In the object, create a <code>name</code> property set to <code>&quot;Mac n Cheese&quot;</code><ul>
+<li>In the object, create a <code>store</code> property set to <code>&quot;Panera&quot;</code><ul>
 <li>Property name, colon, property value, comma</li>
 </ul>
 </li>
+<li>Under that in the object, create a <code>name</code> property set to <code>&quot;Mac n Cheese&quot;</code></li>
 <li>Under that in the object, create a <code>price</code> property set to <code>7</code></li>
 <li>Under that in the object, create a <code>picture</code> property set to <code>&quot;macncheese.jfif&quot;</code><ul>
 <li>Note that there is a file in the <strong>pictures</strong> folder named <strong>macncheese.jfif</strong></li>
 </ul>
 </li>
 <li>Under that, <em>outside</em> the object (after <code>}</code>), make a new line</li>
-<li>There, push the <code>mac</code> object to the <code>panera.items</code> array</li>
+<li>There, push the <code>mac</code> object to the <code>items</code> array</li>
 </ol>
 <p>Run the project, click the button a few times, and verify that the Mac n Cheese eventually appears! The additional code should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> mac = {
+  store: <span class="hljs-string">&quot;Panera&quot;</span>,
   name: <span class="hljs-string">&quot;Mac n Cheese&quot;</span>,
   price: <span class="hljs-number">7</span>,
   picture: <span class="hljs-string">&quot;macncheese.jfif&quot;</span>
 };
 
-panera.items.push(mac);
+items.push(mac);
 </code></pre>
 <h2 id="creating-and-adding-a-soup-object">Creating and Adding a Soup Object</h2>
 <p>It is also possible to add a new item directly without creating a separate variable! Add Soup to the possible Panera food items in this manner.</p>
 <ol>
 <li>Make a new line at the bottom of the <strong>script.js</strong> file</li>
-<li>Push a currently empty object to the <code>panera.items</code> array</li>
+<li>Push a currently empty object to the <code>items</code> array</li>
+<li>Add a <code>store</code> property to the pushed object set to <code>&quot;Panera&quot;</code></li>
 <li>Add a <code>name</code> property to the pushed object set to <code>&quot;Soup&quot;</code></li>
 <li>Add a <code>price</code> property to the pushed object set to <code>6</code></li>
 <li>Add a <code>picture</code> property to the pushed object set to <code>&quot;panerabread.jpg&quot;</code></li>
 </ol>
 <p>Run the project, click the button a few times, and verify that the Soup eventually appears! The additional code should look something like this:</p>
-<pre><code class="lang-js">panera.items.push({
+<pre><code class="lang-js">items.push({
   name: <span class="hljs-string">&quot;Soup&quot;</span>,
   price: <span class="hljs-number">6</span>,
   picture: <span class="hljs-string">&quot;panerabread.jpg&quot;</span>
@@ -1024,15 +982,11 @@ panera.items.push(mac);
 <p>That&apos;s it for the code-along activity! At this point, it should be possible to click the button, and see a variety of different foods appear.</p>
 <p>The added code in the <strong>script.js</strong> file should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getFood</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">let</span> randomRestaurantIndex = getRandomInt(restaurants.length);
-  <span class="hljs-keyword">let</span> restaurant = restaurants[randomRestaurantIndex];
-
-  <span class="hljs-keyword">let</span> restaurantItems = restaurant.items;
-  <span class="hljs-keyword">let</span> randomItemIndex = getRandomInt(restaurantItems.length);
-  <span class="hljs-keyword">let</span> item = restaurantItems[randomItemIndex];
+  <span class="hljs-keyword">let</span> randomItemIndex = getRandomInt(items.length);
+  <span class="hljs-keyword">let</span> item = items[randomItemIndex];
 
   <span class="hljs-keyword">let</span> foodNameElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#food-name&quot;</span>);
-  <span class="hljs-keyword">let</span> foodNameText = <span class="hljs-string">`<span class="hljs-subst">${item.name}</span> (<span class="hljs-subst">${restaurant.name}</span>)`</span>;
+  <span class="hljs-keyword">let</span> foodNameText = <span class="hljs-string">`<span class="hljs-subst">${item.name}</span> (<span class="hljs-subst">${item.store}</span>)`</span>;
   foodNameElement.textContent = foodNameText;
 
   <span class="hljs-keyword">let</span> foodPictureElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#food-pic&quot;</span>);
@@ -1040,29 +994,26 @@ panera.items.push(mac);
   foodPictureElement.src = foodPictureUrl;
 }
 
-<span class="hljs-keyword">let</span> panera = {
-  name: <span class="hljs-string">&quot;Panera&quot;</span>,
-  items: []
-};
-
 <span class="hljs-keyword">let</span> greekSalad = {
+  store: <span class="hljs-string">&quot;Panera&quot;</span>,
   price: <span class="hljs-number">10</span>,
   picture: <span class="hljs-string">&quot;greeksalad.jpg&quot;</span>
 };
 
 greekSalad.name = <span class="hljs-string">&quot;Greek Salad&quot;</span>;
-panera.items.push(greekSalad);
-restaurants.push(panera);
+items.push(greekSalad);
 
 <span class="hljs-keyword">let</span> mac = {
+  store: <span class="hljs-string">&quot;Panera&quot;</span>,
   name: <span class="hljs-string">&quot;Mac n Cheese&quot;</span>,
   price: <span class="hljs-number">7</span>,
   picture: <span class="hljs-string">&quot;macncheese.jfif&quot;</span>
 };
 
-panera.items.push(mac);
+items.push(mac);
 
-panera.items.push({
+items.push({
+  store: <span class="hljs-string">&quot;Panera&quot;</span>,
   name: <span class="hljs-string">&quot;Soup&quot;</span>,
   price: <span class="hljs-number">6</span>,
   picture: <span class="hljs-string">&quot;panerabread.jpg&quot;</span>
@@ -1113,7 +1064,7 @@ panera.items.push({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.4.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"path":"Objects/SelfPacedWork.md","ref":"Objects/SelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.4.1","depth":2,"path":"Objects/WarmUp.md","ref":"Objects/WarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/FoodPickerCodeAlong.md","mtime":"2024-01-30T18:34:17.597Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-30T18:34:48.732Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.4.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"path":"Objects/SelfPacedWork.md","ref":"Objects/SelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.4.1","depth":2,"path":"Objects/WarmUp.md","ref":"Objects/WarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/FoodPickerCodeAlong.md","mtime":"2024-01-30T19:09:31.575Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-30T19:10:04.311Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

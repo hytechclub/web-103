@@ -799,10 +799,10 @@
 </tr>
 </tbody>
 </table>
-<p>Feel free to add these items directly when the <code>restaurants</code> object is created, or add them in the way the <code>panera</code> items were added. Whatever works!</p>
+<p>Feel free to add these items directly when the <code>items</code> array is created, or add them in the way the Panera items were added. Whatever works!</p>
 <p>Make sure it is possible to click the button and see all items appear.</p>
 <h2 id="new-restaurant-arbys">New Restaurant: Arby&apos;s</h2>
-<p>Next, add an entirely new restaurant. This can be done in the same way that Panera was added, or added wholesale to the <code>restaurants</code> array.</p>
+<p>Next, add an entirely new restaurant. This can be done in the same way that Panera was added, or added wholesale to the <code>items</code> array.</p>
 <h4 id="name">Name</h4>
 <p>Arby&apos;s</p>
 <h4 id="items">Items</h4>
@@ -905,18 +905,17 @@
 <li>Set <code>restaurantName</code> to be the <code>value</code> of the <code>restaurantNameInput</code> variable</li>
 </ol>
 <p>Now the name is ready to go.</p>
-<h3 id="javascript-finding-the-restaurant-object">JavaScript: Finding the Restaurant Object</h3>
+<h3 id="javascript-finding-the-items-for-the-restaurant">JavaScript: Finding the Items for the Restaurant</h3>
 <p>Once the name has been retrieved, it will be possible to use it to find the proper object for the restaurant.</p>
 <ol>
 <li>Under the <code>restaurantName</code> variable, make a couple new lines in the <code>getFood</code> function</li>
-<li>There, create a new variable named <code>restaurant</code> (not set to anything)</li>
-<li>Under that, create a new variable named <code>found</code>, set to <code>false</code></li>
-<li>Next, create a <code>for</code> loop to loop through each element in the <code>restaurants</code> array<ul>
+<li>There, create a new variable named <code>restaurantItems</code> set to an empty array <code>[]</code></li>
+<li>Next, create a <code>for</code> loop to loop through each element in the <code>items</code> array<ul>
 <li><code>for</code></li>
 <li>Parentheses</li>
 <li>Curly Brackets</li>
 <li>Initialization (<code>let i = 0</code>)</li>
-<li>Condition (<code>i &lt; restaurants.length</code>)</li>
+<li>Condition (<code>i &lt; items.length</code>)</li>
 <li>Increment (<code>i++</code>)</li>
 </ul>
 </li>
@@ -926,15 +925,13 @@
 <li>Curly Brackets</li>
 </ul>
 </li>
-<li>For the condition, check if <code>restaurants[i].name</code> is equal to <code>restaurantName</code><ul>
-<li>This means the current index contains the restaurant the user entered</li>
+<li>For the condition, check if <code>items[i].store</code> is equal to <code>restaurantName</code><ul>
+<li>This means the current index has an item from the given restaurant</li>
 </ul>
 </li>
-<li>In the body of the <code>if</code>, set the <code>restaurant</code> variable to `restaurants[i]</li>
-<li>Under that, set the <code>found</code> variable to <code>true</code></li>
-<li>Under that, use a <code>break</code> statement to exit the loop</li>
+<li>In the body of the <code>if</code>, <code>push</code> the <code>items[i]</code> object to the <code>restaurantItems</code> array</li>
 </ol>
-<p>Now the <code>restaurant</code> variable should be ready to go! Make sure to comment out the two lines that randomly choose the <code>restaurant</code> variable.</p>
+<p>Now the <code>restaurantItems</code> variable should be ready to go! Replace the <code>items</code> references in the code below with <code>restaurantItems</code> to ensure that only items from the given restaurant are available.</p>
 <p>Run the project, enter a restaurant name, and click the button. It should only choose food items from that restaurant! It&apos;s not perfect, though...</p>
 <h3 id="javascript-dealing-with-unfound-restaurants">JavaScript: Dealing with Unfound Restaurants</h3>
 <p>Currently, when entering a restaurant name that is not found, the page should fail. Fix this by handling unfound restaurants.</p>
@@ -945,11 +942,8 @@
 <li>Curly Brackets</li>
 </ul>
 </li>
-<li>Set the condition to check if <code>found</code> is <code>false</code> using <code>!found</code></li>
-<li>In the body of the <code>if</code>, copy the old code that found a random restaurant<ul>
-<li>Remove the <code>let</code> from the <code>restaurant</code> variable because it has already been declared</li>
-</ul>
-</li>
+<li>Set the condition to check if <code>restaurantItems.length</code> is <code>0</code></li>
+<li>In the body of the <code>if</code>, copy the old code that found a random restaurant</li>
 </ol>
 <p>Run the project, enter a name that does not exist, and verify that it chooses randomly from all restaurant items!</p>
 <h2 id="challenge-vegetarian-filter">CHALLENGE: Vegetarian Filter</h2>
@@ -1040,7 +1034,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"next":{"title":"Week 4 - Functions & Callbacks","level":"1.5","depth":1,"path":"Callbacks/StudentDesc.md","ref":"Callbacks/StudentDesc.md","articles":[{"title":"Warm-Up","level":"1.5.1","depth":2,"path":"Callbacks/WarmUp.md","ref":"Callbacks/WarmUp.md","articles":[]},{"title":"Code-Along","level":"1.5.2","depth":2,"path":"Callbacks/FunktionalCodeAlong.md","ref":"Callbacks/FunktionalCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.5.3","depth":2,"path":"Callbacks/SelfPacedWork.md","ref":"Callbacks/SelfPacedWork.md","articles":[]},{"title":"Challenges","level":"1.5.4","depth":2,"path":"Callbacks/Challenges.md","ref":"Callbacks/Challenges.md","articles":[]}]},"previous":{"title":"Code-Along","level":"1.4.2","depth":2,"path":"Objects/FoodPickerCodeAlong.md","ref":"Objects/FoodPickerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/SelfPacedWork.md","mtime":"2024-01-30T18:34:17.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-30T18:34:48.732Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"next":{"title":"Week 4 - Functions & Callbacks","level":"1.5","depth":1,"path":"Callbacks/StudentDesc.md","ref":"Callbacks/StudentDesc.md","articles":[{"title":"Warm-Up","level":"1.5.1","depth":2,"path":"Callbacks/WarmUp.md","ref":"Callbacks/WarmUp.md","articles":[]},{"title":"Code-Along","level":"1.5.2","depth":2,"path":"Callbacks/FunktionalCodeAlong.md","ref":"Callbacks/FunktionalCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.5.3","depth":2,"path":"Callbacks/SelfPacedWork.md","ref":"Callbacks/SelfPacedWork.md","articles":[]},{"title":"Challenges","level":"1.5.4","depth":2,"path":"Callbacks/Challenges.md","ref":"Callbacks/Challenges.md","articles":[]}]},"previous":{"title":"Code-Along","level":"1.4.2","depth":2,"path":"Objects/FoodPickerCodeAlong.md","ref":"Objects/FoodPickerCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/SelfPacedWork.md","mtime":"2024-01-30T19:09:31.587Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-30T19:10:04.311Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
