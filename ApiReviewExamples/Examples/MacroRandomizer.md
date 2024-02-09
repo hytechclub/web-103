@@ -1,7 +1,7 @@
 # API Example: Macro Randomizer
 This website generates random [image macro](https://en.wiktionary.org/wiki/image_macro)s. It pulls a random bit of text from a variety of text-based APIs, then pulls a random image from a variety of different image APIs, and puts them together using a text-image-overlay API. This is certainly the most complex example in the lesson, but it is also the most powerful; combining multiple APIs can be quite interesting.
 
-- [Preview: https://macrorandomizer.hylandoutreach.repl.co/](https://macrorandomizer.hylandoutreach.repl.co/)
+- [Preview](https://hylandtechclub.com/showcase/Web103/MacroRandomizer/index.html)
 - [Project: https://replit.com/@HylandOutreach/MacroRandomizer](https://replit.com/@HylandOutreach/MacroRandomizer)
 - APIs: Several
 
