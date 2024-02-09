@@ -1,5 +1,5 @@
 # Challenges
-Try to complete these challenges that deal with a [playlist website](https://the-best-songs.hylandoutreach.repl.co/).
+Try to complete these challenges that deal with a playlist website.
 
 Start by forking [this Repl project](https://replit.com/@HylandOutreach/the-best-songs#style.css). Then, try to update the site in a variety of ways! Feel free to hop around whichever challenges interest you the most.
 

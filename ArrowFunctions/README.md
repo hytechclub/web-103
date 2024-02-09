@@ -19,7 +19,7 @@ The [presentation](ArrowFunctions.pptx) reviews anonymous functions, introduces 
 Print out copies of the [worksheet](ArrowFunctionsWorksheet.docx), or direct students to the [online version](Worksheet.md) if they are virtual. Give them time to try to complete the worksheet without assistance. When they turn in their worksheets, check them for correctness against the [answer key](WorksheetAnswers.md), and give them back if there is anything they need to fix.
 
 ## Code-Along: Cereal Mascots for Some Reason
-Follow the [instructions](MascotsCodeAlong.md) to build up a sweet website. By the end of the activity, the project should look something like [this](https://cerealend.hylandoutreach.repl.co/).
+Follow the [instructions](MascotsCodeAlong.md) to build up a sweet website. By the end of the activity, the project should look something like [this](https://replit.com/@HylandOutreach/CerealEnd/).
 
 ## Self-Paced Work: Trading Card Updates
 Students should follow the [self-paced work instructions](SelfPacedWork.md) to update their websites. They should be encouraged to change the subjects of the trading cards, and do whatever they would like with the styles.

@@ -1,7 +1,7 @@
 # API Example: Weather App
 This site takes a search location (either zip code or city name), finds some information about the current weather for it, and displays it.
 
-- [Preview: https://weather.hylandoutreach.repl.co](https://weather.hylandoutreach.repl.co)
+- [Preview](https://hylandtechclub.com/showcase/Web103/Weather/index.html)
 - [Project: https://replit.com/@HylandOutreach/Weather](https://replit.com/@HylandOutreach/Weather)
 - [APIs: Open-Meteo](https://open-meteo.com/)
 

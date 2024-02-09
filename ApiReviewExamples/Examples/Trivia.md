@@ -1,7 +1,7 @@
 # API Example: Trivia App
 This site uses a Trivia API to grab some multiple choice questions and use them to quiz the user.
 
-- [Preview: https://trivia.hylandoutreach.repl.co](https://trivia.hylandoutreach.repl.co)
+- [Preview](https://hylandtechclub.com/showcase/Web103/Trivia/index.html)
 - [Project: https://replit.com/@HylandOutreach/Trivia](https://replit.com/@HylandOutreach/Trivia)
 - [APIs: Open Trivia Database](https://opentdb.com/api_config.php)
 
