@@ -2,7 +2,7 @@ let enabled = true;
 
 let passwordProtectedPages = {
     // "Arrays/WatchlistCodeAlong.md": "awesome",
-    "Callbacks/FunktionalCodeAlong.md": "teartheroofoff",
+    // "Callbacks/FunktionalCodeAlong.md": "teartheroofoff",
     // "JsReview/QuizCodeAlong.md": "whoami",
     // "Objects/FoodPickerCodeAlong.md": "imhungry",
     "ArrowFunctions/MascotsCodeAlong.md": "horatio",
