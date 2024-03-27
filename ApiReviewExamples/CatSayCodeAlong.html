@@ -772,45 +772,20 @@
 <li>An <code>&lt;img&gt;</code> with an <code>id</code> of <code>&quot;cat-pic&quot;</code></li>
 </ul>
 <p>All of these elements will be necessary to make the website functional.</p>
+<p>There is also some code in the <strong>script.js</strong> file already - specifically, the definition for a function named <code>speak</code>. This function uses the <a href="https://weilbyte.github.io/tiktok-tts/" target="_blank">TikTok Text-to-Speech API</a> to speak whatever message is passed to it.</p>
 <h3 id="the-cat-as-a-service-api">The <a href="https://cataas.com/" target="_blank">Cat as a Service</a> API</h3>
 <p>The <strong>cataas API</strong> has a <em>ton</em> of different ways to access random cat pictures. One of its most powerful features is to embed messages right onto images. This is possible with the <code>/cat/says/</code> endpoint.</p>
 <p>For example, the URL to get a random cat saying &quot;hi&quot; would look like this: <a href="https://cataas.com/cat/says/hi" target="_blank">https://cataas.com/cat/says/hi</a></p>
-<p>Notice that the message <code>hi</code> is actually not a query parameter - it is simply part of the URL path! There is one query parameter to add, though: <code>json=true</code>. This will send along more information in JSON form that could end up being useful.</p>
-<p>For example, the URL to get a random cat saying &quot;hi&quot; in JSON would look like this: <a href="https://cataas.com/cat/says/hi?json=true" target="_blank">https://cataas.com/cat/says/hi?json=true</a></p>
-<p><em>Note: Changing &quot;hi&quot; to any other message would make the new message appear on the image!</em></p>
-<p>The response should look something like this:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;tags&quot;</span>: [
-    <span class="hljs-string">&quot;closed eyes&quot;</span>,
-    <span class="hljs-string">&quot;sleepy&quot;</span>,
-    <span class="hljs-string">&quot;bed&quot;</span>
-  ],
-  <span class="hljs-string">&quot;createdAt&quot;</span>: <span class="hljs-string">&quot;2022-09-11T00:27:05.317Z&quot;</span>,
-  <span class="hljs-string">&quot;updatedAt&quot;</span>: <span class="hljs-string">&quot;2022-10-11T07:52:32.756Z&quot;</span>,
-  <span class="hljs-string">&quot;validated&quot;</span>: <span class="hljs-literal">true</span>,
-  <span class="hljs-string">&quot;owner&quot;</span>: <span class="hljs-string">&quot;LeBonk&quot;</span>,
-  <span class="hljs-string">&quot;file&quot;</span>: <span class="hljs-string">&quot;631d2b59444de200102f10c9.jpeg&quot;</span>,
-  <span class="hljs-string">&quot;mimetype&quot;</span>: <span class="hljs-string">&quot;image/jpeg&quot;</span>,
-  <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">384097</span>,
-  <span class="hljs-string">&quot;_id&quot;</span>: <span class="hljs-string">&quot;2bPYDRuvU70sbgja&quot;</span>,
-  <span class="hljs-string">&quot;url&quot;</span>: <span class="hljs-string">&quot;/cat/2bPYDRuvU70sbgja/says/hi&quot;</span>
-}
-</code></pre>
-<p>For the purposes of this activity, the important property will be the <code>url</code> - that can be appended to the base URL to retrieve the image!</p>
-<p>It ends up looking something like this: <a href="https://cataas.com/cat/2bPYDRuvU70sbgja/says/hi" target="_blank">https://cataas.com/cat/2bPYDRuvU70sbgja/says/hi</a></p>
+<p>Notice that the message <code>hi</code> is actually not a query parameter - it is simply part of the URL path!</p>
+<p>It ends up looking something like this:</p>
 <p><img src="Assets/CatSaysHi.jpg" alt=""></p>
 <h3 id="the-plan">The Plan</h3>
 <p>To utilize this API, the code should:</p>
 <ul>
 <li>Grab the message from the text box <code>&lt;input&gt;</code> on the page</li>
-<li>Use <code>fetch</code> to request a random cat saying the message<ul>
-<li>Use the base URL of <code>https://cataas.com/cat/says/</code></li>
-<li>Pass the message after the slash</li>
-<li>Use the <code>json=true</code> query parameter to get JSON data</li>
-</ul>
-</li>
-<li>Grab the <code>url</code> property from the response</li>
-<li>Set the <code>src</code> of the <code>&lt;img id=&quot;cat-pic&quot;&gt;</code> to be the returned URL</li>
+<li>Create a new image url by appending the message appropriately</li>
+<li>Set the <code>src</code> of the <code>&lt;img id=&quot;cat-pic&quot;&gt;</code> to be the URL</li>
+<li>Speak the response using the TikTok Text-to-Speech API</li>
 </ul>
 <h2 id="part-two-hooking-up-the-button">Part Two: Hooking Up the Button</h2>
 <p>First, define an asynchronous function to run when the button on the page is clicked.</p>
@@ -844,90 +819,34 @@
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> messageInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#cat-message&quot;</span>);
 <span class="hljs-keyword">let</span> message = messageInput.value;
 </code></pre>
-<h2 id="part-four-catching-errors">Part Four: Catching Errors</h2>
-<p>In order to properly make an HTTP request in JavaScript, it is generally a good idea to wrap any call to <code>fetch</code> in a <code>try</code>/<code>catch</code> structure. Create this structure.</p>
+<h2 id="part-four-setting-the-image-source">Part Four: Setting the Image Source</h2>
+<p>Next, set the image URL based on the message.</p>
 <ol>
 <li>Make a new line in the body of the <code>run</code> function</li>
-<li>There, <em>declare</em> two variables without values: <code>response</code> and <code>responseJson</code><ul>
-<li>These will be set in the <code>try</code> block</li>
-</ul>
-</li>
-<li>Under that, create a <code>try</code>/<code>catch</code> structure<ul>
-<li><code>try</code></li>
-<li>curly brackets <code>{</code> and <code>}</code></li>
-<li><code>catch</code></li>
-<li>parentheses <code>()</code></li>
-<li><code>e</code> within the parentheses for the error value</li>
-<li>curly brackets <code>{</code> and <code>}</code></li>
-</ul>
-</li>
-<li>Within the <code>catch</code> block, make a new line</li>
-<li>There, set the <code>src</code> of <code>catPic</code> to be <code>&quot;&quot;</code><ul>
-<li>This will remove the loading indicator</li>
-</ul>
-</li>
-<li>Under that, <code>alert</code> the error received</li>
-<li>Under that, <code>return</code> from the function</li>
+<li>There, set the <code>src</code> property of <code>catPic</code></li>
+<li>Set it to a new template literal</li>
+<li>Start the template literal with the base URL: <code>https://cataas.com/cat/says/</code></li>
+<li>Add the message at the end of the URL with <code>${message}</code></li>
 </ol>
-<p>Nothing will change, but now the code is ready for a <code>fetch</code>! The added lines should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> response, responseJson;
-
-<span class="hljs-keyword">try</span> {
-} <span class="hljs-keyword">catch</span> (e) {
-  catPic.src = <span class="hljs-string">&quot;&quot;</span>;
-  alert(e);
-  <span class="hljs-keyword">return</span>;
-}
+<p>That&apos;s it! The line of code added should look something like this:</p>
+<pre><code class="lang-js">catPic.src = <span class="hljs-string">`https://cataas.com/cat/says/<span class="hljs-subst">${message}</span>`</span>;
 </code></pre>
-<h2 id="part-five-making-the-request">Part Five: Making the Request</h2>
-<p>Now it&apos;s time to actually involve the API with <code>fetch</code>! Make the request, and grab the JSON data.</p>
+<h2 id="part-five-speaking-the-part">Part Five: Speaking the Part</h2>
+<p>Luckily, there is already a function defined to make the HTTP request. Here&apos;s what the <code>speak</code> function does:</p>
 <ol>
-<li>Make a new line in the <code>try</code> block within the <code>run</code> function</li>
-<li>There, make a new variable named <code>url</code></li>
-<li>Set <code>url</code> to be the a new template literal</li>
-<li>Between the backticks, add the URL with the query parameter for the cat to say &quot;hi&quot;<ul>
-<li><code>https://cataas.com/cat/says/hi?json=true</code></li>
-</ul>
-</li>
-<li>Replace <code>hi</code> with the interpolated value of <code>message</code> using <code>${}</code><ul>
-<li><code>https://cataas.com/cat/says/${message}?json=true</code></li>
-</ul>
-</li>
-<li>Under that, call <code>fetch</code> on the <code>url</code> variable value<ul>
-<li>Add an <code>await</code> in front of the <code>fetch</code> call to yield the response</li>
-<li>Store the result in the <code>response</code> variable</li>
-</ul>
-</li>
-<li>Under that, call <code>response.json()</code> to grab the JSON data in a promise<ul>
-<li>Add the <code>await</code> keyword in front of the <code>.json()</code> call to yield the JSON object</li>
-<li>Store the result in the <code>responseJson</code> variable</li>
-</ul>
-</li>
+<li>Creates <code>ttsUrl</code> and <code>body</code> variables to setup the request with the necessary data</li>
+<li>In a <code>try</code> block, performs a <code>fetch</code></li>
+<li>In the <code>fetch</code>, passes the appropriate data, including <code>method</code>, <code>headers</code>, and <code>body</code> to the <code>ttsUrl</code></li>
+<li>Converts the <code>response</code> to JSON</li>
+<li>Creates a new <code>Audio</code> object given the response data</li>
+<li>Plays the audio after one second</li>
 </ol>
-<p>For testing purposes, throw an <code>alert</code> in the code to display the <code>responseJson</code> result. Then, run the project, enter a message in the box, click the button, and verify that the response JSON data appears! It should simply say <code>[object Object]</code>, but that means it is in fact an object! Remove the <code>alert</code> after testing. The added code should end up looking something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> url = <span class="hljs-string">`https://cataas.com/cat/says/<span class="hljs-subst">${message}</span>?json=true`</span>;
-response = <span class="hljs-keyword">await</span> fetch(url);
-responseJson = <span class="hljs-keyword">await</span> response.json();
+<p>It basically does all the work! The only thing needed within the <code>run</code> function is to <em>call</em> the <code>speak</code> function, <code>await</code> it, and pass in the <code>message</code> from the user. It should look like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">await</span> speak(message);
 </code></pre>
-<h2 id="part-six-displaying-the-image">Part Six: Displaying the Image</h2>
-<p>Now for the fun part. The response has come back, and the data is there - all that&apos;s left is to extract the image URL, append it to the base URL, and set it as the image source!</p>
-<ol>
-<li>Make a new line at the <em>bottom</em> of the <code>run</code> function</li>
-<li>There, create a new variable named <code>imageUrl</code></li>
-<li>Set <code>imageUrl</code> to be the a new template literal</li>
-<li>Between the backticks, add the base URL, without the slash at the end<ul>
-<li><code>https://cataas.com</code></li>
-</ul>
-</li>
-<li>At the end of the literal, add the interpolated value of the response <code>url</code> property using <code>${}</code></li>
-<li>Under that, set the <code>src</code> of the <code>catPic</code> element to be the <code>imageUrl</code> value</li>
-</ol>
-<p>Run the project, enter a message, click the button, and verify that a random cat appears with the message! The added code should look something like this:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> imageUrl = <span class="hljs-string">`https://cataas.com<span class="hljs-subst">${responseJson.url}</span>`</span>;
-catPic.src = imageUrl;
-</code></pre>
+<p>Run the program, enter a message, click the button, and hear the wonderful Bradley Cooper-inspired voice speak the cat&apos;s message!</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>By the end of the code-along, the <strong>script.js</strong> file should look something like this:</p>
+<p>By the end of the code-along, the added code in the <strong>script.js</strong> file should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">run</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">let</span> catPic = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#cat-pic&quot;</span>);
   catPic.src = <span class="hljs-string">&quot;https://media.tenor.com/o8m3bKTsifUAAAAM/hold-on.gif&quot;</span>;
@@ -935,20 +854,9 @@ catPic.src = imageUrl;
   <span class="hljs-keyword">let</span> messageInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#cat-message&quot;</span>);
   <span class="hljs-keyword">let</span> message = messageInput.value;
 
-  <span class="hljs-keyword">let</span> response, responseJson;
+  catPic.src = <span class="hljs-string">`https://cataas.com/cat/says/<span class="hljs-subst">${message}</span>`</span>;
 
-  <span class="hljs-keyword">try</span> {
-    <span class="hljs-keyword">let</span> url = <span class="hljs-string">`https://cataas.com/cat/says/<span class="hljs-subst">${message}</span>?json=true`</span>;
-    response = <span class="hljs-keyword">await</span> fetch(url);
-    responseJson = <span class="hljs-keyword">await</span> response.json();
-  } <span class="hljs-keyword">catch</span> (e) {
-    catPic.src = <span class="hljs-string">&quot;&quot;</span>;
-    alert(e);
-    <span class="hljs-keyword">return</span>;
-  }
-
-  <span class="hljs-keyword">let</span> imageUrl = <span class="hljs-string">`https://cataas.com<span class="hljs-subst">${responseJson.url}</span>`</span>;
-  catPic.src = imageUrl;
+  <span class="hljs-keyword">await</span> speak(message);
 }
 </code></pre>
 <h2 id="next-steps">Next Steps</h2>
@@ -996,7 +904,7 @@ catPic.src = imageUrl;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.9.1","depth":2,"next":{"title":"Self-Paced Work","level":"1.9.2","depth":2,"path":"ApiReviewExamples/CatSaySelfPacedWork.md","ref":"ApiReviewExamples/CatSaySelfPacedWork.md","articles":[]},"previous":{"title":"Week 8 - API Review & Examples","level":"1.9","depth":1,"path":"ApiReviewExamples/StudentDesc.md","ref":"ApiReviewExamples/StudentDesc.md","articles":[{"title":"Code-Along","level":"1.9.1","depth":2,"path":"ApiReviewExamples/CatSayCodeAlong.md","ref":"ApiReviewExamples/CatSayCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.9.2","depth":2,"path":"ApiReviewExamples/CatSaySelfPacedWork.md","ref":"ApiReviewExamples/CatSaySelfPacedWork.md","articles":[]},{"title":"Examples","level":"1.9.3","depth":2,"path":"ApiReviewExamples/Examples.md","ref":"ApiReviewExamples/Examples.md","articles":[{"title":"Weather","level":"1.9.3.1","depth":3,"path":"ApiReviewExamples/Examples/Weather.md","ref":"ApiReviewExamples/Examples/Weather.md","articles":[]},{"title":"Trivia","level":"1.9.3.2","depth":3,"path":"ApiReviewExamples/Examples/Trivia.md","ref":"ApiReviewExamples/Examples/Trivia.md","articles":[]},{"title":"Macro Randomizer","level":"1.9.3.3","depth":3,"path":"ApiReviewExamples/Examples/MacroRandomizer.md","ref":"ApiReviewExamples/Examples/MacroRandomizer.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiReviewExamples/CatSayCodeAlong.md","mtime":"2024-03-20T12:03:22.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-20T12:03:54.046Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.9.1","depth":2,"next":{"title":"Self-Paced Work","level":"1.9.2","depth":2,"path":"ApiReviewExamples/CatSaySelfPacedWork.md","ref":"ApiReviewExamples/CatSaySelfPacedWork.md","articles":[]},"previous":{"title":"Week 8 - API Review & Examples","level":"1.9","depth":1,"path":"ApiReviewExamples/StudentDesc.md","ref":"ApiReviewExamples/StudentDesc.md","articles":[{"title":"Code-Along","level":"1.9.1","depth":2,"path":"ApiReviewExamples/CatSayCodeAlong.md","ref":"ApiReviewExamples/CatSayCodeAlong.md","articles":[]},{"title":"Self-Paced Work","level":"1.9.2","depth":2,"path":"ApiReviewExamples/CatSaySelfPacedWork.md","ref":"ApiReviewExamples/CatSaySelfPacedWork.md","articles":[]},{"title":"Examples","level":"1.9.3","depth":2,"path":"ApiReviewExamples/Examples.md","ref":"ApiReviewExamples/Examples.md","articles":[{"title":"Weather","level":"1.9.3.1","depth":3,"path":"ApiReviewExamples/Examples/Weather.md","ref":"ApiReviewExamples/Examples/Weather.md","articles":[]},{"title":"Trivia","level":"1.9.3.2","depth":3,"path":"ApiReviewExamples/Examples/Trivia.md","ref":"ApiReviewExamples/Examples/Trivia.md","articles":[]},{"title":"Macro Randomizer","level":"1.9.3.3","depth":3,"path":"ApiReviewExamples/Examples/MacroRandomizer.md","ref":"ApiReviewExamples/Examples/MacroRandomizer.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiReviewExamples/CatSayCodeAlong.md","mtime":"2024-03-27T13:42:56.916Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-27T13:43:27.316Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

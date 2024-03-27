@@ -760,16 +760,14 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="self-paced-work-what-does-the-cat-say-now">Self-Paced Work: What Does the Cat Say Now?</h1>
-<p>Continue to explore the <a href="https://cataas.com/#/" target="_blank">cataas API</a> with these exercises.</p>
+<p>Continue to explore the <a href="https://cataas.com/#/" target="_blank">cataas API</a> and the <a href="https://weilbyte.github.io/tiktok-tts/" target="_blank">TikTok Text-to-Speech API</a> with these exercises.</p>
 <h2 id="gifs-only">GIFs Only</h2>
 <p><a href="https://www.youtube.com/watch?v=Nrk8sqZfsgI" target="_blank">Is it pronounced gif? Or is it gif?</a> The world may never know. The one thing we can all agree on is that there are GIF images of cats on the internet. And luckily, the <strong>cataas API</strong> has a way to send them!</p>
 <p>Do some research to figure out how to limit images returned by the API to only GIFs.</p>
-<p>Hint: the URLs should look something like <strong><a href="https://cataas.com/cat/gif/says/meow?json=true" target="_blank">https://cataas.com/cat/gif/says/meow?json=true</a></strong>.</p>
-<p>For an added challenge, add a checkbox in the HTML to see if the user would like GIFs or all images, and add the <code>/gif/</code> to the URL if the box is checked!</p>
+<p>For an added challenge, add a checkbox in the HTML to see if the user would like GIFs or all images, and add the <code>/gif/</code> to the URL if the box is checked! Additionally, update the <code>speak</code> function so that, if a gif is being generated, it waits a little longer to speak. Or, figure out how to make it speak only after the new image has loaded.</p>
 <h2 id="cat-tags">Cat Tags</h2>
 <p>Another cool thing the <strong>cataas API</strong> can do is search by tag. For example, to display <em>only</em> cats where &quot;cute&quot; is a tag, just add <code>/cute</code> before <code>/says</code>!</p>
 <p>Do some research and figure out how to find cats with certain tags.</p>
-<p>Hint: the URLs should look something like <strong><a href="https://cataas.com/cat/cute/says/hi?json=true" target="_blank">https://cataas.com/cat/cute/says/hi?json=true</a></strong></p>
 <p>For an added challenge, add another text box in the HTML, and allow the user to enter a tag. But what tags could they enter???</p>
 <h3 id="all-tags">All Tags</h3>
 <p>Amazingly, there is an cataas API endpoint that returns the complete list of tags for cat images. Go to <a href="https://cataas.com/api/tags" target="_blank">https://cataas.com/api/tags</a> to see the full list.</p>
@@ -790,7 +788,7 @@
 <li>paint</li>
 <li>pixel</li>
 </ul>
-<p>The filter option is added to the URL as a query parameter! For example, a URL could look like this: <a href="https://cataas.com/cat/cute/says/meow?json=true&amp;filter=negative" target="_blank">https://cataas.com/cat/cute/says/meow?json=true&amp;filter=negative</a></p>
+<p>The filter option is added to the URL as a query parameter! For example, a URL could look like this: <a href="https://cataas.com/cat/cute/says/meow?json=true&amp;filter=negative" target="_blank">https://cataas.com/cat/cute/says/meow?filter=negative</a></p>
 <p>There are some options here:</p>
 <ul>
 <li>Add a default filter to every image returned</li>
@@ -798,6 +796,8 @@
 <li>Allow the user to select a filter to apply to the image</li>
 </ul>
 <p>Feel free to use filters however you&apos;d like!</p>
+<h2 id="new-voices">New Voices</h2>
+<p>There are plenty of TikTok voices to try. Figure out how to swap out the Rocket voice for another voice of your choosing. Then, make a dropdown to let the <em>user</em> decide which voice to use!</p>
 <h2 id="more">More</h2>
 <p>These are some of the options available, but it&apos;s up to you to make whatever you&apos;d like. Take these tools and create something fun!</p>
 
@@ -843,7 +843,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.9.2","depth":2,"next":{"title":"Examples","level":"1.9.3","depth":2,"path":"ApiReviewExamples/Examples.md","ref":"ApiReviewExamples/Examples.md","articles":[{"title":"Weather","level":"1.9.3.1","depth":3,"path":"ApiReviewExamples/Examples/Weather.md","ref":"ApiReviewExamples/Examples/Weather.md","articles":[]},{"title":"Trivia","level":"1.9.3.2","depth":3,"path":"ApiReviewExamples/Examples/Trivia.md","ref":"ApiReviewExamples/Examples/Trivia.md","articles":[]},{"title":"Macro Randomizer","level":"1.9.3.3","depth":3,"path":"ApiReviewExamples/Examples/MacroRandomizer.md","ref":"ApiReviewExamples/Examples/MacroRandomizer.md","articles":[]}]},"previous":{"title":"Code-Along","level":"1.9.1","depth":2,"path":"ApiReviewExamples/CatSayCodeAlong.md","ref":"ApiReviewExamples/CatSayCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiReviewExamples/CatSaySelfPacedWork.md","mtime":"2024-03-20T12:03:22.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-20T12:03:54.046Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Self-Paced Work","level":"1.9.2","depth":2,"next":{"title":"Examples","level":"1.9.3","depth":2,"path":"ApiReviewExamples/Examples.md","ref":"ApiReviewExamples/Examples.md","articles":[{"title":"Weather","level":"1.9.3.1","depth":3,"path":"ApiReviewExamples/Examples/Weather.md","ref":"ApiReviewExamples/Examples/Weather.md","articles":[]},{"title":"Trivia","level":"1.9.3.2","depth":3,"path":"ApiReviewExamples/Examples/Trivia.md","ref":"ApiReviewExamples/Examples/Trivia.md","articles":[]},{"title":"Macro Randomizer","level":"1.9.3.3","depth":3,"path":"ApiReviewExamples/Examples/MacroRandomizer.md","ref":"ApiReviewExamples/Examples/MacroRandomizer.md","articles":[]}]},"previous":{"title":"Code-Along","level":"1.9.1","depth":2,"path":"ApiReviewExamples/CatSayCodeAlong.md","ref":"ApiReviewExamples/CatSayCodeAlong.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiReviewExamples/CatSaySelfPacedWork.md","mtime":"2024-03-27T13:42:56.916Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-03-27T13:43:27.316Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -16,7 +16,7 @@ Students can start by working on the [self-paced work from the previous lesson](
 Facilitate the [Blooket quiz game](https://dashboard.blooket.com/set/6422fe57d17b5fa22d5eb76d). Note than an account is required to host the game.
 
 ## Code-Along: What Does the Cat Say?
-Follow [the instructions](CatSayCodeAlong.md) to build a website that displays pictures of cats with messages. If students are interested, there is also some optional [self-paced work](CatSaySelfPacedWork.md) that explores more of the [cataas API](https://cataas.com/#/).
+Follow [the instructions](CatSayCodeAlong.md) to build a website that displays pictures of cats with messages that speaks the messages. If students are interested, there is also some optional [self-paced work](CatSaySelfPacedWork.md) that explores more of the [cataas API](https://cataas.com/#/) and the [TikTok Text-to-Speech API](https://weilbyte.github.io/tiktok-tts/).
 
 ## Examples
 Introduce [the examples](Examples.md) to show students more of what is possible with APIs. Students should have an opportunity to explore and modify a variety of API-driven front-end web applications.
@@ -28,5 +28,5 @@ Introduce [the examples](Examples.md) to show students more of what is possible 
 | Self-Paced Work | 20m |
 | Review | 20m |
 | Break | 10m |
-| Code-Along | 45m |
-| Examples | 25m |
+| Code-Along | 30m |
+| Examples | 40m |
