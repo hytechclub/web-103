@@ -6,7 +6,7 @@ let passwordProtectedPages = {
     // "JsReview/QuizCodeAlong.md": "whoami",
     // "Objects/FoodPickerCodeAlong.md": "imhungry",
     // "ArrowFunctions/MascotsCodeAlong.md": "horatio",
-    "ApiConsumption/DogFetcherCodeAlong.md": "wow"
+    // "ApiConsumption/DogFetcherCodeAlong.md": "wow"
 };
 
 document.addEventListener('DOMContentLoaded', function() {
