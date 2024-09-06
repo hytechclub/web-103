@@ -18,7 +18,7 @@ Follow the links below to view each week of material.
 - Week 11 (5/7) - Final Project Work Continued
 - Week 12 (5/14) - Final Project Presentations
 
-## Multiplayer Repl Submissions
-[Click here to submit your Multiplayer Repl links!](https://hylandtechclub.com/MultiplayerLink)
+##  Submissions
+[Click here to submit your project links!](https://hylandtechclub.com/GlitchLink)
 
->_Note: only virtual students should submit Multiplayer Repl links_
+>_Note: only virtual students should submit links_

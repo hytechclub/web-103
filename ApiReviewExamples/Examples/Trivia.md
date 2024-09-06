@@ -2,7 +2,7 @@
 This site uses a Trivia API to grab some multiple choice questions and use them to quiz the user.
 
 - [Preview](https://hylandtechclub.com/showcase/Web103/Trivia/index.html)
-- [Project: https://replit.com/@HylandOutreach/Trivia](https://replit.com/@HylandOutreach/Trivia)
+- [Project: https://glitch.com/edit/#!/trivia-api-app](https://glitch.com/edit/#!/trivia-api-app)
 - [APIs: Open Trivia Database](https://opentdb.com/api_config.php)
 
 ## Improvement Ideas

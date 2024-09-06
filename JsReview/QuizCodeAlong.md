@@ -2,16 +2,11 @@
 Follow this guide to create and customize an interactive quiz. These instructions use Ash Ketchum as an example subject, but make sure to change the questions and answers to be about you!
 
 ## Part 1 - Setup
-Start by forking the existing project. It contains all of the HTML and CSS, but none of the JavaScript.
+Start by remixing the existing project. It contains all of the HTML and CSS, but none of the JavaScript.
 
->Note: You must be logged into Replit to fork the project
+[Click here to remix the project!](https://glitch.com/edit/#!/remix/personal-quiz-starter)
 
-1. [Click here to open the starter project](https://replit.com/@HylandOutreach/PersonalQuizStarter)
-1. Click the "Fork Repl" button in the upper right
-1. Click the "Fork Repl" button in the pop-up that appears
-1. Run the project to see how it looks!
-
-Everything should show up on the page, but the button will not be functional yet...
+Open the preview to see how it looks. Everything should show up on the page, but the button will not be functional yet...
 
 ## Part 2 - Hooking Up the Button
 There is currently no JavaScript code, so nothing happens when the button is clicked! Take a look at the `<button>` element in the HTML:
@@ -212,8 +207,8 @@ The quiz is functionally complete now, but the player might want a bit more of a
 1. There, create a new variable named `starImg`
 1. Set `starImg` to be a newly created `<img>` element
     - Use `document.createElement` to accomplish this
-1. Under that, set the `src` of `starImg` to be `"star.png"`
-    - The **star.png** file should already be loaded into the Repl project
+1. Under that, set the `src` of `starImg` to be `"https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true"`
+    - The **star.png** file should be accessible through the URL
 1. Under that, append the `starImg` element to the `body` of the page
     - Use `document.body.appendChild` to accomplish this
 1. Run the project, take the quiz again, and see how many stars you see!
@@ -223,7 +218,7 @@ The added code should look something like this:
 ```js
 for (let i = 0; i < score; i++) {
   let starImg = document.createElement("img");
-  starImg.src = "star.png";
+  starImg.src = "https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true";
   document.body.appendChild(starImg);
 }
 ```
@@ -272,7 +267,7 @@ function startQuiz() {
 
   for (let i = 0; i < score; i++) {
     let starImg = document.createElement("img");
-    starImg.src = "star.png";
+    starImg.src = "https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true";
     document.body.appendChild(starImg);
   }
 }

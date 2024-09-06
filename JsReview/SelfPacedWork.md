@@ -22,7 +22,7 @@ D) Flanto
 The user could then enter `A` or `a`, so the answer variable could be checked against that.
 
 ## 4. Different Images
-Stars are cool, but you might be able to find something better. Search the internet for an appropriate victory icon, and replace the `star.png` url in the JavaScript with the new URL!
+Stars are cool, but you might be able to find something better. Search the internet for an appropriate victory icon, and replace the image url in the JavaScript with the new URL!
 
 ## 5. (BUG) Extra Stars
 Currently, if a player completes the quiz more than once, all the additional stars are appended to the page - they are never removed! Figure out how to remove the star `<img>` elements whenever the quiz starts, so that the number of stars will always match the number of correct answers.

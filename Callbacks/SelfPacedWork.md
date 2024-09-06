@@ -56,7 +56,7 @@ Add a secret way to change the background image - when a site visitor clicks the
     - Parentheses (`()`)
     - Curly brackets (`{}`)
 1. Make a new line in the body of the function (between `{` and `}`)
-1. There, set `document.body.style.backgroundImage` to `"url('assets/sly.jpg')"`
+1. There, set `document.body.style.backgroundImage` to `"url('https://github.com/hytechclub/web-103/raw/main/Assets/sly.jpg')"`
     - This will change the background image of the page
 1. Make a new line _under_ the function definition (after `}`)
 1. There, create a new variable named `header`
@@ -72,7 +72,7 @@ In addition to changing the background image, start playing a different piece of
 1. Make a new line above the `slyBackground` function definition
 1. There, create a new variable named `danceToTheMusic`
     - Set `danceToTheMusic` to be a `new Audio` object
-    - Set the audio file to be `"assets/dancetothemusic.mp3"`
+    - Set the audio file to be `"https://github.com/hytechclub/web-103/raw/main/Assets/dancetothemusic.mp3"`
 1. Make a new line in the _body_ of the `slyBackground` function
 1. There, reate an `if`/`else` structure
     - `if` keyword

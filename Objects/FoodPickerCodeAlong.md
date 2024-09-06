@@ -2,9 +2,9 @@
 In this code-along, create a website to help visitors decide which food they should eat!
 
 ## Setting Up
-[Click here to go to the Food Picker Start project.](https://replit.com/@HylandOutreach/FoodPickerStarter)
+[Click here to go to the Food Picker Start project.](https://glitch.com/edit/#!/food-picker-start)
 
-1. Fork the Repl
+1. Remix the project
 1. Run the project
 1. Click the "Get Food" button
 1. Realize that nothing is happening
@@ -86,7 +86,7 @@ foodNameElement.textContent = foodNameText;
 ```
 
 ## Displaying the Random Item Picture
-The name is good, but it would be much more appetizing with a picture. Luckily, there are already some pictures built into the Repl! They are in the **pictures** folder.
+The name is good, but it would be much more appetizing with a picture. Luckily, there are some pictures accessible via URL.
 
 1. Open the **index.html** file
 1. Notice there is a `<p>` element with an `id` of `food-pic`
@@ -97,7 +97,7 @@ The name is good, but it would be much more appetizing with a picture. Luckily, 
 1. Set `foodPictureElement` to select the `<p id="food-pic">` element
     - Using `document.querySelector`
 1. Under that, create a new variable named `foodPictureUrl`
-1. Set `foodPictureUrl` to be `pictures/URL`
+1. Set `foodPictureUrl` to be `https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/URL`
 1. Make the string into a template literal
 1. In the literal, replace `URL` with `${item.picture}`
     - This gets the `picture` property of the `item` object
@@ -108,7 +108,7 @@ Run the project, click the button, and verify that a random food item picture is
 
 ```js
 let foodPictureElement = document.querySelector("#food-pic");
-let foodPictureUrl = `pictures/${item.picture}`;
+let foodPictureUrl = `https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/${item.picture}`;
 foodPictureElement.src = foodPictureUrl;
 ```
 
@@ -151,7 +151,7 @@ At this point:
 - The `name` property has been added to the `greekSalad` object
 - The `greekSalad` object has been added to the `items` array
 
-Run the project, click the button a few times, and verify that the Greek Salad eventually appears! Note that it may be helpful to remove the `alert` statement from the top of the `getFood` function for usability purposes. Replit also runs slowly sometimes, so if the image is not changing, it may be necessary to wait several seconds.
+Run the project, click the button a few times, and verify that the Greek Salad eventually appears! Note that it may be helpful to remove the `alert` statement from the top of the `getFood` function for usability purposes. The site also runs slowly sometimes, so if the image is not changing, it may be necessary to wait several seconds.
 
 The additional code should look something like this:
 
@@ -172,7 +172,7 @@ Now it will be possible to add new items in a few different ways! Add a Mac n Ch
 1. Under that in the object, create a `name` property set to `"Mac n Cheese"`
 1. Under that in the object, create a `price` property set to `7`
 1. Under that in the object, create a `picture` property set to `"macncheese.jfif"`
-    - Note that there is a file in the **pictures** folder named **macncheese.jfif**
+    - Note that there is a file with the URL `https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/macncheese.jfif` 
 1. Under that, _outside_ the object (after `}`), make a new line
 1. There, push the `mac` object to the `items` array
 
@@ -224,7 +224,7 @@ function getFood() {
   foodNameElement.textContent = foodNameText;
 
   let foodPictureElement = document.querySelector("#food-pic");
-  let foodPictureUrl = `pictures/${item.picture}`;
+  let foodPictureUrl = `https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/${item.picture}`;
   foodPictureElement.src = foodPictureUrl;
 }
 

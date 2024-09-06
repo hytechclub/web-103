@@ -1,7 +1,7 @@
 # Emoji Crush
 Follow these instructions to create a website that displays information about a random emoji.
 
-[Click here to view the Emoji Crush Starter Repl project.](https://replit.com/@HylandOutreach/EmojiCrush#script.js) Fork the project to begin the activity.
+[Click here to view the Emoji Crush Starter project.](https://glitch.com/edit/#!/emoji-crush-start) Remix the project to begin the activity.
 
 ## Part Zero: Background
 There is basically no starter code for this project, but the API will make it relatively simple to add functionality to the site.
