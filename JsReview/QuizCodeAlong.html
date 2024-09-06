@@ -762,17 +762,9 @@
                                 <h1 id="code-along-personal-quiz">Code-Along: Personal Quiz</h1>
 <p>Follow this guide to create and customize an interactive quiz. These instructions use Ash Ketchum as an example subject, but make sure to change the questions and answers to be about you!</p>
 <h2 id="part-1---setup">Part 1 - Setup</h2>
-<p>Start by forking the existing project. It contains all of the HTML and CSS, but none of the JavaScript.</p>
-<blockquote>
-<p>Note: You must be logged into Replit to fork the project</p>
-</blockquote>
-<ol>
-<li><a href="https://replit.com/@HylandOutreach/PersonalQuizStarter" target="_blank">Click here to open the starter project</a></li>
-<li>Click the &quot;Fork Repl&quot; button in the upper right</li>
-<li>Click the &quot;Fork Repl&quot; button in the pop-up that appears</li>
-<li>Run the project to see how it looks!</li>
-</ol>
-<p>Everything should show up on the page, but the button will not be functional yet...</p>
+<p>Start by remixing the existing project. It contains all of the HTML and CSS, but none of the JavaScript.</p>
+<p><a href="https://glitch.com/edit/#!/remix/personal-quiz-starter" target="_blank">Click here to remix the project!</a></p>
+<p>Open the preview to see how it looks. Everything should show up on the page, but the button will not be functional yet...</p>
 <h2 id="part-2---hooking-up-the-button">Part 2 - Hooking Up the Button</h2>
 <p>There is currently no JavaScript code, so nothing happens when the button is clicked! Take a look at the <code>&lt;button&gt;</code> element in the HTML:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;startQuiz()&quot;</span>&gt;</span>Start the Quiz<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
@@ -1004,8 +996,8 @@ scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-
 <li>Use <code>document.createElement</code> to accomplish this</li>
 </ul>
 </li>
-<li>Under that, set the <code>src</code> of <code>starImg</code> to be <code>&quot;star.png&quot;</code><ul>
-<li>The <strong>star.png</strong> file should already be loaded into the Repl project</li>
+<li>Under that, set the <code>src</code> of <code>starImg</code> to be <code>&quot;https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true&quot;</code><ul>
+<li>The <strong>star.png</strong> file should be accessible through the URL</li>
 </ul>
 </li>
 <li>Under that, append the <code>starImg</code> element to the <code>body</code> of the page<ul>
@@ -1017,7 +1009,7 @@ scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-
 <p>The added code should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score; i++) {
   <span class="hljs-keyword">let</span> starImg = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
-  starImg.src = <span class="hljs-string">&quot;star.png&quot;</span>;
+  starImg.src = <span class="hljs-string">&quot;https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true&quot;</span>;
   <span class="hljs-built_in">document</span>.body.appendChild(starImg);
 }
 </code></pre>
@@ -1063,7 +1055,7 @@ scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-
 
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; score; i++) {
     <span class="hljs-keyword">let</span> starImg = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;img&quot;</span>);
-    starImg.src = <span class="hljs-string">&quot;star.png&quot;</span>;
+    starImg.src = <span class="hljs-string">&quot;https://github.com/hytechclub/web-103/blob/main/Assets/star.png?raw=true&quot;</span>;
     <span class="hljs-built_in">document</span>.body.appendChild(starImg);
   }
 }
@@ -1113,7 +1105,7 @@ scoreElement.textContent = <span class="hljs-string">`You got <span class="hljs-
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.2.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"path":"JsReview/SelfPacedWork.md","ref":"JsReview/SelfPacedWork.md","articles":[]},"previous":{"title":"Cheat Sheet","level":"1.2.1","depth":2,"path":"JsReview/Web102CheatSheet.md","ref":"JsReview/Web102CheatSheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/QuizCodeAlong.md","mtime":"2024-09-06T18:45:44.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:46:15.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.2.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.2.3","depth":2,"path":"JsReview/SelfPacedWork.md","ref":"JsReview/SelfPacedWork.md","articles":[]},"previous":{"title":"Cheat Sheet","level":"1.2.1","depth":2,"path":"JsReview/Web102CheatSheet.md","ref":"JsReview/Web102CheatSheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"JsReview/QuizCodeAlong.md","mtime":"2024-09-06T18:52:51.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:53:22.796Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

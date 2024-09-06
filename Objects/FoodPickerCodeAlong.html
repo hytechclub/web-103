@@ -762,9 +762,9 @@
                                 <h1 id="code-along-food-picker">Code-Along: Food Picker</h1>
 <p>In this code-along, create a website to help visitors decide which food they should eat!</p>
 <h2 id="setting-up">Setting Up</h2>
-<p><a href="https://replit.com/@HylandOutreach/FoodPickerStarter" target="_blank">Click here to go to the Food Picker Start project.</a></p>
+<p><a href="https://glitch.com/edit/#!/food-picker-start" target="_blank">Click here to go to the Food Picker Start project.</a></p>
 <ol>
-<li>Fork the Repl</li>
+<li>Remix the project</li>
 <li>Run the project</li>
 <li>Click the &quot;Get Food&quot; button</li>
 <li>Realize that nothing is happening</li>
@@ -848,7 +848,7 @@
 foodNameElement.textContent = foodNameText;
 </code></pre>
 <h2 id="displaying-the-random-item-picture">Displaying the Random Item Picture</h2>
-<p>The name is good, but it would be much more appetizing with a picture. Luckily, there are already some pictures built into the Repl! They are in the <strong>pictures</strong> folder.</p>
+<p>The name is good, but it would be much more appetizing with a picture. Luckily, there are some pictures accessible via URL.</p>
 <ol>
 <li>Open the <strong>index.html</strong> file</li>
 <li>Notice there is a <code>&lt;p&gt;</code> element with an <code>id</code> of <code>food-pic</code><ul>
@@ -863,7 +863,7 @@ foodNameElement.textContent = foodNameText;
 </ul>
 </li>
 <li>Under that, create a new variable named <code>foodPictureUrl</code></li>
-<li>Set <code>foodPictureUrl</code> to be <code>pictures/URL</code></li>
+<li>Set <code>foodPictureUrl</code> to be <code>https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/URL</code></li>
 <li>Make the string into a template literal</li>
 <li>In the literal, replace <code>URL</code> with <code>${item.picture}</code><ul>
 <li>This gets the <code>picture</code> property of the <code>item</code> object</li>
@@ -876,7 +876,7 @@ foodNameElement.textContent = foodNameText;
 </ol>
 <p>Run the project, click the button, and verify that a random food item picture is properly displayed! The additional code should look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> foodPictureElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#food-pic&quot;</span>);
-<span class="hljs-keyword">let</span> foodPictureUrl = <span class="hljs-string">`pictures/<span class="hljs-subst">${item.picture}</span>`</span>;
+<span class="hljs-keyword">let</span> foodPictureUrl = <span class="hljs-string">`https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/<span class="hljs-subst">${item.picture}</span>`</span>;
 foodPictureElement.src = foodPictureUrl;
 </code></pre>
 <h2 id="creating-a-greek-salad-object">Creating a Greek Salad Object</h2>
@@ -924,7 +924,7 @@ foodPictureElement.src = foodPictureUrl;
 <li>The <code>name</code> property has been added to the <code>greekSalad</code> object</li>
 <li>The <code>greekSalad</code> object has been added to the <code>items</code> array</li>
 </ul>
-<p>Run the project, click the button a few times, and verify that the Greek Salad eventually appears! Note that it may be helpful to remove the <code>alert</code> statement from the top of the <code>getFood</code> function for usability purposes. Replit also runs slowly sometimes, so if the image is not changing, it may be necessary to wait several seconds.</p>
+<p>Run the project, click the button a few times, and verify that the Greek Salad eventually appears! Note that it may be helpful to remove the <code>alert</code> statement from the top of the <code>getFood</code> function for usability purposes. The site also runs slowly sometimes, so if the image is not changing, it may be necessary to wait several seconds.</p>
 <p>The additional code should look something like this:</p>
 <pre><code class="lang-js">greekSalad.name = <span class="hljs-string">&quot;Greek Salad&quot;</span>;
 items.push(greekSalad);
@@ -945,7 +945,7 @@ items.push(greekSalad);
 <li>Under that in the object, create a <code>name</code> property set to <code>&quot;Mac n Cheese&quot;</code></li>
 <li>Under that in the object, create a <code>price</code> property set to <code>7</code></li>
 <li>Under that in the object, create a <code>picture</code> property set to <code>&quot;macncheese.jfif&quot;</code><ul>
-<li>Note that there is a file in the <strong>pictures</strong> folder named <strong>macncheese.jfif</strong></li>
+<li>Note that there is a file with the URL <code>https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/macncheese.jfif</code> </li>
 </ul>
 </li>
 <li>Under that, <em>outside</em> the object (after <code>}</code>), make a new line</li>
@@ -990,7 +990,7 @@ items.push(mac);
   foodNameElement.textContent = foodNameText;
 
   <span class="hljs-keyword">let</span> foodPictureElement = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&quot;#food-pic&quot;</span>);
-  <span class="hljs-keyword">let</span> foodPictureUrl = <span class="hljs-string">`pictures/<span class="hljs-subst">${item.picture}</span>`</span>;
+  <span class="hljs-keyword">let</span> foodPictureUrl = <span class="hljs-string">`https://raw.githubusercontent.com/hytechclub/web-103/main/Assets/<span class="hljs-subst">${item.picture}</span>`</span>;
   foodPictureElement.src = foodPictureUrl;
 }
 
@@ -1064,7 +1064,7 @@ items.push({
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.4.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"path":"Objects/SelfPacedWork.md","ref":"Objects/SelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.4.1","depth":2,"path":"Objects/WarmUp.md","ref":"Objects/WarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/FoodPickerCodeAlong.md","mtime":"2024-09-06T18:45:44.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:46:15.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.4.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.4.3","depth":2,"path":"Objects/SelfPacedWork.md","ref":"Objects/SelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.4.1","depth":2,"path":"Objects/WarmUp.md","ref":"Objects/WarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"Objects/FoodPickerCodeAlong.md","mtime":"2024-09-06T18:52:51.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:53:22.796Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

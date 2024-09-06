@@ -1,7 +1,7 @@
 # TV Characters
 Follow these instructions to update a website that displays characters from TV shows.
 
-[Click here to view the TV Characters Starter Repl project.](https://replit.com/@HylandOutreach/TvCharacters) Fork the project to begin the activity.
+[Click here to view the TV Characters Starter project.](https://glitch.com/edit/#!/tv-characters) Remix the project to begin the activity.
 
 ## Part Zero: Background
 There is significant code and functionality already built into this project.

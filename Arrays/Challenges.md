@@ -1,10 +1,10 @@
 # Challenges
 Try to complete these challenges that deal with a playlist website.
 
-Start by forking [this Repl project](https://replit.com/@HylandOutreach/the-best-songs#style.css). Then, try to update the site in a variety of ways! Feel free to hop around whichever challenges interest you the most.
+Start by remixing [this project](https://glitch.com/edit/#!/the-best-songs). Then, try to update the site in a variety of ways! Feel free to hop around whichever challenges interest you the most.
 
 ## Challenge 1 - Updating the Picture
-The jumbotron header has a background image, but it might not be something you like. Find another picture online, add it to your Repl project, and update the `background-image` property in the **style.css** file!
+The jumbotron header has a background image, but it might not be something you like. Find another picture online, and update the `background-image` property in the **style.css** file!
 
 ## Challenge 2 - Updating the Colors
 The colors are designed to match the background image of the jumbotron. Update any of the colors in the **style.css** file to match your own personal taste!
@@ -74,10 +74,10 @@ myNamelessFunction();
 Run the code at this point to make sure each play button is hooked up!
 
 ### Playing Audio
-The next step will be to actually [play some audio](https://stackoverflow.com/a/18628124). You will want to find some audio files and pull them into your Repl project first. Once you have done that, you can play them! It looks something like this:
+The next step will be to actually [play some audio](https://stackoverflow.com/a/18628124). You will want to find some audio file links. Once you have done that, you can play them! It looks something like this:
 
 ```js
-let audio = new Audio("audio_file.mp3");
+let audio = new Audio("https://link-to.my/audio_file.mp3");
 audio.play();
 ```
 

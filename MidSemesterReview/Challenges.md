@@ -1,7 +1,7 @@
 # Challenges: Menu Application
 Complete these challenges based on an online menu.
 
-[Click here to view the Menu Application Repl project.](https://replit.com/@HylandOutreach/MenuApplication) Fork the project to begin the challenges.
+[Click here to view the Menu Application project.](https://glitch.com/edit/#!/online-menu) Remix the project to begin the challenges.
 
 ## Background: Application Testing
 Run the project, and see how the application works:
@@ -126,7 +126,7 @@ There is quite a bit of code, but learning how to navigate and update existing c
 Currently, there are only three sandwiches. This is a pretty weak offering. **Update the initial `sandwiches` array to include at least two (2) new items!**
 
 ### What to Add
-There are already images for a Club Sandwich (**images/club.jpg**) and a Veggie Sandwich (**images/veg.jpg**) built into the project. However, this menu can contain anything you would like! Feel free to change it up and offer entirely new options as desired. They don't even have to be food items!
+This menu can contain anything you would like! Feel free to change it up and offer entirely new options as desired. They don't even have to be food items!
 
 ## Challenge 2: Menu Item Prices
 Currently, the menu displays the name, picture, and description for each item. However, the _price_ is not displayed anywhere! **Update the `itemElement` HTML to include each `item`'s `price`!**

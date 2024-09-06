@@ -1,7 +1,7 @@
 # Code-Along: Dog Fetcher
 Follow these instructions to build a website that will provide the user with some pictures of dogs.
 
-[Click here to view the Dog Fetcher Starter Repl project.](https://replit.com/@HylandOutreach/DogFetcher) Fork the project to begin the activity.
+[Click here to view the Dog Fetcher Starter project.](https://glitch.com/edit/#!/dog-fetcher-start) Remix the project to begin the activity.
 
 ## Part One: Background
 Typically, dogs play fetch. In this activity, _your code_ is going to be playing fetch, and the things that your code will be fetching will be dogs!

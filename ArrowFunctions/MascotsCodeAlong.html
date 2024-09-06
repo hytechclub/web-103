@@ -762,8 +762,8 @@
                                 <h1 id="code-along-cereal-mascots-for-some-reason">Code-Along: Cereal Mascots for Some Reason</h1>
 <p>In this code-along, create a website that showcases cereal mascot trading cards for some reason.</p>
 <h2 id="setting-up">Setting Up</h2>
-<p><a href="https://replit.com/@HylandOutreach/CerealStart" target="_blank">Click here to go to the Cereal Start project.</a></p>
-<p>Start by forking the Repl. There is a decent amount of starter code.</p>
+<p><a href="https://glitch.com/edit/#!/cereal-mascots-compendium" target="_blank">Click here to go to the Cereal Start project.</a></p>
+<p>Start by remixing the project. There is a decent amount of starter code.</p>
 <h4 id="html-starter-code">HTML Starter Code</h4>
 <p>The <strong>index.html</strong> file has some basic elements, including:</p>
 <ul>
@@ -780,7 +780,7 @@
 <h4 id="javascript-starter-code">JavaScript Starter Code</h4>
 <p>There is one variable in the <strong>script.js</strong> file - <code>mascots</code>. This is an array containing objects, each object with some properties about a different cereal mascot. This code-along is all about displaying that data in an engaging way!</p>
 <h4 id="images">Images</h4>
-<p>Also of note, there are some images in the <strong>images</strong> folder. The image filenames are referenced by the <code>mascots</code> objects (e.g., <strong>tony.png</strong>).</p>
+<p>Also of note, there are some images referenced by URL.</p>
 <h3 id="beginning">Beginning</h3>
 <p>There is a lot of setup, but nothing is actually functional yet. Run the project and notice that no mascots appear!</p>
 <h2 id="name-cards-text">Name Cards: Text</h2>
@@ -806,7 +806,7 @@ displayCards();
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> tony = {
   name: <span class="hljs-string">&quot;Tony the Tiger&quot;</span>,
   cereal: <span class="hljs-string">&quot;Frosted Flakes&quot;</span>,
-  image: <span class="hljs-string">&quot;tony.png&quot;</span>,
+  image: <span class="hljs-string">&quot;https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg&quot;</span>,
   type: <span class="hljs-string">&quot;animal&quot;</span>,
   description: <span class="hljs-string">&quot;Tony began to be humanized in the 1970s...&quot;</span>
 }
@@ -949,7 +949,7 @@ displayCards();
 <p>To see how this will look, there is some HTML to copy:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;this.classList.toggle(&apos;flipped&apos;);&quot;</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;images/tony.png&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>Tony the Tiger<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Frosted Flakes<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -1033,7 +1033,7 @@ displayCards();
 <p>The updated code in the body of the <code>objectToCard</code> should now look something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> cardHTML = <span class="hljs-string">`
   &lt;div&gt;
-    &lt;img src=&quot;images/tony.png&quot;&gt;
+    &lt;img src=&quot;https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg&quot;&gt;
     &lt;h4&gt;Tony the Tiger&lt;/h4&gt;
     &lt;p&gt;Frosted Flakes&lt;/p&gt;
   &lt;/div&gt;
@@ -1047,7 +1047,7 @@ mascotCard.innerHTML = cardHTML;
 <p>Luckily, each time <code>objectToCard</code> is called, there is a parameter that has all the data for each individual mascot. This is all stored in the <code>m</code> object, under <code>m.image</code>, <code>m.name</code>, <code>m.cereal</code>, and <code>m.description</code>. Using <code>${expression}</code> notation, it will be possible to put this data into the HTML!</p>
 <ol>
 <li>Find the <code>cardHTML</code> template string (between backticks), and get ready to update it</li>
-<li>Replace <code>tony.png</code> with <code>${m.image}</code></li>
+<li>Replace the image URL with <code>${m.image}</code></li>
 <li>Replace <code>Tony the Tiger</code> with <code>${m.name}</code></li>
 <li>Replace <code>Frosted Flakes</code> with <code>${m.cereal}</code></li>
 <li>Replace <code>Tony began to be humanized in the 1970s...</code> with <code>${m.description}</code></li>
@@ -1055,7 +1055,7 @@ mascotCard.innerHTML = cardHTML;
 <p>The updated code should end up looking something like this:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> cardHTML = <span class="hljs-string">`
   &lt;div&gt;
-    &lt;img src=&quot;images/<span class="hljs-subst">${m.image}</span>&quot;&gt;
+    &lt;img src=&quot;<span class="hljs-subst">${m.image}</span>&quot;&gt;
     &lt;h4&gt;<span class="hljs-subst">${m.name}</span>&lt;/h4&gt;
     &lt;p&gt;<span class="hljs-subst">${m.cereal}</span>&lt;/p&gt;
   &lt;/div&gt;
@@ -1177,7 +1177,7 @@ displayCards(filteredList);
   <span class="hljs-comment">// Add all the HTML text to show the image, name, cereal, and description</span>
   <span class="hljs-keyword">let</span> cardHTML = <span class="hljs-string">`
     &lt;div&gt;
-      &lt;img src=&quot;images/<span class="hljs-subst">${m.image}</span>&quot;&gt;
+      &lt;img src=&quot;<span class="hljs-subst">${m.image}</span>&quot;&gt;
       &lt;h4&gt;<span class="hljs-subst">${m.name}</span>&lt;/h4&gt;
       &lt;p&gt;<span class="hljs-subst">${m.cereal}</span>&lt;/p&gt;
     &lt;/div&gt;
@@ -1267,7 +1267,7 @@ displayCards(mascots);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.6.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.6.3","depth":2,"path":"ArrowFunctions/SelfPacedWork.md","ref":"ArrowFunctions/SelfPacedWork.md","articles":[]},"previous":{"title":"Worksheet","level":"1.6.1","depth":2,"path":"ArrowFunctions/Worksheet.md","ref":"ArrowFunctions/Worksheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ArrowFunctions/MascotsCodeAlong.md","mtime":"2024-09-06T18:45:44.341Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:46:15.929Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.6.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.6.3","depth":2,"path":"ArrowFunctions/SelfPacedWork.md","ref":"ArrowFunctions/SelfPacedWork.md","articles":[]},"previous":{"title":"Worksheet","level":"1.6.1","depth":2,"path":"ArrowFunctions/Worksheet.md","ref":"ArrowFunctions/Worksheet.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ArrowFunctions/MascotsCodeAlong.md","mtime":"2024-09-06T18:52:51.489Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-09-06T18:53:22.796Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

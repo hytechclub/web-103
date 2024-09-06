@@ -2,9 +2,9 @@
 In this code-along, create a website that showcases cereal mascot trading cards for some reason.
 
 ## Setting Up
-[Click here to go to the Cereal Start project.](https://replit.com/@HylandOutreach/CerealStart)
+[Click here to go to the Cereal Start project.](https://glitch.com/edit/#!/cereal-mascots-compendium)
 
-Start by forking the Repl. There is a decent amount of starter code.
+Start by remixing the project. There is a decent amount of starter code.
 
 #### HTML Starter Code
 The **index.html** file has some basic elements, including:
@@ -22,7 +22,7 @@ There is quite a bit of CSS code in the **style.css** file - most of this is to 
 There is one variable in the **script.js** file - `mascots`. This is an array containing objects, each object with some properties about a different cereal mascot. This code-along is all about displaying that data in an engaging way!
 
 #### Images
-Also of note, there are some images in the **images** folder. The image filenames are referenced by the `mascots` objects (e.g., **tony.png**).
+Also of note, there are some images referenced by URL.
 
 ### Beginning
 There is a lot of setup, but nothing is actually functional yet. Run the project and notice that no mascots appear!
@@ -57,7 +57,7 @@ Each piece of data from the `mascots` array should be converted into an HTML tex
 let tony = {
   name: "Tony the Tiger",
   cereal: "Frosted Flakes",
-  image: "tony.png",
+  image: "https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg",
   type: "animal",
   description: "Tony began to be humanized in the 1970s..."
 }
@@ -245,7 +245,7 @@ To see how this will look, there is some HTML to copy:
 ```html
 <div onclick="this.classList.toggle('flipped');">
   <div>
-    <img src="images/tony.png">
+    <img src="https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg">
     <h4>Tony the Tiger</h4>
     <p>Frosted Flakes</p>
   </div>
@@ -343,7 +343,7 @@ The updated code in the body of the `objectToCard` should now look something lik
 ```js
 let cardHTML = `
   <div>
-    <img src="images/tony.png">
+    <img src="https://i.pinimg.com/736x/51/4b/c8/514bc836deb22942d7266f23b06497a2.jpg">
     <h4>Tony the Tiger</h4>
     <p>Frosted Flakes</p>
   </div>
@@ -359,7 +359,7 @@ Run the project again. Now, you should see your website with all tonys. It's pre
 Luckily, each time `objectToCard` is called, there is a parameter that has all the data for each individual mascot. This is all stored in the `m` object, under `m.image`, `m.name`, `m.cereal`, and `m.description`. Using `${expression}` notation, it will be possible to put this data into the HTML!
 
 1. Find the `cardHTML` template string (between backticks), and get ready to update it
-1. Replace `tony.png` with `${m.image}`
+1. Replace the image URL with `${m.image}`
 1. Replace `Tony the Tiger` with `${m.name}`
 1. Replace `Frosted Flakes` with `${m.cereal}`
 1. Replace `Tony began to be humanized in the 1970s...` with `${m.description}`
@@ -369,7 +369,7 @@ The updated code should end up looking something like this:
 ```js
 let cardHTML = `
   <div>
-    <img src="images/${m.image}">
+    <img src="${m.image}">
     <h4>${m.name}</h4>
     <p>${m.cereal}</p>
   </div>
@@ -504,7 +504,7 @@ let objectToCard = m => {
   // Add all the HTML text to show the image, name, cereal, and description
   let cardHTML = `
     <div>
-      <img src="images/${m.image}">
+      <img src="${m.image}">
       <h4>${m.name}</h4>
       <p>${m.cereal}</p>
     </div>

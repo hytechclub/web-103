@@ -16,9 +16,6 @@ This course expands upon the material from Web 102, and dives deeper into more J
 - Week 11: Final Project Work
 - Week 12: Final Project Presentations
 
-## Multiplayer Repls
-[View responses for Multiplayer Repl Submissions here.](https://forms.office.com/Pages/DesignPage.aspx?fragment=FormId%3DiNuljKul90il4EzlCTX4B33juYEmlJlJpIkctSGCv9RUN0kzU0NJVDlIOUNET0NLQktVTzZMTzFMRS4u%26Token%3Db6c035cb537a4d5bbd05a4918fcda8cc)
-
 ## Resources & Ideas
 Here are some thoughts and things.
 

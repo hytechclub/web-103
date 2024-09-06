@@ -2,9 +2,9 @@
 In this code-along, add some funktionality to buttons on a website using callbacks.
 
 ## Setting Up
-[Click here to go to the Funktional Functions Starter project.](https://replit.com/@HylandOutreach/FunktionalFunctionsStarter#script.js)
+[Click here to go to the Funktional Functions Starter project.](https://glitch.com/edit/#!/funktional-functions)
 
-Start by forking the Repl. Take a look at the current code in the **script.js** file:
+Start by remixing the project. Take a look at the current code in the **script.js** file:
 
 - `bassAudio` object and `playBass` function definition - these make it possible to play an audio track!
 - `chooseRandom` function definition - this makes it possible to choose a random item from an array, and exclude any item in particular

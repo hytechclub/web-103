@@ -2,7 +2,7 @@
 Make some updates to a Funk Playlist website.
 
 ## Overview
-[Click here to access and fork the starter Repl project.](https://replit.com/@HylandOutreach/FunkPlaylist#script.js)
+[Click here to access and remix the starter project.](https://glitch.com/edit/#!/funk-playlist)
 
 The current website will play six shortened tracks in a playlist format. The play buttons should play the songs, and when a song ends, the site should play the next song in the list. It's functional, but there are some nice features that you can try to add!
 
@@ -10,7 +10,7 @@ The current website will play six shortened tracks in a playlist format. The pla
 Update any of the styles to fit whatever vibe you would like to cultivate. Change colors, fonts, pictures, or anything like that.
 
 ## New Tracks
-There are only six tracks right now, which is kind of sad. Go find some additional music to add to the list! The hardest part of this will be to actually download audio files - try Bandcamp, Internet Archive, or Soundcloud.
+There are only six tracks right now, which is kind of sad. Go find some additional music to add to the list! The hardest part of this will be to actually find links for audio files - try Bandcamp, Internet Archive, or Soundcloud.
 
 ## Repeat
 Currently, the music well stop when the playlist ends. Update the code so that instead of ending, it goes back to the start!
