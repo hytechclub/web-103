@@ -22,3 +22,16 @@ Follow the links below to view each week of material.
 [Click here to submit your project links!](https://hylandtechclub.com/GlitchLink)
 
 >_Note: only virtual students should submit links_
+
+### VS Code for Education
+If Glitch glitches, it may be necessary to use [Visual Studio Code for Education](https://vscodeedu.com/) instead. Sign up with a Google or Microsoft account to get started.
+
+>_Note: when using this platform, it will be necessary to "Share" projects in order to send links. It will also be necessary to "Publish" projects to allow other people to view them online. Also, there are some issues with embedded assets like images and audio - but publishing the site and viewing it in its own tab should fix those issues._
+
+- [EmptyWeb](https://vscodeedu.com/fIutwSTikdAllE0aICni)
+- [Week 1: Personal Quiz Starter](https://vscodeedu.com/LqIpbHNI2dk0lWzB3ViQ)
+- [Week 2: Watchlist](https://vscodeedu.com/tFDrBoBdJHidrQcGbuHD)
+- [Week 2: The Best Songs](https://vscodeedu.com/9NOoBJIn2GP8pOL3F8k6)
+- [Week 3: Food Picker](https://vscodeedu.com/xy5N8WHG3lR17oTZYUta)
+- [Week 4: Funktional Functions](https://vscodeedu.com/QvuHNxsJjPxmLk5cWqRA)
+- [Week 4: Funk Playlist](https://vscodeedu.com/IclldDQwPld8O2W4I2jr)
