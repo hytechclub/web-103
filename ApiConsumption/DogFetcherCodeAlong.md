@@ -19,7 +19,9 @@ The starter project has quite a bit of code, but it's all HTML and CSS! In the *
 
 All of these elements will be necessary to make the website functional.
 
-### The [shibe.online](https://shibe.online/) API
+### NOT WORKING: The [shibe.online](https://shibe.online/) API
+_Note: the shibe.online API appears to be down. Use [give-me-dogs.glitch.me/dogs](https://give-me-dogs.glitch.me/dogs) instead._
+
 The code needs something to fetch, and luckily, there is an API that provides random pictures of shiba inu dogs! These adorable pups are also known as "shibes" in internet parlance - hence the name, [shibe.online](https://shibe.online/). Take a look at the homepage to learn more about how the API works.
 
 The _base url_ is `https://shibe.online/api/shibes`. For the purposes of this activity, the only relevant _query parameter_ will be `count`. The response will be a JSON array of strings; each one a URL pointing to a picture of a shibe.
@@ -77,7 +79,7 @@ Use the `fetch` function to send a request out to the API to _try to_ get some s
 1. Make a new line in the body of the `getDogs` function
 1. Create a new variable named `response`
 1. Set `response` to equal a call to `fetch`
-    - Pass in \``https://shibe.online/api/shibes?count=2`\` as the URL
+    - Pass in \``https://give-me-dogs.glitch.me/dogs?count=2`\` as the URL
 1. Under that, create a variable named `responseJson`
 1. Set `responseJson` to a call to the `json()` function on the `response` variable
 1. Finally, call `alert` on `responseJson` to display the result
@@ -85,7 +87,7 @@ Use the `fetch` function to send a request out to the API to _try to_ get some s
 With that, run the code, click the "Get Dogs" button again, and see what happens. It might not quite work... it should display a pop-up, but there is an issue with this code:
 
 ```js
-let response = fetch(`https://shibe.online/api/shibes?count=2`);
+let response = fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
 let responseJson = response.json();
 alert(responseJson);
 ```
@@ -113,7 +115,7 @@ The modified code should look something like this:
 let response, responseJson;
 
 try {
-  response = fetch(`https://shibe.online/api/shibes?count=2`);
+  response = fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
   responseJson = response.json();
 } catch (e) {
   alert(e);
@@ -140,7 +142,7 @@ Hmm... why would `response.json` not be a function? The `fetch` call _should_ re
     - Use `.style.display = "none"` to accomplish this
 1. Additionally, for testing, purposes, call `alert` on `responseJson`
 
-Run the program, click the "Get Dogs" button again, and verify that some dog image URLs appear! Copy and paste one into a new tab to see a shibe like [this](https://cdn.shibe.online/shibes/039e86853cb65ed16cb3823a4fd9528ae374cfec.jpg).
+Run the program, click the "Get Dogs" button again, and verify that some dog image URLs appear! Copy and paste one into a new tab to see a shibe like [this](https://images.dog.ceo/breeds/shiba/kurosuke01.jpg).
 
 At this point, the entire code in the **script.js** file should look something like this:
 
@@ -152,7 +154,7 @@ async function getDogs() {
   let response, responseJson;
   
   try {
-    response = await fetch(`https://shibe.online/api/shibes?count=2`);
+    response = await fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
     responseJson = await response.json();
   } catch (e) {
     alert(e);
@@ -187,7 +189,10 @@ dogImgsDiv.innerHTML = "";
 The goal is to create one picture element _for each_ picture URL in the response. The `responseJson` object should be an array that stores something like this:
 
 ```
-["https://cdn.shibe.online/shibes/9e5687af188a54e801762da4ee920f870e3db633.jpg","https://cdn.shibe.online/shibes/3e918c16e267262d9affef660758b76368f49125.jpg"]
+[
+  "https://images.dog.ceo/breeds/shiba/shiba-9.jpg",
+  "https://images.dog.ceo/breeds/shiba/shiba-10.jpg"
+]
 ```
 
 The `forEach` array function will be perfect for this! First, establish the loop.
@@ -206,7 +211,7 @@ responseJson.forEach(dogUrl => {});
 ```
 
 ### Adding Each Image to the Container
-Now the code is setup to run a block for every image URL retrieved from **shibe.online**. For each of them, a new `<img>` element should be created and added to the `dogImgsDiv` container!
+Now the code is setup to run a block for every image URL retrieved from **give-me-dogs.glitch.me**. For each of them, a new `<img>` element should be created and added to the `dogImgsDiv` container!
 
 1. Within the `forEach` arrow function body, make a new line
 1. There, create a new variable named `newDogImg`
@@ -254,7 +259,7 @@ async function getDogs() {
   let response, responseJson;
 
   try {
-    response = await fetch(`https://shibe.online/api/shibes?count=${numDogs}`);
+    response = await fetch(`https://give-me-dogs.glitch.me/dogs?count=${numDogs}`);
     responseJson = await response.json();
   } catch (e) {
     alert(e);
