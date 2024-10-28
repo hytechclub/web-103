@@ -2,13 +2,13 @@
 Follow these instructions to make some updates to the Dog Fetcher website.
 
 ## 🐦 Birds & Cats 🐈
-Dogs are cool. Dogs are _really_ cool. But it might be even cooler to show images of other animals too! Luckily, **shibe.online** has APIs for birds and cats in addition to dogs! Incorporate these into the Dog Fetcher site.
+Dogs are cool. Dogs are _really_ cool. But it might be even cooler to show images of other animals too! Luckily, **give-me-dogs.glitch.me** has APIs for birds and cats in addition to dogs! Incorporate these into the Dog Fetcher site.
 
 ### Basic Challenge: Replace
-The simple way to do this would be to replace the `shibes` URL with one that points to either `birds` or `cats`. Basically, the base URL should look something like this instead:
+The simple way to do this would be to replace the `dogs` URL with one that points to either `birds` or `cats`. Basically, the base URL should look something like this instead:
 
 ```
-https://shibe.online/api/birds
+https://give-me-dogs.glitch.me/cats
 ```
 
 Update the URL in the `fetch` call to grab images of a different kind of animal. Then, update all the HTML to reflect the new type of animal!

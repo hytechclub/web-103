@@ -20,7 +20,7 @@ The starter project has quite a bit of code, but it's all HTML and CSS! In the *
 All of these elements will be necessary to make the website functional.
 
 ### NOT WORKING: The [shibe.online](https://shibe.online/) API
-_Note: the shibe.online API appears to be down. Use [give-me-dogs.glitch.me/dogs](https://give-me-dogs.glitch.me/dogs) instead._
+_Note: the shibe.online API appears to be down. Use [give-me-dogs.glitch.me/dogs](https://give-me-dogs.glitch.me/dogs) instead. You can check out the [source code](https://glitch.com/edit/#!/give-me-dogs) too._
 
 The code needs something to fetch, and luckily, there is an API that provides random pictures of shiba inu dogs! These adorable pups are also known as "shibes" in internet parlance - hence the name, [shibe.online](https://shibe.online/). Take a look at the homepage to learn more about how the API works.
 
