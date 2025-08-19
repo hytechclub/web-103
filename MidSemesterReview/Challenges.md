@@ -1,7 +1,7 @@
 # Challenges: Menu Application
 Complete these challenges based on an online menu.
 
-[Click here to view the Menu Application project.](https://glitch.com/edit/#!/online-menu) Remix the project to begin the challenges.
+[Click here to view the Menu Application project.](https://hytop.onrender.com/e/online-menu) Remix the project to begin the challenges.
 
 ## Background: Application Testing
 Run the project, and see how the application works:

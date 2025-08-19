@@ -23,7 +23,7 @@ The [presentation](FunctionsAndCallbacks.pptx) reviews functions, and shows how 
 Facilitate the [Blooket quiz game](https://dashboard.blooket.com/set/63d16a6402b104792091fdf5). Note than an account is required to host the game.
 
 ## Code-Along: Funktional Functions
-Follow the [instructions](FunktionalCodeAlong.md) to build up a funky website. By the end of the activity, the project should look something like [this](https://glitch.com/edit/#!/funktional-code-along-complete).
+Follow the [instructions](FunktionalCodeAlong.md) to build up a funky website. By the end of the activity, the project should look something like [this](https://hytop.onrender.com/e/funktional-code-along-complete).
 
 ## Self-Paced Work: Funktional Functions Updates
 Have the students follow [the instructions](SelfPacedWork.md) to continue working on the funky website.

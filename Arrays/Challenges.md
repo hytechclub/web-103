@@ -1,7 +1,7 @@
 # Challenges
 Try to complete these challenges that deal with a playlist website.
 
-Start by remixing [this project](https://glitch.com/edit/#!/the-best-songs). Then, try to update the site in a variety of ways! Feel free to hop around whichever challenges interest you the most.
+Start by remixing [this project](https://hytop.onrender.com/e/the-best-songs). Then, try to update the site in a variety of ways! Feel free to hop around whichever challenges interest you the most.
 
 ## Challenge 1 - Updating the Picture
 The jumbotron header has a background image, but it might not be something you like. Find another picture online, and update the `background-image` property in the **style.css** file!

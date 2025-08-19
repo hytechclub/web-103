@@ -41,7 +41,7 @@ Present the [JavaScript Crash Course PowerPoint](JsCrashCourse.pptx). This is me
 ## Code-Along: Personal Quiz
 Walk through [the instructions](QuizCodeAlong.md) with the students to have them build a short quiz about themselves.
 
-By the end of the activity, the projects should look something like [this](https://glitch.com/edit/#!/rhinestone-pear-jaxartosaurus).
+By the end of the activity, the projects should look something like [this](https://hytop.onrender.com/e/rhinestone-pear-jaxartosaurus).
 
 ## Self-Paced Work: Quiz Updates
 Have the students follow [the instructions](SelfPacedWork.md) to continue working on their Personal Quiz from the code-along.

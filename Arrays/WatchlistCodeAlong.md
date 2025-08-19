@@ -2,7 +2,7 @@
 Follow these instructions to build a movie watchlist website!
 
 ## Getting Started
-To begin, remix [this Starter project](https://glitch.com/edit/#!/my-watchlist-as-an-array). It contains some HTML and CSS, but no JavaScript yet 😓
+To begin, remix [this Starter project](https://hytop.onrender.com/e/my-watchlist-as-an-array). It contains some HTML and CSS, but no JavaScript yet 😓
 
 ## Creating the Array
 The first step is to create the array that will store the list of movies.

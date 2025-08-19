@@ -2,6 +2,7 @@
 This course expands upon the material from Web 102, and dives deeper into more JavaScript concepts. Students will learn about objects, data, functional programming, asynchronous execution, and more! By the end of the semester, students should be able to create an advanced website that connects to an external API and dynamically updates based on real live information.
 
 ## Outline
+This eight-week version of the course is comprised by these lessons:
 
 - [Week 1: JavaScript Review](JsReview/)
 - [Week 2: Arrays](Arrays/)
@@ -11,10 +12,6 @@ This course expands upon the material from Web 102, and dives deeper into more J
 - [Week 6: Mid-Semester Review](MidSemesterReview/)
 - [Week 7: Consuming an API](ApiConsumption/)
 - [Week 8: API Review & Examples](ApiReviewExamples/)
-- [Week 9: API Practice](ApiPractice/)
-- [Week 10: Final Project Introduction](FinalProject/)
-- Week 11: Final Project Work
-- Week 12: Final Project Presentations
 
 ## Resources & Ideas
 Here are some thoughts and things.

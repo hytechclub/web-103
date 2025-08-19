@@ -2,7 +2,7 @@
 This site takes a search location (either zip code or city name), finds some information about the current weather for it, and displays it.
 
 - [Preview](https://hylandtechclub.com/showcase/Web103/Weather/index.html)
-- [Project: https://glitch.com/edit/#!/weather-api-app-thing](https://glitch.com/edit/#!/weather-api-app-thing)
+- [Project: https://hytop.onrender.com/e/weather-api-app-thing](https://hytop.onrender.com/e/weather-api-app-thing)
 - [APIs: Open-Meteo](https://open-meteo.com/)
 
 ## Improvement Ideas

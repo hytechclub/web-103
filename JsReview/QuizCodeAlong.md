@@ -4,7 +4,7 @@ Follow this guide to create and customize an interactive quiz. These instruction
 ## Part 1 - Setup
 Start by remixing the existing project. It contains all of the HTML and CSS, but none of the JavaScript.
 
-[Click here to remix the project!](https://glitch.com/edit/#!/remix/personal-quiz-starter)
+[Click here to remix the project!](https://hytop.onrender.com/e/remix/personal-quiz-starter)
 
 Open the preview to see how it looks. Everything should show up on the page, but the button will not be functional yet...
 

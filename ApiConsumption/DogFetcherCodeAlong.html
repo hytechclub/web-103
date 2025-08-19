@@ -38,17 +38,17 @@
 
     
         
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
         <link rel="stylesheet" href="../styles/website.css">
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
         
     
 
@@ -585,7 +585,7 @@
                 <a href="../ApiReviewExamples/Examples.html">
             
                     
-                    Examples
+                    Examples & Activities
             
                 </a>
             
@@ -633,33 +633,9 @@
             
         </li>
     
-
-            </ul>
+        <li class="chapter " data-level="1.9.3.4" data-path="../ApiReviewExamples/GuidedActivities/ColorSchemer.html">
             
-        </li>
-    
-
-            </ul>
-            
-        </li>
-    
-        <li class="chapter " data-level="1.10" data-path="../ApiPractice/StudentDesc.html">
-            
-                <a href="../ApiPractice/StudentDesc.html">
-            
-                    
-                    Week 9 - API Practice
-            
-                </a>
-            
-
-            
-            <ul class="articles">
-                
-    
-        <li class="chapter " data-level="1.10.1" data-path="../ApiPractice/ColorSchemer.html">
-            
-                <a href="../ApiPractice/ColorSchemer.html">
+                <a href="../ApiReviewExamples/GuidedActivities/ColorSchemer.html">
             
                     
                     Color Schemer
@@ -670,9 +646,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.2" data-path="../ApiPractice/TvCharacters.html">
+        <li class="chapter " data-level="1.9.3.5" data-path="../ApiReviewExamples/GuidedActivities/TvCharacters.html">
             
-                <a href="../ApiPractice/TvCharacters.html">
+                <a href="../ApiReviewExamples/GuidedActivities/TvCharacters.html">
             
                     
                     TV Characters
@@ -683,9 +659,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="../ApiPractice/EmojiCrush.html">
+        <li class="chapter " data-level="1.9.3.6" data-path="../ApiReviewExamples/GuidedActivities/EmojiCrush.html">
             
-                <a href="../ApiPractice/EmojiCrush.html">
+                <a href="../ApiReviewExamples/GuidedActivities/EmojiCrush.html">
             
                     
                     Emoji Crush
@@ -701,16 +677,8 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="../FinalProject/StudentDesc.html">
-            
-                <a href="../FinalProject/StudentDesc.html">
-            
-                    
-                    Final Project
-            
-                </a>
-            
 
+            </ul>
             
         </li>
     
@@ -761,7 +729,7 @@
                                 
                                 <h1 id="code-along-dog-fetcher">Code-Along: Dog Fetcher</h1>
 <p>Follow these instructions to build a website that will provide the user with some pictures of dogs.</p>
-<p><a href="https://glitch.com/edit/#!/dog-fetcher-start" target="_blank">Click here to view the Dog Fetcher Starter project.</a> Remix the project to begin the activity.</p>
+<p><a href="https://hytop.onrender.com/e/dog-fetcher-start" target="_blank">Click here to view the Dog Fetcher Starter project.</a> Remix the project to begin the activity.</p>
 <h2 id="part-one-background">Part One: Background</h2>
 <p>Typically, dogs play fetch. In this activity, <em>your code</em> is going to be playing fetch, and the things that your code will be fetching will be dogs!</p>
 <p><img src="Assets/DogPlayingFetch.jpg" alt=""></p>
@@ -778,7 +746,7 @@
 </ul>
 <p>All of these elements will be necessary to make the website functional.</p>
 <h3 id="not-working-the-shibeonline-api">NOT WORKING: The <a href="https://shibe.online/" target="_blank">shibe.online</a> API</h3>
-<p><em>Note: the shibe.online API appears to be down. Use <a href="https://give-me-dogs.glitch.me/dogs" target="_blank">give-me-dogs.glitch.me/dogs</a> instead. You can check out the <a href="https://glitch.com/edit/#!/give-me-dogs" target="_blank">source code</a> too.</em></p>
+<p><em>Note: the shibe.online API appears to be down. Use <a href="https://hytop.onrender.com/api/fake-api/dogs" target="_blank">https://hytop.onrender.com/api/fake-api/dogs</a> instead.</em></p>
 <p>The code needs something to fetch, and luckily, there is an API that provides random pictures of shiba inu dogs! These adorable pups are also known as &quot;shibes&quot; in internet parlance - hence the name, <a href="https://shibe.online/" target="_blank">shibe.online</a>. Take a look at the homepage to learn more about how the API works.</p>
 <p>The <em>base url</em> is <code>https://shibe.online/api/shibes</code>. For the purposes of this activity, the only relevant <em>query parameter</em> will be <code>count</code>. The response will be a JSON array of strings; each one a URL pointing to a picture of a shibe.</p>
 <p>Putting it all together, here&apos;s an example URL: <a href="https://shibe.online/api/shibes?count=3" target="_blank"><code>https://shibe.online/api/shibes?count=3</code></a></p>
@@ -830,7 +798,7 @@
 <li>Make a new line in the body of the <code>getDogs</code> function</li>
 <li>Create a new variable named <code>response</code></li>
 <li>Set <code>response</code> to equal a call to <code>fetch</code><ul>
-<li>Pass in `<code>https://give-me-dogs.glitch.me/dogs?count=2</code>` as the URL</li>
+<li>Pass in `<code>https://hytop.onrender.com/api/fake-api/dogsdogs?count=2</code>` as the URL</li>
 </ul>
 </li>
 <li>Under that, create a variable named <code>responseJson</code></li>
@@ -838,7 +806,7 @@
 <li>Finally, call <code>alert</code> on <code>responseJson</code> to display the result</li>
 </ol>
 <p>With that, run the code, click the &quot;Get Dogs&quot; button again, and see what happens. It might not quite work... it should display a pop-up, but there is an issue with this code:</p>
-<pre><code class="lang-js"><span class="hljs-keyword">let</span> response = fetch(<span class="hljs-string">`https://give-me-dogs.glitch.me/dogs?count=2`</span>);
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> response = fetch(<span class="hljs-string">`https://hytop.onrender.com/api/fake-api/dogs?count=2`</span>);
 <span class="hljs-keyword">let</span> responseJson = response.json();
 alert(responseJson);
 </code></pre>
@@ -869,7 +837,7 @@ alert(responseJson);
 <pre><code class="lang-js"><span class="hljs-keyword">let</span> response, responseJson;
 
 <span class="hljs-keyword">try</span> {
-  response = fetch(<span class="hljs-string">`https://give-me-dogs.glitch.me/dogs?count=2`</span>);
+  response = fetch(<span class="hljs-string">`https://hytop.onrender.com/api/fake-api/dogs?count=2`</span>);
   responseJson = response.json();
 } <span class="hljs-keyword">catch</span> (e) {
   alert(e);
@@ -901,7 +869,7 @@ alert(responseJson);
   <span class="hljs-keyword">let</span> response, responseJson;
 
   <span class="hljs-keyword">try</span> {
-    response = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://give-me-dogs.glitch.me/dogs?count=2`</span>);
+    response = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://hytop.onrender.com/api/fake-api/dogs?count=2`</span>);
     responseJson = <span class="hljs-keyword">await</span> response.json();
   } <span class="hljs-keyword">catch</span> (e) {
     alert(e);
@@ -948,7 +916,7 @@ dogImgsDiv.innerHTML = <span class="hljs-string">&quot;&quot;</span>;
 <pre><code class="lang-js">responseJson.forEach(dogUrl =&gt; {});
 </code></pre>
 <h3 id="adding-each-image-to-the-container">Adding Each Image to the Container</h3>
-<p>Now the code is setup to run a block for every image URL retrieved from <strong>give-me-dogs.glitch.me</strong>. For each of them, a new <code>&lt;img&gt;</code> element should be created and added to the <code>dogImgsDiv</code> container!</p>
+<p>Now the code is setup to run a block for every image URL retrieved from <strong>hytop.onrender.com/api/fake-api</strong>. For each of them, a new <code>&lt;img&gt;</code> element should be created and added to the <code>dogImgsDiv</code> container!</p>
 <ol>
 <li>Within the <code>forEach</code> arrow function body, make a new line</li>
 <li>There, create a new variable named <code>newDogImg</code></li>
@@ -995,7 +963,7 @@ dogImgsDiv.appendChild(newDogImg);
   <span class="hljs-keyword">let</span> response, responseJson;
 
   <span class="hljs-keyword">try</span> {
-    response = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://give-me-dogs.glitch.me/dogs?count=<span class="hljs-subst">${numDogs}</span>`</span>);
+    response = <span class="hljs-keyword">await</span> fetch(<span class="hljs-string">`https://hytop.onrender.com/api/fake-api/dogs?count=<span class="hljs-subst">${numDogs}</span>`</span>);
     responseJson = <span class="hljs-keyword">await</span> response.json();
   } <span class="hljs-keyword">catch</span> (e) {
     alert(e);
@@ -1059,7 +1027,7 @@ dogImgsDiv.appendChild(newDogImg);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.8.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.8.3","depth":2,"path":"ApiConsumption/DogFetcherSelfPacedWork.md","ref":"ApiConsumption/DogFetcherSelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.8.1","depth":2,"path":"ApiConsumption/QueryStylesWarmUp.md","ref":"ApiConsumption/QueryStylesWarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiConsumption/DogFetcherCodeAlong.md","mtime":"2024-10-28T19:15:49.246Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-10-28T19:16:21.084Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Code-Along","level":"1.8.2","depth":2,"next":{"title":"Self-Paced Work","level":"1.8.3","depth":2,"path":"ApiConsumption/DogFetcherSelfPacedWork.md","ref":"ApiConsumption/DogFetcherSelfPacedWork.md","articles":[]},"previous":{"title":"Warm-Up","level":"1.8.1","depth":2,"path":"ApiConsumption/QueryStylesWarmUp.md","ref":"ApiConsumption/QueryStylesWarmUp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters","scripts"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"scripts":{"files":["./passwordProtectedPages.js"]},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"StudentDesc.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web 103 | Hy-Tech Club","gitbook":"*"},"file":{"path":"ApiConsumption/DogFetcherCodeAlong.md","mtime":"2025-08-19T17:01:28.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-08-19T17:02:01.856Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
