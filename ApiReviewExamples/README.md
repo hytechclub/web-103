@@ -21,6 +21,8 @@ Follow [the instructions](CatSayCodeAlong.md) to build a website that displays p
 ## Examples
 Introduce [the examples](Examples.md) to show students more of what is possible with APIs. Students should have an opportunity to explore and modify a variety of API-driven front-end web applications.
 
+Additionally, 
+
 ## Agenda
 
 | Activity | Time |

@@ -1,7 +1,7 @@
 # Code-Along: Dog Fetcher
 Follow these instructions to build a website that will provide the user with some pictures of dogs.
 
-[Click here to view the Dog Fetcher Starter project.](https://glitch.com/edit/#!/dog-fetcher-start) Remix the project to begin the activity.
+[Click here to view the Dog Fetcher Starter project.](https://hytop.onrender.com/e/dog-fetcher-start) Remix the project to begin the activity.
 
 ## Part One: Background
 Typically, dogs play fetch. In this activity, _your code_ is going to be playing fetch, and the things that your code will be fetching will be dogs!
@@ -20,7 +20,7 @@ The starter project has quite a bit of code, but it's all HTML and CSS! In the *
 All of these elements will be necessary to make the website functional.
 
 ### NOT WORKING: The [shibe.online](https://shibe.online/) API
-_Note: the shibe.online API appears to be down. Use [give-me-dogs.glitch.me/dogs](https://give-me-dogs.glitch.me/dogs) instead. You can check out the [source code](https://glitch.com/edit/#!/give-me-dogs) too._
+_Note: the shibe.online API appears to be down. Use [https://hytop.onrender.com/api/fake-api/dogs](https://hytop.onrender.com/api/fake-api/dogs) instead._
 
 The code needs something to fetch, and luckily, there is an API that provides random pictures of shiba inu dogs! These adorable pups are also known as "shibes" in internet parlance - hence the name, [shibe.online](https://shibe.online/). Take a look at the homepage to learn more about how the API works.
 
@@ -79,7 +79,7 @@ Use the `fetch` function to send a request out to the API to _try to_ get some s
 1. Make a new line in the body of the `getDogs` function
 1. Create a new variable named `response`
 1. Set `response` to equal a call to `fetch`
-    - Pass in \``https://give-me-dogs.glitch.me/dogs?count=2`\` as the URL
+    - Pass in \``https://hytop.onrender.com/api/fake-api/dogsdogs?count=2`\` as the URL
 1. Under that, create a variable named `responseJson`
 1. Set `responseJson` to a call to the `json()` function on the `response` variable
 1. Finally, call `alert` on `responseJson` to display the result
@@ -87,7 +87,7 @@ Use the `fetch` function to send a request out to the API to _try to_ get some s
 With that, run the code, click the "Get Dogs" button again, and see what happens. It might not quite work... it should display a pop-up, but there is an issue with this code:
 
 ```js
-let response = fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
+let response = fetch(`https://hytop.onrender.com/api/fake-api/dogs?count=2`);
 let responseJson = response.json();
 alert(responseJson);
 ```
@@ -115,7 +115,7 @@ The modified code should look something like this:
 let response, responseJson;
 
 try {
-  response = fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
+  response = fetch(`https://hytop.onrender.com/api/fake-api/dogs?count=2`);
   responseJson = response.json();
 } catch (e) {
   alert(e);
@@ -154,7 +154,7 @@ async function getDogs() {
   let response, responseJson;
   
   try {
-    response = await fetch(`https://give-me-dogs.glitch.me/dogs?count=2`);
+    response = await fetch(`https://hytop.onrender.com/api/fake-api/dogs?count=2`);
     responseJson = await response.json();
   } catch (e) {
     alert(e);
@@ -211,7 +211,7 @@ responseJson.forEach(dogUrl => {});
 ```
 
 ### Adding Each Image to the Container
-Now the code is setup to run a block for every image URL retrieved from **give-me-dogs.glitch.me**. For each of them, a new `<img>` element should be created and added to the `dogImgsDiv` container!
+Now the code is setup to run a block for every image URL retrieved from **hytop.onrender.com/api/fake-api**. For each of them, a new `<img>` element should be created and added to the `dogImgsDiv` container!
 
 1. Within the `forEach` arrow function body, make a new line
 1. There, create a new variable named `newDogImg`
@@ -259,7 +259,7 @@ async function getDogs() {
   let response, responseJson;
 
   try {
-    response = await fetch(`https://give-me-dogs.glitch.me/dogs?count=${numDogs}`);
+    response = await fetch(`https://hytop.onrender.com/api/fake-api/dogs?count=${numDogs}`);
     responseJson = await response.json();
   } catch (e) {
     alert(e);

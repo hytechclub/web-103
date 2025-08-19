@@ -2,7 +2,7 @@
 In this code-along, add some funktionality to buttons on a website using callbacks.
 
 ## Setting Up
-[Click here to go to the Funktional Functions Starter project.](https://glitch.com/edit/#!/funktional-functions)
+[Click here to go to the Funktional Functions Starter project.](https://hytop.onrender.com/e/funktional-functions)
 
 Start by remixing the project. Take a look at the current code in the **script.js** file:
 

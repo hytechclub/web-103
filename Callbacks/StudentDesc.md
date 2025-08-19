@@ -8,7 +8,7 @@ Learn how to use functions as objects and pass them into other functions!
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-103/Callbacks/FunctionsAndCallbacks.pptx' width='100%' height='450px' frameborder='0'></iframe>
 
 ## Code-Along: Funktional Functions
-[Click here for the code-along **starter code**.](https://glitch.com/edit/#!/funktional-functions)
+[Click here for the code-along **starter code**.](https://hytop.onrender.com/e/funktional-functions)
 
 [Click here for the code-along instructions.](FunktionalCodeAlong.md)
 

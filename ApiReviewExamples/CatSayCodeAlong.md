@@ -1,7 +1,7 @@
 # Code-Along: What Does the Cat Say?
 Follow these instructions to build a website that will provide the user with some pictures of cats saying messages. _Not to be confused with [The Fox](https://www.youtube.com/watch?v=jofNR_WkoCE)._
 
-[Click here to view the Cat Says Starter project.](https://glitch.com/edit/#!/what-does-the-cat-say) Remix the project to begin the activity.
+[Click here to view the Cat Says Starter project.](https://hytop.onrender.com/e/what-does-the-cat-say) Remix the project to begin the activity.
 
 ## Part One: Background
 Before diving into the activity, take some time for research and planning.

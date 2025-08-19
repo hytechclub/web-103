@@ -2,7 +2,7 @@
 In this code-along, create a website that showcases cereal mascot trading cards for some reason.
 
 ## Setting Up
-[Click here to go to the Cereal Start project.](https://glitch.com/edit/#!/cereal-mascots-compendium)
+[Click here to go to the Cereal Start project.](https://hytop.onrender.com/e/cereal-mascots-compendium)
 
 Start by remixing the project. There is a decent amount of starter code.
 

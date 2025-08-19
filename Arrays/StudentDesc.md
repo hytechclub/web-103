@@ -8,7 +8,7 @@ Learn how to use arrays to store multiple values in one variable.
 <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=https://hylandtechclub.com/web-103/Arrays/Arrays.pptx' width='100%' height='450px' frameborder='0'></iframe>
 
 ## Code-Along: Movie Watchlist
-[Click here for the code-along **starter code**.](https://glitch.com/edit/#!/my-watchlist-as-an-array)
+[Click here for the code-along **starter code**.](https://hytop.onrender.com/e/my-watchlist-as-an-array)
 
 [Click here for the code-along instructions.](WatchlistCodeAlong.md)
 
