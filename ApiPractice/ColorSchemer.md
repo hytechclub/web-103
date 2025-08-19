@@ -1,7 +1,7 @@
 # Color Schemer
 Follow these instructions to update a website that generates aesthetically pleasing color schemes.
 
-[Click here to view the Color Schemer Starter project.](https://hytop.onrender.com/e/color-schemer) Remix the project to begin the activity.
+[Click here to view the Color Schemer Starter project.](https://hytop.onrender.com/e/color-schemer) Copy the project to begin the activity.
 
 ## Part Zero: Background
 This project is already fairly substantial in terms of the code and the functionality.

@@ -1,7 +1,7 @@
 # Code-Along: Dog Fetcher
 Follow these instructions to build a website that will provide the user with some pictures of dogs.
 
-[Click here to view the Dog Fetcher Starter project.](https://hytop.onrender.com/e/dog-fetcher-start) Remix the project to begin the activity.
+[Click here to view the Dog Fetcher Starter project.](https://hytop.onrender.com/e/dog-fetcher-start) Copy the project to begin the activity.
 
 ## Part One: Background
 Typically, dogs play fetch. In this activity, _your code_ is going to be playing fetch, and the things that your code will be fetching will be dogs!

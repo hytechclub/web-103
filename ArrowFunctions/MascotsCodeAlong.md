@@ -4,7 +4,7 @@ In this code-along, create a website that showcases cereal mascot trading cards 
 ## Setting Up
 [Click here to go to the Cereal Start project.](https://hytop.onrender.com/e/cereal-mascots-compendium)
 
-Start by remixing the project. There is a decent amount of starter code.
+Start by copying the project. There is a decent amount of starter code.
 
 #### HTML Starter Code
 The **index.html** file has some basic elements, including:
