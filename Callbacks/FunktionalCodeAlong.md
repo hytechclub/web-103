@@ -4,7 +4,7 @@ In this code-along, add some funktionality to buttons on a website using callbac
 ## Setting Up
 [Click here to go to the Funktional Functions Starter project.](https://hytop.onrender.com/e/funktional-functions)
 
-Start by remixing the project. Take a look at the current code in the **script.js** file:
+Start by copying the project. Take a look at the current code in the **script.js** file:
 
 - `bassAudio` object and `playBass` function definition - these make it possible to play an audio track!
 - `chooseRandom` function definition - this makes it possible to choose a random item from an array, and exclude any item in particular

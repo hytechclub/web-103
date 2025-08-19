@@ -4,7 +4,7 @@ In this code-along, create a website to help visitors decide which food they sho
 ## Setting Up
 [Click here to go to the Food Picker Start project.](https://hytop.onrender.com/e/food-picker-start)
 
-1. Remix the project
+1. Copy the project
 1. Run the project
 1. Click the "Get Food" button
 1. Realize that nothing is happening

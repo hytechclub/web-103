@@ -1,5 +1,5 @@
 # Bug Fixing
-Find and fix all the issues with these projects. Start by remixing and running the linked the projects; the webpages themselves explain the bugs.
+Find and fix all the issues with these projects. Start by copying and running the linked the projects; the webpages themselves explain the bugs.
 
 ## Web 102 Bugs
 These bugs all involve concepts covered by the [Web 102](https://hylandtechclub.com/web-102/) Hy-Tech Club course.

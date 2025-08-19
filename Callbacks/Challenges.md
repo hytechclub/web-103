@@ -2,7 +2,7 @@
 Make some updates to a Funk Playlist website.
 
 ## Overview
-[Click here to access and remix the starter project.](https://hytop.onrender.com/e/funk-playlist)
+[Click here to access and copy the starter project.](https://hytop.onrender.com/e/funk-playlist)
 
 The current website will play six shortened tracks in a playlist format. The play buttons should play the songs, and when a song ends, the site should play the next song in the list. It's functional, but there are some nice features that you can try to add!
 
