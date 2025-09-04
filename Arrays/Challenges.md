@@ -56,7 +56,7 @@ Run the project, and see the albums show up in the list!
 The most hardest part of this challenge may be finding audio files, so do not worry too much about that. The more technical challenges may also be difficult!
 
 ### Function for the Play Buttons
-It will be beneficial to learn more about [anonymous functions](https://www.javatpoint.com/javascript-anonymous-functions) to accomplish this. Basically, it is possible to pass around JavaScript functions as objects, and they do not need names. This allows custom, dynamic functionality to be applied at different points in the code. Here's a brief example:
+It will be beneficial to learn more about [anonymous functions](https://www.geeksforgeeks.org/javascript/javascript-anonymous-functions/) to accomplish this. Basically, it is possible to pass around JavaScript functions as objects, and they do not need names. This allows custom, dynamic functionality to be applied at different points in the code. Here's a brief example:
 
 ```js
 let myNamelessFunction = function () {
