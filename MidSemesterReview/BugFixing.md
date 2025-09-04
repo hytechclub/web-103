@@ -11,7 +11,7 @@ These bugs all involve concepts covered by the [Web 102](https://hylandtechclub.
 ## Web 103 Bugs
 These bugs involve the more advanced Web 103 concepts.
 
-- [Bug 4: Dis-**Array**](https://hytop.onrender.com/e/historical-solar-salt)
+- [Bug 4: Dis-**Array**](https://hytop.onrender.com/e/historyical-solar-salt)
 - [Bug 5: **Object**-ively Bad](https://hytop.onrender.com/e/shrub-obtainable-spur)
 - [Bug 6: The mid 2000s **Call**ed; they want their self-aware humor **Back** (😏)](https://hytop.onrender.com/e/light-hilarious-firewall)
 - [Bug 7: **Arrow Functions** (no joke for this one, it's serious)](https://hytop.onrender.com/e/universal-sugar-chemistry)
