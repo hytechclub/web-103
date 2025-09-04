@@ -7,8 +7,6 @@ There are no particular learning objectives for this session. Students should ha
 - Review concepts from previous sessions
 - Interact socially
 
-The main focus will be the [check-ins](https://github.com/hytechclub/hytechclub.github.io/blob/main/CheckIns.md#check-ins).
-
 ## Self-Paced Time
 This time will be very free, but it will be important for every student to at least _try_ to review/practice a little bit. There are a number of things they can do.
 
